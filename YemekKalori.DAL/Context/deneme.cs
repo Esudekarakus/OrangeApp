@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YemekKalori.DAL.Context
 {
-    internal class deneme
+    public class deneme
     {
     }
 }
