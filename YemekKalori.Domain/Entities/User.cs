@@ -14,13 +14,15 @@ namespace YemekKalori.Domain.Entities
         // Public properties to hold user information that can be accessed and modified externally.
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DietType Diet {  get; set; } // Enum to represent user's diet type.
-        public decimal Weight { get; set; }
-        public decimal Height { get; set; }
+        public DietType? Diet {  get; set; } // Enum to represent user's diet type.
+        public decimal? Weight { get; set; }
+        public decimal? Height { get; set; }
         public string Username { get; set; }
         public AccountStatus Status { get; set; } // Enum to represent the user's account status.
-        public GoalType Goal { get; set; } // Enum to represent user's dietary goal.
+        public GoalType? Goal { get; set; } // Enum to represent user's dietary goal.
         public ICollection<Meal> Meals { get; set; } // Collection of meals consumed by the user up to that point.
+        public decimal? BMI { get; set; }
+        public UserType Type { get; set; }
 
         // Private field to store the hashed password, which is not directly accessible outside the class.
         private string _hashedPassword;
@@ -29,7 +31,27 @@ namespace YemekKalori.Domain.Entities
         public string Password
         {
             
-            set { _hashedPassword = HashPassword(value); }
+            set 
+            {
+                if (value.Length < 6)
+                {
+                    throw new ArgumentException("Şifre 6 karakterden kısa olamaz.");
+                }
+                if (!value.Any(char.IsUpper))
+                {
+                    throw new ArgumentException("Şifre en az 1 büyük harf içermeli.");
+                }
+                if (!value.Any(char.IsLower)) 
+                {
+                    throw new ArgumentException("Şifre en az 1 küçük harf içermeli.");
+                }
+                if (!value.Any(char.IsDigit)) 
+                {
+                    throw new ArgumentException("Şifre en az 1 rakam içermeli.");
+                }
+
+                _hashedPassword = HashPassword(value); 
+            }
         }
 
         // Method to verify if the provided password matches the stored hashed password.

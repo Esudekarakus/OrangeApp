@@ -12,7 +12,7 @@ namespace YemekKalori.Domain.Entities
 
         public string PortionType { get; set; }
 
-        public int Calorie { get; set; }
+        public decimal Calorie { get; set; }
 
         public decimal Portion { get; set; }
 

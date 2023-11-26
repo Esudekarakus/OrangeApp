@@ -11,7 +11,7 @@ namespace YemekKalori.Domain.Entities
     {
         public MealType Type { get; set; }
 
-        public int Calorie { get; set; } // Total calorie of the foods included in this meal.
+        public decimal Calorie { get; set; } // Total calorie of the foods included in this meal.
 
         public ICollection<Food> Foods { get; set; } // Collection of foods that this meal contains.
         public int UserRefId { get; set; } // Foreign key for the user that ate this meal.
