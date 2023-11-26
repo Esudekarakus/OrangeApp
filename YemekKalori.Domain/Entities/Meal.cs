@@ -17,5 +17,7 @@ namespace YemekKalori.Domain.Entities
         public int UserRefId { get; set; } // Foreign key for the user that ate this meal.
         public User User { get; set; } // The user that ate this meal.
 
+
+
     }
 }
