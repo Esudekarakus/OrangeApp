@@ -9,20 +9,18 @@ namespace WFA_YemekKaloriHesap_Proje
             InitializeComponent();
         }
 
-        User user = new User()
-        {
-            Username = "admin",
-            Password = "admin"
-        };
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == user.Username && user.VerifyPassword(txtPassword.Text)) 
-            {
-                MessageBox.Show("Giriþ baþarýlý.");
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
