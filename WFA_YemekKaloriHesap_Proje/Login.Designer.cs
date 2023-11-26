@@ -45,7 +45,8 @@
             label1.Name = "label1";
             label1.Size = new Size(140, 39);
             label1.TabIndex = 0;
-            label1.Text = "Sign In";
+            label1.Text = "Log In";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -95,6 +96,7 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Log in";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // lblKayitOl
             // 
@@ -103,10 +105,10 @@
             lblKayitOl.LinkColor = Color.Cyan;
             lblKayitOl.Location = new Point(388, 360);
             lblKayitOl.Name = "lblKayitOl";
-            lblKayitOl.Size = new Size(77, 25);
+            lblKayitOl.Size = new Size(70, 25);
             lblKayitOl.TabIndex = 6;
             lblKayitOl.TabStop = true;
-            lblKayitOl.Text = "Kayıt Ol";
+            lblKayitOl.Text = "Sign In";
             // 
             // Login
             // 
