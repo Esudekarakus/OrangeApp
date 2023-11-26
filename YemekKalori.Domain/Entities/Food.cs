@@ -14,7 +14,7 @@ namespace YemekKalori.Domain.Entities
 
         public decimal Calorie { get; set; }
 
-        public decimal Portion { get; set; }
+        public decimal? Portion { get; set; }
 
         public Meal Meal { get; set; }
 

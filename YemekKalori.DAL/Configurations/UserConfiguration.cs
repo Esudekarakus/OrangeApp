@@ -13,6 +13,8 @@ namespace YemekKalori.DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.ToTable("Users");
+
             builder.Property(a => a.FirstName).HasMaxLength(50);
             builder.Property(a => a.LastName).HasMaxLength(50);
             builder.HasIndex(a => a.Username).IsUnique();

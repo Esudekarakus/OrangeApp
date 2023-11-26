@@ -17,8 +17,8 @@ namespace YemekKalori.DAL.Configurations
             builder.ToTable("Foods");
 
             builder.Property(a => a.Name).HasMaxLength(255);
-            
-            
+
+            builder.Ignore(a => a.Portion);
         }
     }
 }
