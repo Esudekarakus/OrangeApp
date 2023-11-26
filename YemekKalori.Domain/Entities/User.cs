@@ -20,6 +20,7 @@ namespace YemekKalori.Domain.Entities
         public string Username { get; set; }
         public AccountStatus Status { get; set; } // Enum to represent the user's account status.
         public GoalType Goal { get; set; } // Enum to represent user's dietary goal.
+        public ICollection<Meal> Meals { get; set; } // Collection of meals consumed by the user up to that point.
 
         // Private field to store the hashed password, which is not directly accessible outside the class.
         private string _hashedPassword;
