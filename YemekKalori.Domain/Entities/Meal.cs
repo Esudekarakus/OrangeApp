@@ -14,5 +14,7 @@ namespace YemekKalori.Domain.Entities
 
         public ICollection<Food> Foods { get; set; }
 
+
+
     }
 }
