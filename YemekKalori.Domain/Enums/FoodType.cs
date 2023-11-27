@@ -8,13 +8,20 @@ namespace YemekKalori.Domain.Enums
 {
     public enum FoodType
     {
-        Meyeve = 1,
-        Sebze,
-        Et,
-        SütÜrünü,
-        Baklagil
-        
-        
+        Fruits = 1,
+        Vegetables,
+        MeatProducts,
+        DairyProducts,
+        Eggs,
+        Legumes,
+        GrainProducts,
+        Honey,
+        Tea,
+        Juice,
+        SugaryDrinks,
+        Nuts,
+        ProcessedFood,
+        Coffee
         
     }
 }
