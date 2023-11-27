@@ -16,6 +16,42 @@ namespace YemekKalori.DAL.Repositories
         }
         AppDbContext dbContext;
         
-        
+        public void Add(MealFood entity)
+        {
+            dbContext.Add(entity);
+            dbContext.SaveChanges();
+        }
+
+        public void Update(MealFood entity) 
+        {
+            dbContext.Update(entity);
+            dbContext.SaveChanges();
+        }
+
+        public void Delete(MealFood entity) 
+        {
+            entity.Status = Domain.Enums.Status.Deleted;
+            dbContext.SaveChanges();
+        }
+
+        public void PermaDelete(MealFood entity)
+        {
+            dbContext.Remove(entity);
+            dbContext.SaveChanges();
+        }
+
+        public List<MealFood> GetMealFoodByMeal(int mealId)
+        {
+            List<MealFood> mealFoods = dbContext.MealFoods.Where(a => a.MealId == mealId).ToList();
+            return mealFoods;
+        }
+
+        public MealFood GetMealFoodById(int  id)
+        {
+            MealFood mealFood = dbContext.MealFoods.FirstOrDefault(x => x.Id == id);
+            return mealFood;
+        }
+
+
     }
 }
