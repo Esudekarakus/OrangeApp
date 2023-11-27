@@ -109,6 +109,7 @@
             Controls.Add(lLabelEvet);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "StartingScreen";
             Text = "StartingScreen";
             Load += StartingScreen_Load;
