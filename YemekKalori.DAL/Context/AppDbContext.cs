@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using YemekKalori.DAL.Configurations;
 using YemekKalori.Domain.Entities;
 
 namespace YemekKalori.DAL.Context
@@ -24,7 +24,10 @@ namespace YemekKalori.DAL.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            new UserConfiguration().Configure(modelBuilder.Entity<User>());
+            new FoodConfiguration().Configure(modelBuilder.Entity<Food>());
+            new MealConfiguration().Configure(modelBuilder.Entity<Meal>());
+            new MealFoodConfiguration().Configure(modelBuilder.Entity<MealFood>());
             //base.OnModelCreating(modelBuilder);
         }
     }
