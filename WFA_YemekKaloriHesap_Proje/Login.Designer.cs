@@ -39,13 +39,13 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Sans Serif Collection", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(183, 12);
+            label1.Location = new Point(160, 9);
             label1.Name = "label1";
-            label1.Size = new Size(160, 52);
+            label1.Size = new Size(172, 83);
             label1.TabIndex = 0;
-            label1.Text = "Log In";
+            label1.Text = "Giriş Yap";
             label1.Click += label1_Click;
             // 
             // label2
@@ -53,40 +53,37 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(42, 155);
+            label2.Location = new Point(37, 116);
             label2.Name = "label2";
-            label2.Size = new Size(133, 32);
+            label2.Size = new Size(126, 25);
             label2.TabIndex = 1;
-            label2.Text = "Username :";
-            
+            label2.Text = "Kullanıcı Adı :";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(49, 236);
+            label3.Location = new Point(104, 174);
             label3.Name = "label3";
-            label3.Size = new Size(123, 32);
+            label3.Size = new Size(59, 25);
             label3.TabIndex = 2;
-            label3.Text = "Password :";
+            label3.Text = "Şifre :";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(183, 161);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(179, 121);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(251, 27);
+            txtUsername.Size = new Size(220, 23);
             txtUsername.TabIndex = 3;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(183, 243);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(179, 179);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(251, 27);
+            txtPassword.Size = new Size(220, 23);
             txtPassword.TabIndex = 4;
             // 
             // btnLogin
@@ -94,12 +91,11 @@
             btnLogin.BackColor = Color.DarkOrange;
             btnLogin.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogin.ForeColor = SystemColors.ButtonHighlight;
-            btnLogin.Location = new Point(183, 337);
-            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Location = new Point(160, 253);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(251, 75);
+            btnLogin.Size = new Size(220, 56);
             btnLogin.TabIndex = 5;
-            btnLogin.Text = "Log in";
+            btnLogin.Text = "Giriş";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
@@ -108,19 +104,19 @@
             lblKayitOl.AutoSize = true;
             lblKayitOl.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblKayitOl.LinkColor = Color.Cyan;
-            lblKayitOl.Location = new Point(443, 480);
+            lblKayitOl.Location = new Point(388, 360);
             lblKayitOl.Name = "lblKayitOl";
-            lblKayitOl.Size = new Size(98, 32);
+            lblKayitOl.Size = new Size(77, 25);
             lblKayitOl.TabIndex = 6;
             lblKayitOl.TabStop = true;
-            lblKayitOl.Text = "Sign Up";
+            lblKayitOl.Text = "Kayıt Ol";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Crimson;
-            ClientSize = new Size(545, 525);
+            ClientSize = new Size(477, 394);
             Controls.Add(lblKayitOl);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
@@ -128,7 +124,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             Text = "Form1";
             Load += Login_Load;
