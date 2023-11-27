@@ -24,13 +24,15 @@ namespace YemekKalori.Domain.Entities
         public decimal? BMI { get; set; }
         public UserType Type { get; set; }
 
+
+
         // Private field to store the hashed password, which is not directly accessible outside the class.
         private string _hashedPassword;
 
         // Public property to set the password. The set method hashes the password and stores it.
         public string Password
         {
-            
+            private get { return _hashedPassword; }
             set 
             {
                 if (value.Length < 6)

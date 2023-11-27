@@ -14,7 +14,7 @@ namespace YemekKalori.Domain.Entities
             CreatedDate = DateTime.Now;
         }
         public int Id { get; set; }
-        public Status Status { get; set; } // Enum to represent the user's account status.
+        public Status Status { get; set; } // Enum to represent the data entrys status.
 
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
