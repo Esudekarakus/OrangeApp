@@ -58,7 +58,7 @@ namespace YemekKalori.DAL.Repositories
         //user ın meallerini getir
         public List<Meal> GetMealsByUser(int userId)
         {
-            return dbContext.Meals.Where(x => x.UserRefId == userId).ToList();
+            return dbContext.Meals.Where(x => x.UserId == userId).ToList();
         }
 
         //tüm meall leri getir
@@ -73,21 +73,21 @@ namespace YemekKalori.DAL.Repositories
 
         //kahvaltılıkları getir
 
-        public List <Meal>GetBreakfast()
-        {
-            return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Breakfast).ToList();
-        }
+        //public List <Meal>GetBreakfast()
+        //{
+        //    return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Breakfast).ToList();
+        //}
 
-        //öğle  yemeği
+        ////öğle  yemeği
 
-        public List<Meal> GetLunch()
-        {
-            return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Lunch).ToList();
-        }
-        //dinner 
-        public List <Meal>GetDinner()
-        {
-            return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Dinner).ToList();
-        }
+        //public List<Meal> GetLunch()
+        //{
+        //    return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Lunch).ToList();
+        //}
+        ////dinner 
+        //public List <Meal>GetDinner()
+        //{
+        //    return dbContext.Meals.Where(x=>x.Type==Domain.Enums.MealType.Dinner).ToList();
+        //}
     }
 }

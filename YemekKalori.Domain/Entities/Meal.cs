@@ -15,7 +15,7 @@ namespace YemekKalori.Domain.Entities
         public ICollection<MealFood> MealFoods { get; set; }
 
         public decimal MealCalorie { get; set; }
-        public int UserRefId { get; set; }
+        public int UserId { get; set; }
         public User User { get; set; }
         
 

@@ -57,23 +57,23 @@ namespace YemekKalori.DAL.Repositories
 
         //standart kullanıcıları listelemek için
 
-        public List <User> GetStandartUsers()
-        {
-            return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Standart).ToList();
-        }
-        //premium kullanıcıları listele
+        //public List <User> GetStandartUsers()
+        //{
+        //    return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Standart).ToList();
+        //}
+        ////premium kullanıcıları listele
 
-        public List<User> GetPremiumUsers()
-        {
-            return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Premium).ToList();
-        }
+        //public List<User> GetPremiumUsers()
+        //{
+        //    return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Premium).ToList();
+        //}
 
-        //adminleri listele
+        ////adminleri listele
 
-        public List <User>GetAdmin()
-        {
-            return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Admin).ToList();
-        }
+        //public List <User>GetAdmin()
+        //{
+        //    return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Admin).ToList();
+        //}
         
         
 
