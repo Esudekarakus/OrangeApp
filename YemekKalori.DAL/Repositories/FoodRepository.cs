@@ -17,21 +17,21 @@ namespace YemekKalori.DAL.Repositories
         AppDbContext dbContext;
 
         //food eklemek için
-        public void Add(Food food)
+        public void AddFood(Food food)
         {
             dbContext.Foods.Add(food);
             dbContext.SaveChanges();
 
         }
         //food update
-        public void Update(Food food) 
+        public void UpdateFood(Food food) 
         {
             dbContext.Foods.Update(food);
             food.Status = Domain.Enums.Status.Modified;
             dbContext.SaveChanges();
         }
         //food sil
-        public void Delete(int foodID)
+        public void DeleteFood(int foodID)
         {
             Food food= dbContext.Foods.Find(foodID);
             dbContext.Foods.Remove(food);
