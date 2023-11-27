@@ -8,6 +8,10 @@ namespace YemekKalori.Domain.Entities
 {
     public abstract class BaseClass
     {
+        public BaseClass()
+        {
+            CreatedDate = DateTime.Now;
+        }
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

@@ -13,6 +13,11 @@ namespace YemekKalori.Domain.Entities
         public int FoodRefId { get; set; }
         public Food Food { get; set; }
 
+        public decimal Calorie { get; set; }
+        public decimal FatRate { get; set; }
+        public decimal CarbRate { get; set; }
+        public decimal ProteinRate { get; set; }
+
         public decimal Portion { get; set; }
     }
 }
