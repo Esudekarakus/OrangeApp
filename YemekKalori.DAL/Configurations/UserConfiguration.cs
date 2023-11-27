@@ -19,6 +19,8 @@ namespace YemekKalori.DAL.Configurations
             builder.Property(a => a.LastName).HasMaxLength(50);
             builder.HasIndex(a => a.Username).IsUnique();
 
+            builder.Property<string>("Password").HasField("_hashedPassword");
+
             builder.HasData
                 (
                     new User
