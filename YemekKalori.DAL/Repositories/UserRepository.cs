@@ -16,6 +16,11 @@ namespace YemekKalori.DAL.Repositories
         }
         AppDbContext dbContext;
 
+        // Login logic'İndfe kullanılacak
+        public User GetUserByUsername(string username)
+        {
+            return dbContext.Users.FirstOrDefault(x => x.Username == username);
+        }
         public void Add(User user)
         {
             dbContext.Users.Add(user);
