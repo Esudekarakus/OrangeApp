@@ -13,11 +13,11 @@ namespace YemekKalori.Domain.Entities
 
         public decimal Calorie { get; set; }
 
-        public int FatRate { get; set; }
+        public decimal FatRate { get; set; }
 
-        public int CarbRate { get; set; }
+        public decimal CarbRate { get; set; }
 
-        public int ProteinRate { get; set; }
+        public decimal ProteinRate { get; set; }
         public FoodType Type { get; set; }
 
         public ICollection<MealFood> MealFoods { get; set; }
