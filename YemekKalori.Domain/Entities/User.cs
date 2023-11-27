@@ -18,7 +18,7 @@ namespace YemekKalori.Domain.Entities
         public decimal? Weight { get; set; }
         public decimal? Height { get; set; }
         public string Username { get; set; }
-        public AccountStatus Status { get; set; } // Enum to represent the user's account status.
+        
         public GoalType? Goal { get; set; } // Enum to represent user's dietary goal.
         public ICollection<Meal> UserMeals { get; set; } // Collection of meals consumed by the user up to that point.
         public decimal? BMI { get; set; }
