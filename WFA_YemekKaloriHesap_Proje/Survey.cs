@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_YemekKaloriHesap_Proje;
 
 namespace YemekKalori.UI
 {
@@ -15,6 +16,13 @@ namespace YemekKalori.UI
         public Survey()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
