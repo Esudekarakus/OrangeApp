@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YemekKalori.Domain.Enums;
 
 namespace YemekKalori.Domain.Entities
 {
@@ -17,6 +18,7 @@ namespace YemekKalori.Domain.Entities
         public int CarbRate { get; set; }
 
         public int ProteinRate { get; set; }
+        public FoodType Type { get; set; }
 
         public ICollection<MealFood> MealFoods { get; set; }
     }
