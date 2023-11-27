@@ -74,5 +74,9 @@ namespace YemekKalori.DAL.Repositories
         {
             return dbContext.Users.Where(x=>x.Type==Domain.Enums.UserType.Admin).ToList();
         }
+        
+        
+
+        
     }
 }
