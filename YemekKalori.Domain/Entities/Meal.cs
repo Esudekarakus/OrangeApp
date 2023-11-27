@@ -10,12 +10,14 @@ namespace YemekKalori.Domain.Entities
     public class Meal:BaseClass
     {
         public MealType Type { get; set; }
+        public DateTime MealTime { get; set; }
 
-        public decimal Calorie { get; set; } // Total calorie of the foods included in this meal.
+        public ICollection<MealFood> MealFoods { get; set; }
 
-        public ICollection<Food> Foods { get; set; } // Collection of foods that this meal contains.
-        public int UserRefId { get; set; } // Foreign key for the user that ate this meal.
-        public User User { get; set; } // The user that ate this meal.
+
+        public int UserRefId { get; set; }
+        public User User { get; set; }
+        
 
 
 
