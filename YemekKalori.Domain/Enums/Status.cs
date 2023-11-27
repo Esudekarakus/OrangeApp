@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YemekKalori.Domain.Enums
 {
-    public enum AccountStatus
+    public enum Status
     {
         Added = 1,
         Modified,

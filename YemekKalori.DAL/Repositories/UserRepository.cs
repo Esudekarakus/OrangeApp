@@ -34,10 +34,16 @@ namespace YemekKalori.DAL.Repositories
 
 
         }
-        //kullanıcı kaydını silmek isterse
-        public void Delete(string userName) 
+        public void DeleteUserByStatus(int id) 
         {
-            User user = dbContext.Users.Find(userName);
+            User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
+            user.Status = Domain.Enums.Status.Deleted;
+            dbContext.SaveChanges();
+        }
+        //kullanıcı kaydını silmek isterse
+        public void Delete(int id) 
+        {
+            User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
             dbContext.Users.Remove(user);
             dbContext.SaveChanges();
 

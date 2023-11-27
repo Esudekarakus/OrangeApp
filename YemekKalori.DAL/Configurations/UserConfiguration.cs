@@ -29,7 +29,7 @@ namespace YemekKalori.DAL.Configurations
                         LastName = "Admin",
                         Username = "admin",
                         Password = "Admin123",
-                        Status = Domain.Enums.AccountStatus.Added,
+                        Status = Domain.Enums.Status.Added,
                         Type = Domain.Enums.UserType.Admin
                     }
                 );
