@@ -9,8 +9,9 @@ namespace YemekKalori.Domain.Entities
     public class MealFood : BaseClass
     {
         public Meal Meal { get; set; }
+        public int MealId { get; set; }
 
-        public int FoodRefId { get; set; }
+        public int FoodId { get; set; }
         public Food Food { get; set; }
 
         public decimal Calorie { get; set; }

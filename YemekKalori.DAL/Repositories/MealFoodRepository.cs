@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YemekKalori.BLL.Services
+namespace YemekKalori.DAL.Repositories
 {
-    internal class testclass
+    public class MealFoodRepository
     {
     }
 }
