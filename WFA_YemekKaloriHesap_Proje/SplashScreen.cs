@@ -33,5 +33,10 @@ namespace YemekKalori.UI
                 this.Hide();
             }
         }
+
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
