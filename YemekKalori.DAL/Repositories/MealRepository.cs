@@ -61,6 +61,11 @@ namespace YemekKalori.DAL.Repositories
             return dbContext.Meals.Where(x => x.UserId == userId).ToList();
         }
 
+        public Meal GetMealByUser(int userId) 
+        {
+            Meal meal = dbContext.Meals.FirstOrDefault(m => m.UserId == userId);
+            return meal;
+        }
         //tüm meall leri getir
 
         public List<Meal> GetMeals()
