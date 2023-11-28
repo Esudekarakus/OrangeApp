@@ -21,6 +21,11 @@ namespace YemekKalori.DAL.Repositories
         {
             return dbContext.Users.FirstOrDefault(x => x.Username == username);
         }
+
+        public User GetUserById(int userId) 
+        {
+            return dbContext.Users.FirstOrDefault(x => x.Id == userId);
+        }
         public void Add(User user)
         {
             dbContext.Users.Add(user);
@@ -34,12 +39,12 @@ namespace YemekKalori.DAL.Repositories
 
 
         }
-        public void DeleteUserByStatus(int id) 
-        {
-            User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
-            user.Status = Domain.Enums.Status.Deleted;
-            dbContext.SaveChanges();
-        }
+        //public void DeleteUserByStatus(int id) 
+        //{
+        //    User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
+        //    user.Status = Domain.Enums.Status.Deleted;
+        //    dbContext.SaveChanges();
+        //}
         //kullanıcı kaydını silmek isterse
         public void Delete(int id) 
         {

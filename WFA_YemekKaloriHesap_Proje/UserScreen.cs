@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YemekKalori.Domain.Entities;
 
 namespace YemekKalori.UI
 {
@@ -17,7 +18,20 @@ namespace YemekKalori.UI
             InitializeComponent();
         }
 
+        public UserScreen(User user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
+
+        User user;
+
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserScreen_Load(object sender, EventArgs e)
         {
 
         }
