@@ -117,5 +117,25 @@ namespace YemekKalori.BLL.Services
         {
             return repo.GetAllFood().Where(x => x.Type == Domain.Enums.FoodType.Nuts).ToList();
         }
+
+        public List<Food> GetVeganFoods() 
+        {
+            return repo.GetAllFood().Where(f => f.Type != Domain.Enums.FoodType.MeatProducts && f.Type != Domain.Enums.FoodType.DairyProducts && f.Type != Domain.Enums.FoodType.Eggs && f.Type != Domain.Enums.FoodType.Honey).ToList();
+        }
+
+        public List<Food> GetCarnivoreFoods()
+        {
+            return repo.GetAllFood().Where(f => f.Type != Domain.Enums.FoodType.Vegetables && f.Type != Domain.Enums.FoodType.Fruits && f.Type != Domain.Enums.FoodType.GrainProducts && f.Type != Domain.Enums.FoodType.SugaryDrinks && f.Type != Domain.Enums.FoodType.ProcessedFood).ToList();
+        }
+
+        public List<Food> GetClassicFood() 
+        {
+            return repo.GetAllFood();
+        }
+
+        public List<Food> GetVegetarianFood()
+        {
+            return repo.GetAllFood().Where(x => x.Type != Domain.Enums.FoodType.MeatProducts).ToList();
+        }
     }
 }

@@ -21,5 +21,11 @@ namespace YemekKalori.Domain.Entities
         public FoodType Type { get; set; }
 
         public ICollection<MealFood> MealFoods { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} {Calorie} Kalori";
+            //return base.ToString();
+        }
     }
 }
