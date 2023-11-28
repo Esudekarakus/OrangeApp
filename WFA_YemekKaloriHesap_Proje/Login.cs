@@ -52,7 +52,14 @@ namespace WFA_YemekKaloriHesap_Proje
             this.Hide();
             signUp.ShowDialog();
             this.Show();
+            ClearFields();
             
+        }
+
+        public void ClearFields()
+        {
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
         }
     }
 }

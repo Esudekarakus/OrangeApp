@@ -139,6 +139,7 @@
             txtSifre.Location = new Point(116, 180);
             txtSifre.Margin = new Padding(3, 2, 3, 2);
             txtSifre.Name = "txtSifre";
+            txtSifre.PasswordChar = '*';
             txtSifre.Size = new Size(210, 23);
             txtSifre.TabIndex = 8;
             // 
@@ -147,6 +148,7 @@
             txtSifreTekrar.Location = new Point(116, 220);
             txtSifreTekrar.Margin = new Padding(3, 2, 3, 2);
             txtSifreTekrar.Name = "txtSifreTekrar";
+            txtSifreTekrar.PasswordChar = '*';
             txtSifreTekrar.Size = new Size(209, 23);
             txtSifreTekrar.TabIndex = 9;
             // 
