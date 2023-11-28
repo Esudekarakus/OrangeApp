@@ -47,7 +47,6 @@
             lstSecimler = new ListBox();
             sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             textBox1 = new TextBox();
-            btnEkle = new Button();
             btnGuncelle = new Button();
             btnSil = new Button();
             gBoxSabah = new GroupBox();
@@ -243,15 +242,6 @@
             textBox1.Size = new Size(683, 27);
             textBox1.TabIndex = 107;
             // 
-            // btnEkle
-            // 
-            btnEkle.Location = new Point(726, 50);
-            btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(94, 29);
-            btnEkle.TabIndex = 108;
-            btnEkle.Text = "Ekle";
-            btnEkle.UseVisualStyleBackColor = true;
-            // 
             // btnGuncelle
             // 
             btnGuncelle.Location = new Point(726, 99);
@@ -288,7 +278,7 @@
             grBoxAksam.Size = new Size(250, 125);
             grBoxAksam.TabIndex = 109;
             grBoxAksam.TabStop = false;
-            grBoxAksam.Text = "groupBox1";
+            grBoxAksam.Text = "Akşam";
             // 
             // gBoxOgle
             // 
@@ -321,7 +311,6 @@
             Controls.Add(gBoxSabah);
             Controls.Add(btnSil);
             Controls.Add(btnGuncelle);
-            Controls.Add(btnEkle);
             Controls.Add(textBox1);
             Controls.Add(lstSecimler);
             Controls.Add(lstYemekler);
@@ -367,7 +356,6 @@
         private ListBox lstSecimler;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private TextBox textBox1;
-        private Button btnEkle;
         private Button btnGuncelle;
         private Button btnSil;
         private GroupBox gBoxSabah;
