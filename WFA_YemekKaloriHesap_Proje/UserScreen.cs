@@ -76,12 +76,12 @@ namespace YemekKalori.UI
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (lstYemekler.SelectedIndex > -1)
+            if (lstSecimler.SelectedIndex > -1)
             {
                 DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    Food food = lstYemekler.SelectedItem as Food;
+                    Food food = lstSecimler.SelectedItem as Food;
 
                     foodService.DeleteFoodByStatus(food.Id);
 
