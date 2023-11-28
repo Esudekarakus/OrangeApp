@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserScreen));
-            lblAraOgun = new Label();
             lblAksam = new Label();
             lblOglen = new Label();
             lblSu = new Label();
@@ -59,21 +58,11 @@
             gBoxOgle.SuspendLayout();
             SuspendLayout();
             // 
-            // lblAraOgun
-            // 
-            lblAraOgun.AutoSize = true;
-            lblAraOgun.ForeColor = SystemColors.ButtonHighlight;
-            lblAraOgun.Location = new Point(535, 487);
-            lblAraOgun.Name = "lblAraOgun";
-            lblAraOgun.Size = new Size(15, 20);
-            lblAraOgun.TabIndex = 96;
-            lblAraOgun.Text = "_";
-            // 
             // lblAksam
             // 
             lblAksam.AutoSize = true;
             lblAksam.ForeColor = SystemColors.ButtonHighlight;
-            lblAksam.Location = new Point(363, 487);
+            lblAksam.Location = new Point(6, 91);
             lblAksam.Name = "lblAksam";
             lblAksam.Size = new Size(15, 20);
             lblAksam.TabIndex = 95;
@@ -83,7 +72,7 @@
             // 
             lblOglen.AutoSize = true;
             lblOglen.ForeColor = SystemColors.ButtonHighlight;
-            lblOglen.Location = new Point(193, 487);
+            lblOglen.Location = new Point(6, 91);
             lblOglen.Name = "lblOglen";
             lblOglen.Size = new Size(15, 20);
             lblOglen.TabIndex = 94;
@@ -93,7 +82,7 @@
             // 
             lblSu.AutoSize = true;
             lblSu.ForeColor = SystemColors.ButtonHighlight;
-            lblSu.Location = new Point(747, 487);
+            lblSu.Location = new Point(6, 91);
             lblSu.Name = "lblSu";
             lblSu.Size = new Size(15, 20);
             lblSu.TabIndex = 93;
@@ -251,6 +240,7 @@
             btnGuncelle.TabIndex = 108;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnSil
             // 
@@ -260,10 +250,12 @@
             btnSil.TabIndex = 108;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
             // gBoxSabah
             // 
             gBoxSabah.Controls.Add(btnHesaplaSabah);
+            gBoxSabah.Controls.Add(lblSu);
             gBoxSabah.Location = new Point(18, 339);
             gBoxSabah.Name = "gBoxSabah";
             gBoxSabah.Size = new Size(250, 125);
@@ -274,6 +266,7 @@
             // grBoxAksam
             // 
             grBoxAksam.Controls.Add(btnHesaplaAksam);
+            grBoxAksam.Controls.Add(lblAksam);
             grBoxAksam.Location = new Point(596, 339);
             grBoxAksam.Name = "grBoxAksam";
             grBoxAksam.Size = new Size(250, 125);
@@ -284,6 +277,7 @@
             // gBoxOgle
             // 
             gBoxOgle.Controls.Add(btnHesaplaOglen);
+            gBoxOgle.Controls.Add(lblOglen);
             gBoxOgle.Location = new Point(300, 339);
             gBoxOgle.Name = "gBoxOgle";
             gBoxOgle.Size = new Size(250, 125);
@@ -316,10 +310,6 @@
             Controls.Add(lstSecimler);
             Controls.Add(lstYemekler);
             Controls.Add(label1);
-            Controls.Add(lblAraOgun);
-            Controls.Add(lblAksam);
-            Controls.Add(lblOglen);
-            Controls.Add(lblSu);
             Controls.Add(comboBoxSu);
             Controls.Add(btnHesaplaAraOgun);
             Controls.Add(btnToplamKalori);
@@ -331,14 +321,16 @@
             Load += UserScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             gBoxSabah.ResumeLayout(false);
+            gBoxSabah.PerformLayout();
             grBoxAksam.ResumeLayout(false);
+            grBoxAksam.PerformLayout();
             gBoxOgle.ResumeLayout(false);
+            gBoxOgle.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label lblAraOgun;
         private Label lblAksam;
         private Label lblOglen;
         private Label lblSu;

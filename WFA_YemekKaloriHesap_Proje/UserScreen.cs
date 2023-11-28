@@ -69,9 +69,34 @@ namespace YemekKalori.UI
 
         private void lstYemekler_SelectedIndexChanged(object sender, EventArgs e)
         {
-             Food secilenFood = lstYemekler.SelectedItem as Food;
+            Food secilenFood = lstYemekler.SelectedItem as Food;
 
-            txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate} Karbonhidrat Oranı {secilenFood.CarbRate} Protein Oranı: {secilenFood.ProteinRate}";
+            txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate}% Karbonhidrat Oranı {secilenFood.CarbRate}% Protein Oranı: {secilenFood.ProteinRate}%";
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (lstYemekler.SelectedIndex > -1)
+            {
+                DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Food food = lstYemekler.SelectedItem as Food;
+
+                    foodService.DeleteFoodByStatus(food.Id);
+
+
+                }
+
+            }
+
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+          
+            
         }
     }
 }
