@@ -55,6 +55,11 @@ namespace YemekKalori.DAL.Repositories
             return dbContext.Foods.ToList();
         }
 
+        public Food GetFoodById(int foodId)
+        {
+            return dbContext.Foods.FirstOrDefault(x => x.Id == foodId);
+        }
+
         // food ları foodtype a göre listle
 
         //sebzeleri listele
