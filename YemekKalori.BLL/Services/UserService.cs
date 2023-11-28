@@ -27,6 +27,11 @@ namespace YemekKalori.BLL.Services
             return repository.GetUserById(userId);
         }
 
+        public void UpdateUser(User user) 
+        {
+            repository.Update(user);
+        }
+
         public void Delete(int userId) 
         {
             User user = repository.GetUserById(userId);

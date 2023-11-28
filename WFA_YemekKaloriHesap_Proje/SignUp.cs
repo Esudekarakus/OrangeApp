@@ -44,7 +44,10 @@ namespace YemekKalori.UI
                 }
 
                 userService.SignUp(user);
+                MessageBox.Show("Kayıt başarılı.");
 
+                Survey survey = new Survey(user);
+                survey.ShowDialog();
                 this.Close();
             }
             catch (Exception ex)
