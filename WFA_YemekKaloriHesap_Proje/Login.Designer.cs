@@ -110,6 +110,7 @@
             lblKayitOl.TabIndex = 6;
             lblKayitOl.TabStop = true;
             lblKayitOl.Text = "Kayıt Ol";
+            lblKayitOl.LinkClicked += lblKayitOl_LinkClicked;
             // 
             // Login
             // 
