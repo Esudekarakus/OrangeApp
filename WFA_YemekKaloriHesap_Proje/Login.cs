@@ -1,4 +1,8 @@
+
+
+using YemekKalori.BLL.Services;
 using YemekKalori.Domain.Entities;
+using YemekKalori.UI;
 
 namespace WFA_YemekKaloriHesap_Proje
 {
@@ -8,11 +12,23 @@ namespace WFA_YemekKaloriHesap_Proje
         {
             InitializeComponent();
         }
-
+        UserService service;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                User user = service.UserLogin(txtUsername.Text, txtPassword.Text);
+                UserScreen userScreen = new UserScreen(user);
+                this.Hide();
+                userScreen.ShowDialog();
+                this.Show();
+            }
+            catch(Exception ex)  
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,7 +38,7 @@ namespace WFA_YemekKaloriHesap_Proje
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            service = new UserService();
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
