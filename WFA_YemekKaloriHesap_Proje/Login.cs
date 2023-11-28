@@ -23,6 +23,7 @@ namespace WFA_YemekKaloriHesap_Proje
                 this.Hide();
                 userScreen.ShowDialog();
                 this.Show();
+                ClearFields();
             }
             catch (Exception ex)
             {
