@@ -46,7 +46,7 @@
             lstYemekler = new ListBox();
             lstSecimler = new ListBox();
             sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
-            textBox1 = new TextBox();
+            txtFoodDetay = new TextBox();
             btnGuncelle = new Button();
             btnSil = new Button();
             gBoxSabah = new GroupBox();
@@ -219,6 +219,7 @@
             lstYemekler.Name = "lstYemekler";
             lstYemekler.Size = new Size(336, 244);
             lstYemekler.TabIndex = 105;
+            lstYemekler.SelectedIndexChanged += lstYemekler_SelectedIndexChanged;
             // 
             // lstSecimler
             // 
@@ -235,12 +236,12 @@
             sqlCommandBuilder1.QuotePrefix = "[";
             sqlCommandBuilder1.QuoteSuffix = "]";
             // 
-            // textBox1
+            // txtFoodDetay
             // 
-            textBox1.Location = new Point(11, 50);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(683, 27);
-            textBox1.TabIndex = 107;
+            txtFoodDetay.Location = new Point(11, 50);
+            txtFoodDetay.Name = "txtFoodDetay";
+            txtFoodDetay.Size = new Size(683, 27);
+            txtFoodDetay.TabIndex = 107;
             // 
             // btnGuncelle
             // 
@@ -311,7 +312,7 @@
             Controls.Add(gBoxSabah);
             Controls.Add(btnSil);
             Controls.Add(btnGuncelle);
-            Controls.Add(textBox1);
+            Controls.Add(txtFoodDetay);
             Controls.Add(lstSecimler);
             Controls.Add(lstYemekler);
             Controls.Add(label1);
@@ -325,7 +326,6 @@
             Controls.Add(lblToplamKalori);
             Controls.Add(pictureBox6);
             Controls.Add(label14);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "UserScreen";
             Text = "UserScreen";
             Load += UserScreen_Load;
@@ -355,7 +355,7 @@
         private ListBox lstYemekler;
         private ListBox lstSecimler;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
-        private TextBox textBox1;
+        private TextBox txtFoodDetay;
         private Button btnGuncelle;
         private Button btnSil;
         private GroupBox gBoxSabah;

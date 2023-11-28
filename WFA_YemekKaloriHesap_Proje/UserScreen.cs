@@ -32,41 +32,46 @@ namespace YemekKalori.UI
         User user;
         UserService userService;
         FoodService foodService;
-        
+
 
         private void UserScreen_Load(object sender, EventArgs e)
         {
-            if (user.Diet == Domain.Enums.DietType.Classic) 
+            if (user.Diet == Domain.Enums.DietType.Classic)
             {
                 lstYemekler.DisplayMember = null;
                 lstYemekler.DataSource = foodService.GetClassicFood();
-                
+
                 //lstYemekler.ValueMember = "Id";
             }
-            else if (user.Diet == Domain.Enums.DietType.Vegan) 
+            else if (user.Diet == Domain.Enums.DietType.Vegan)
             {
                 lstYemekler.DisplayMember = null;
                 lstYemekler.DataSource = foodService.GetVeganFoods();
-                
+
                 //lstYemekler.ValueMember= "Id";
             }
-            else if (user.Diet == Domain.Enums.DietType.Vegetarian) 
+            else if (user.Diet == Domain.Enums.DietType.Vegetarian)
             {
                 lstYemekler.DisplayMember = null;
                 lstYemekler.DataSource = foodService.GetVegetarianFood();
-                
+
                 //lstYemekler.ValueMember = "Id";
             }
-            else if (user.Diet == Domain.Enums.DietType.Carnivor) 
+            else if (user.Diet == Domain.Enums.DietType.Carnivor)
             {
                 lstYemekler.DisplayMember = null;
                 lstYemekler.DataSource = foodService.GetCarnivoreFoods();
-                
+
                 //lstYemekler.ValueMember = "Id";
             }
             lstYemekler.Refresh();
         }
 
-      
+        private void lstYemekler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             Food secilenFood = lstYemekler.SelectedItem as Food;
+
+            txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate} Karbonhidrat Oranı {secilenFood.CarbRate} Protein Oranı: {secilenFood.ProteinRate}";
+        }
     }
 }
