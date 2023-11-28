@@ -14,6 +14,7 @@ namespace YemekKalori.BLL.Services
         public MealService() 
         {
             repo=new MealRepository();
+            mealFoodRepository = new MealFoodRepository();
         }
 
         MealRepository repo;
@@ -61,11 +62,25 @@ namespace YemekKalori.BLL.Services
             return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Dinner).ToList();
         }
 
+        MealFoodRepository mealFoodRepository;
+
         //kaloriye göre meal getirme
 
         public List <Meal>GetMealByCalorie(decimal kalori)
         {
             return repo.GetMeals().Where(x=>x.MealCalorie==kalori).ToList();
+        }
+
+        public void SetMealCalorie(Meal meal) 
+        {
+            List<MealFood> mealFoods = mealFoodRepository.GetMealFoodByMeal(meal.Id);
+
+            foreach (var food in mealFoods)
+            {
+                meal.MealCalorie += food.Calorie;
+            }
+
+            repo.UpdateMeal(meal);
         }
     }
 }

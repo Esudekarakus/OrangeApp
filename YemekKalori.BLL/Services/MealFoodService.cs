@@ -15,6 +15,7 @@ namespace YemekKalori.BLL.Services
         public MealFoodService()
         {
             _mealFoodRepository = new MealFoodRepository();
+            foodRepository = new FoodRepository();
         }
 
         public void AddMealFood(MealFood mealFood)
@@ -42,6 +43,20 @@ namespace YemekKalori.BLL.Services
         public MealFood GetMealFoodById(int id)
         {
             return _mealFoodRepository.GetMealFoodById(id);
+        }
+
+        FoodRepository foodRepository;
+
+        public void SetNutrientsAndCalories(MealFood mealFood)
+        {
+            Food food = foodRepository.GetFoodById(mealFood.FoodId);
+
+            mealFood.Calorie = food.Calorie * mealFood.Portion;
+            mealFood.ProteinRate = food.ProteinRate * mealFood.Portion;
+            mealFood.CarbRate = food.CarbRate * mealFood.Portion;
+            mealFood.FatRate = food.FatRate * mealFood.Portion;
+
+            _mealFoodRepository.Update(mealFood);
         }
     }
 }
