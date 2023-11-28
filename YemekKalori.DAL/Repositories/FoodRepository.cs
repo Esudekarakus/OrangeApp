@@ -52,7 +52,7 @@ namespace YemekKalori.DAL.Repositories
 
         public List<Food> GetAllFood() 
         {
-            return dbContext.Foods.ToList();
+            return dbContext.Foods.Where(x=>x.Status!=Domain.Enums.Status.Deleted).ToList();
         }
 
         // food ları foodtype a göre listle
