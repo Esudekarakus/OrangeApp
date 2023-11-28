@@ -57,5 +57,34 @@ namespace YemekKalori.BLL.Services
 
             return user;
         }
+
+        public void AddStandartUser(User user) 
+        {
+            user.Status = Domain.Enums.Status.Added;
+            user.CreatedDate = DateTime.Now;
+            repository.Add(user);
+        }
+
+        public bool CheckUsernameExists(string username)
+        {
+            User user = repository.GetUserByUsername(username);
+            if (user != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void SignUp(User user)
+        {
+            
+            user.CreatedDate = DateTime.Now;
+            user.Status = Domain.Enums.Status.Added;
+
+            repository.Add(user);
+        }
     }
 }

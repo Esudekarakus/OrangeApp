@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,17 +12,41 @@ namespace YemekKalori.Domain.Entities
     // Class User inherits from BaseClass and represents a user entity with various properties.
     public class User : BaseClass
     {
+        public User()
+        {
+            
+        }
         // Public properties to hold user information that can be accessed and modified externally.
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DietType? Diet {  get; set; } // Enum to represent user's diet type.
         public decimal? Weight { get; set; }
-        public decimal? Height { get; set; }
+
+        private decimal height;
+
+        public decimal? Height
+        {
+            get { return height; }
+            set 
+            {
+                if (value > 2.5m)
+                {
+                    value = value / 100;
+                }
+
+                height = (decimal)value; 
+            }
+        }
+
+        //public decimal? Height { get; set; }
         public string Username { get; set; }
         
         public GoalType? Goal { get; set; } // Enum to represent user's dietary goal.
         public ICollection<Meal> UserMeals { get; set; } // Collection of meals consumed by the user up to that point.
+        private decimal bmi;
+
         public decimal? BMI { get; set; }
+
         public UserType Type { get; set; }
 
 

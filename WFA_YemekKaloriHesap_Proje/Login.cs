@@ -24,11 +24,11 @@ namespace WFA_YemekKaloriHesap_Proje
                 userScreen.ShowDialog();
                 this.Show();
             }
-            catch(Exception ex)  
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,6 +44,15 @@ namespace WFA_YemekKaloriHesap_Proje
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            this.Hide();
+            signUp.ShowDialog();
+            this.Show();
+            
         }
     }
 }

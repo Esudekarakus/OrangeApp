@@ -21,6 +21,8 @@ namespace YemekKalori.DAL.Configurations
 
             builder.Property<string>("Password").HasField("_hashedPassword");
 
+            builder.Property(u => u.BMI).HasComputedColumnSql("CAST([Weight] / POWER([Height], 2) AS DECIMAL(18,2))", stored: true);
+
             builder.HasData
                 (
                     new User
