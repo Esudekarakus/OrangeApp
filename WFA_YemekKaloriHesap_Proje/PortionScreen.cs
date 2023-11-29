@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YemekKalori.BLL.Services;
 using YemekKalori.Domain.Entities;
 
 namespace YemekKalori.UI
@@ -18,33 +19,43 @@ namespace YemekKalori.UI
             InitializeComponent();
         }
 
-        public PortionScreen(int foodId)
+        public PortionScreen(int foodId, UserScreen frm)
         {
             InitializeComponent();
             this.foodId = foodId;
+            this.frm = frm;
         }
-
+        UserScreen frm;
         int foodId;
         List<Decimal> portions;
         private void PortionScreen_Load(object sender, EventArgs e)
         {
             portions = new List<decimal> { 0.5m, 1.0m, 1.5m, 2.0m, 2.5m, 3.0m, 3.5m, 4.0m, 4.5m, 5.0m };
 
-            foreach (decimal value in portions)
-            {
-                cbPortions.Items.Add(value);
-            }
+            cbPortions.DataSource = portions;
+
+            foodService = new FoodService();
+            
         }
+
+        FoodService foodService;
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            MealFood mealFood = new MealFood()
+            if (cbPortions.SelectedIndex != -1)
             {
-                FoodId = foodId,
-                Calorie = (decimal)cbPortions.SelectedValue
-            };
+                MealFood mealFood = new MealFood()
+                {
+                    FoodId = foodId,
+                    Food = foodService.GetFoodById(foodId),
+                    Portion = (decimal)cbPortions.SelectedItem
+                };
 
+                frm.RetrieveMealFood(mealFood);
 
+                this.Close();
+            }
+            
         }
     }
 }
