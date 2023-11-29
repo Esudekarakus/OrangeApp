@@ -95,8 +95,13 @@ namespace YemekKalori.UI
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-          
-            
+
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

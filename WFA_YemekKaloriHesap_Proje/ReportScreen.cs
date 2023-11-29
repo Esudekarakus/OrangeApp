@@ -21,5 +21,10 @@ namespace YemekKalori.UI
         {
 
         }
+
+        private void ReportScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

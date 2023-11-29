@@ -54,13 +54,18 @@ namespace WFA_YemekKaloriHesap_Proje
             signUp.ShowDialog();
             this.Show();
             ClearFields();
-            
+
         }
 
         public void ClearFields()
         {
             txtUsername.Text = string.Empty;
             txtPassword.Text = string.Empty;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
