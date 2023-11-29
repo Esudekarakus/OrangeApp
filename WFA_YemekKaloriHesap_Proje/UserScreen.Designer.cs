@@ -52,6 +52,7 @@
             grBoxAksam = new GroupBox();
             gBoxOgle = new GroupBox();
             btnOnayla = new Button();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             gBoxSabah.SuspendLayout();
             grBoxAksam.SuspendLayout();
@@ -319,12 +320,24 @@
             btnOnayla.UseVisualStyleBackColor = true;
             btnOnayla.Click += btnOnayla_Click;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(719, 397);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(73, 15);
+            linkLabel1.TabIndex = 111;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Şifre Değiştir";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // UserScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumAquamarine;
             ClientSize = new Size(800, 428);
+            Controls.Add(linkLabel1);
             Controls.Add(btnOnayla);
             Controls.Add(gBoxOgle);
             Controls.Add(grBoxAksam);
@@ -380,5 +393,6 @@
         private GroupBox grBoxAksam;
         private GroupBox gBoxOgle;
         private Button btnOnayla;
+        private LinkLabel linkLabel1;
     }
 }

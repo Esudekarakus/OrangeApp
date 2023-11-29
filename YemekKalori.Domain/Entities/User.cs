@@ -106,7 +106,9 @@ namespace YemekKalori.Domain.Entities
 
         public void ChangePassword(string password)
         {
+            Salt = GenerateSalt();
             Password = password;
+            
         }
 
         //private string _salt;

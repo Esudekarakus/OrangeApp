@@ -268,5 +268,13 @@ namespace YemekKalori.UI
 
             lblAksam.Text = mealService.GetDinnerCalories(user.Id).ToString();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordChangeScreen pcs = new PasswordChangeScreen(user);
+            this.Hide();
+            pcs.ShowDialog();
+            this.Show();
+        }
     }
 }
