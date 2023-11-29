@@ -17,25 +17,27 @@ namespace YemekKalori.UI
         public UserScreen()
         {
             InitializeComponent();
-            userService = new UserService();
-            foodService = new FoodService();
+            
+
         }
 
         public UserScreen(User user)
         {
             InitializeComponent();
             this.user = user;
-            userService = new UserService();
-            foodService = new FoodService();
+            
         }
 
         User user;
         UserService userService;
         FoodService foodService;
-
+        MealFoodService mealfoodService;
 
         private void UserScreen_Load(object sender, EventArgs e)
         {
+            userService = new UserService();
+            foodService = new FoodService();
+            mealfoodService = new MealFoodService();
             if (user.Diet == Domain.Enums.DietType.Classic)
             {
                 lstYemekler.DisplayMember = null;
@@ -95,8 +97,43 @@ namespace YemekKalori.UI
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-          
-            
+
+
+        }
+
+        private void lstYemekler_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (lstYemekler.SelectedItem != null)
+            {
+                DoDragDrop(lstYemekler.SelectedItem, DragDropEffects.Copy);
+            }
+        }
+
+        private void lstSecimler_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(Food)))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void lstSecimler_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof (Food)))
+            {
+                Food food = (Food)e.Data.GetData(typeof(Food));
+            }
+        }
+
+        public void RetrieveMealFood(MealFood mealFood)
+        {
+            mealfoodService.SetNutrientsAndCalories(mealFood);
+
+
         }
     }
 }
