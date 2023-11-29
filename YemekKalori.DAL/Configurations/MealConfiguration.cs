@@ -14,6 +14,9 @@ namespace YemekKalori.DAL.Configurations
         public void Configure(EntityTypeBuilder<Meal> builder)
         {
             builder.ToTable("Meals");
+
+            builder.HasKey(t => t.Id);
+            builder.Property(t => t.Id).ValueGeneratedOnAdd();
         }
     }
 }

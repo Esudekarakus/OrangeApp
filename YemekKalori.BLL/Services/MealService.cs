@@ -80,8 +80,20 @@ namespace YemekKalori.BLL.Services
             foreach (var food in mealFoods)
             {
                 meal.MealCalorie += food.Calorie;
+
+                repo.UpdateMeal(meal);
             }
 
+            repo.UpdateMeal(meal);
+        }
+
+        public void AddMeal(Meal meal)
+        {
+            repo.AddMeal(meal);
+        }
+
+        public void UpdateMeal(Meal meal)
+        {
             repo.UpdateMeal(meal);
         }
     }

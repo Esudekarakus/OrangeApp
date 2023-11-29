@@ -317,6 +317,7 @@
             btnOnayla.TabIndex = 110;
             btnOnayla.Text = "Onayla";
             btnOnayla.UseVisualStyleBackColor = true;
+            btnOnayla.Click += btnOnayla_Click;
             // 
             // UserScreen
             // 

@@ -32,12 +32,14 @@ namespace YemekKalori.UI
         UserService userService;
         FoodService foodService;
         MealFoodService mealfoodService;
+        MealService mealService;
 
         private void UserScreen_Load(object sender, EventArgs e)
         {
             userService = new UserService();
             foodService = new FoodService();
             mealfoodService = new MealFoodService();
+            mealService = new MealService();
 
             lstYemekler.AllowDrop = true;
             lstSecimler.AllowDrop = true;
@@ -114,19 +116,19 @@ namespace YemekKalori.UI
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (lstSecimler.SelectedIndex !=  -1) 
+            if (lstSecimler.SelectedIndex != -1)
             {
                 MealFood mealFood = lstSecimler.SelectedItem as MealFood;
 
-                lstSecimler.Items.RemoveAt (lstSecimler.SelectedIndex);
+                lstSecimler.Items.RemoveAt(lstSecimler.SelectedIndex);
 
-                if (mealFood != null) 
+                if (mealFood != null)
                 {
                     PortionScreen portionScreen = new PortionScreen(mealFood, this);
                     this.Hide();
                     portionScreen.ShowDialog();
                     this.Show();
-                    
+
 
                 }
 
@@ -179,9 +181,66 @@ namespace YemekKalori.UI
 
         private void lstSecimler_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
 
-        
+        private void btnOnayla_Click(object sender, EventArgs e)
+        {
+            ICollection<MealFood> mealFoods = new List<MealFood>();
+
+            
+
+            Meal meal = new Meal()
+            {
+                
+                MealTime = DateTime.Now
+                
+                
+            };
+
+            mealService.AddMeal(meal);
+
+            Meal meal2 = mealService.GetMealByID(meal.Id);
+
+            foreach (MealFood food in lstSecimler.Items)
+            {
+                food.MealId = meal2.Id;
+                food.Meal = meal2;
+                mealFoods.Add(food);
+
+
+            }
+
+            
+
+            meal2.MealFoods = mealFoods;
+
+            meal2.UserId = user.Id;
+            meal2.User = userService.GetById(user.Id);
+
+            mealService.SetMealCalorie(meal2);
+
+            if (meal2.MealTime.Hour >= 6 && meal2.MealTime.Hour <= 12)
+            {
+                meal2.Type = Domain.Enums.MealType.Breakfast;
+            }
+            else if (meal2.MealTime.Hour > 12 && meal2.MealTime.Hour <= 15)
+            {
+                meal2.Type = Domain.Enums.MealType.Lunch;
+            }
+            else if (meal2.MealTime.Hour > 15 && meal2.MealTime.Hour <= 23)
+            {
+                meal2.Type = Domain.Enums.MealType.Dinner;
+            }
+
+            mealService.UpdateMeal(meal2);
+
+            ClearListbox(lstSecimler);
+        }
+
+        public void ClearListbox(ListBox lst) 
+        {
+            lst.Items.Clear();
+        }
     }
 }

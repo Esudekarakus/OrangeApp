@@ -44,6 +44,8 @@ namespace YemekKalori.UI
             cbPortions.DataSource = portions;
 
             foodService = new FoodService();
+
+            cbPortions.SelectedIndex = -1;
             
         }
 
