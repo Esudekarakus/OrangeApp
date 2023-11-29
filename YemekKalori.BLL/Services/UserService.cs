@@ -67,6 +67,9 @@ namespace YemekKalori.BLL.Services
         {
             user.Status = Domain.Enums.Status.Added;
             user.CreatedDate = DateTime.Now;
+
+            
+
             repository.Add(user);
         }
 
