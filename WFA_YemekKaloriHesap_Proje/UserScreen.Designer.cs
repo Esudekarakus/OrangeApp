@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserScreen));
             lblAksam = new Label();
             lblOglen = new Label();
-            lblSu = new Label();
+            lblSabah = new Label();
             btnHesaplaSabah = new Button();
             btnHesaplaOglen = new Button();
             btnHesaplaAksam = new Button();
@@ -78,15 +78,15 @@
             lblOglen.TabIndex = 94;
             lblOglen.Text = "_";
             // 
-            // lblSu
+            // lblSabah
             // 
-            lblSu.AutoSize = true;
-            lblSu.ForeColor = SystemColors.ButtonHighlight;
-            lblSu.Location = new Point(5, 68);
-            lblSu.Name = "lblSu";
-            lblSu.Size = new Size(12, 15);
-            lblSu.TabIndex = 93;
-            lblSu.Text = "_";
+            lblSabah.AutoSize = true;
+            lblSabah.ForeColor = SystemColors.ButtonHighlight;
+            lblSabah.Location = new Point(5, 68);
+            lblSabah.Name = "lblSabah";
+            lblSabah.Size = new Size(12, 15);
+            lblSabah.TabIndex = 93;
+            lblSabah.Text = "_";
             // 
             // btnHesaplaSabah
             // 
@@ -272,7 +272,7 @@
             // gBoxSabah
             // 
             gBoxSabah.Controls.Add(btnHesaplaSabah);
-            gBoxSabah.Controls.Add(lblSu);
+            gBoxSabah.Controls.Add(lblSabah);
             gBoxSabah.Location = new Point(16, 254);
             gBoxSabah.Margin = new Padding(3, 2, 3, 2);
             gBoxSabah.Name = "gBoxSabah";
@@ -359,7 +359,7 @@
         #endregion
         private Label lblAksam;
         private Label lblOglen;
-        private Label lblSu;
+        private Label lblSabah;
         private Button btnHesaplaSabah;
         private Button btnHesaplaOglen;
         private Button btnHesaplaAksam;
