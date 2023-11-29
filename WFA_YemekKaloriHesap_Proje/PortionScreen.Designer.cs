@@ -42,6 +42,7 @@
             label1.Size = new Size(222, 25);
             label1.TabIndex = 0;
             label1.Text = "Porsiyon ne kadar olsun?";
+            label1.Click += label1_Click;
             // 
             // cbPortions
             // 

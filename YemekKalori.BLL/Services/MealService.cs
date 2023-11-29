@@ -77,12 +77,16 @@ namespace YemekKalori.BLL.Services
         {
             List<MealFood> mealFoods = mealFoodRepository.GetMealFoodByMeal(meal.Id);
 
+            decimal totalCalories = 0;
+
             foreach (var food in mealFoods)
             {
-                meal.MealCalorie += food.Calorie;
+                totalCalories += food.Calorie;
 
-                repo.UpdateMeal(meal);
+                
             }
+
+            meal.MealCalorie = totalCalories;
 
             repo.UpdateMeal(meal);
         }

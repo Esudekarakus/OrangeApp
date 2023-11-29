@@ -204,11 +204,18 @@ namespace YemekKalori.UI
 
             foreach (MealFood food in lstSecimler.Items)
             {
-                food.MealId = meal2.Id;
-                food.Meal = meal2;
+                
                 mealFoods.Add(food);
 
 
+            }
+
+            foreach (MealFood mealFood in mealFoods) 
+            {
+                mealFood.MealId = meal2.Id;
+                mealFood.Meal = meal2;
+
+                mealfoodService.AddMealFood(mealFood);
             }
 
             

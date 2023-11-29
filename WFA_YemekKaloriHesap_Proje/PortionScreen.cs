@@ -46,24 +46,25 @@ namespace YemekKalori.UI
             foodService = new FoodService();
 
             cbPortions.SelectedIndex = -1;
-            
+
         }
 
         FoodService foodService;
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            if (mealFood ==  null) 
+            if (mealFood == null)
             {
                 if (cbPortions.SelectedIndex != -1)
                 {
                     MealFood mealFood = new MealFood()
                     {
                         FoodId = foodId,
-                        Food = foodService.GetFoodById(foodId),
+                        //Food = foodService.GetFoodById(foodId),
                         Portion = (decimal)cbPortions.SelectedItem
                     };
 
+                    mealFood.Food = foodService.GetFoodById(foodId);
                     frm.RetrieveMealFood(mealFood);
 
                     this.Close();
@@ -71,7 +72,7 @@ namespace YemekKalori.UI
             }
             else
             {
-                if (cbPortions.SelectedIndex != -1) 
+                if (cbPortions.SelectedIndex != -1)
                 {
                     mealFood.Portion = (decimal)cbPortions.SelectedItem;
                     frm.RetrieveMealFood(mealFood);
@@ -81,8 +82,13 @@ namespace YemekKalori.UI
             }
 
 
-            
-            
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
