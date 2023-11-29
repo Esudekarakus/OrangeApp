@@ -8,7 +8,7 @@ using YemekKalori.Domain.Entities;
 
 namespace YemekKalori.BLL.Services
 {
-    internal class MealFoodService
+    public class MealFoodService
     {
         private MealFoodRepository _mealFoodRepository;
 
@@ -56,7 +56,7 @@ namespace YemekKalori.BLL.Services
             mealFood.CarbRate = food.CarbRate * mealFood.Portion;
             mealFood.FatRate = food.FatRate * mealFood.Portion;
 
-            _mealFoodRepository.Update(mealFood);
+            
         }
     }
 }
