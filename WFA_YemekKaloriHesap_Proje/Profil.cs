@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YemekKalori.BLL.Services;
 using YemekKalori.Domain.Entities;
-using User = Microsoft.VisualBasic.ApplicationServices.User;
+
 
 namespace YemekKalori.UI.Properties
 {
@@ -19,28 +19,39 @@ namespace YemekKalori.UI.Properties
         public FrmProfil()
         {
             InitializeComponent();
-           
+
         }
 
-        public FrmProfil(User user)
+        public FrmProfil(Domain.Entities.User user)
         {
             InitializeComponent();
-            this.user=user;
+            this.user = user;
+            userService = new UserService();
 
         }
-        User user;
+        
         UserService userService;
-
+        Domain.Entities.User user;
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
-            userService = new UserService();
-            FillUserInfo();
+            
+            if (user != null)
+            {
+                lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
+                txtBoxGoalType.Text = user.Goal.ToString();
+                txtBoxDietType.Text = user.Diet.ToString();
+                txtBoxBoy.Text = user.Height.ToString();
+                txtBoxKilo.Text = user.Weight.ToString();
+            }
+
         }
-        private void FillUserInfo() 
+
+        private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-        
-           
+            this.Close();
+            PasswordChangeScreen passwordChangeScreen = new PasswordChangeScreen(user);
+            passwordChangeScreen.Show();
         }
     }
 }

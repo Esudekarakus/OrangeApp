@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YemekKalori.BLL.Services;
 using YemekKalori.Domain.Entities;
+using YemekKalori.UI.Properties;
 
 namespace YemekKalori.UI
 {
@@ -275,6 +276,14 @@ namespace YemekKalori.UI
             this.Hide();
             pcs.ShowDialog();
             this.Show();
+        }
+
+        private void lLabelProfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            FrmProfil frmProfil = new FrmProfil(user);
+            frmProfil.Show();
+            
         }
     }
 }
