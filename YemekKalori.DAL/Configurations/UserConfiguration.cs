@@ -19,6 +19,8 @@ namespace YemekKalori.DAL.Configurations
             builder.Property(a => a.LastName).HasMaxLength(50);
             builder.HasIndex(a => a.Username).IsUnique();
 
+            builder.Property(a => a.Id).ValueGeneratedOnAdd();
+
             builder.Property<string>("Password").HasField("_hashedPassword");
 
             builder.Property(u => u.BMI).HasComputedColumnSql("CAST([Weight] / POWER([Height], 2) AS DECIMAL(18,2))", stored: true);

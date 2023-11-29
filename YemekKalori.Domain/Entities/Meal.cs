@@ -9,14 +9,14 @@ namespace YemekKalori.Domain.Entities
 {
     public class Meal:BaseClass
     {
-        public MealType Type { get; set; }
+        public MealType? Type { get; set; }
         public DateTime MealTime { get; set; }
 
-        public ICollection<MealFood> MealFoods { get; set; }
+        public ICollection<MealFood>? MealFoods { get; set; }
 
-        public decimal MealCalorie { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public decimal? MealCalorie { get; set; }
+        public int? UserId { get; set; }
+        public User? User { get; set; }
         
 
 

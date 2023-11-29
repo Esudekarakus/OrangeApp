@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using YemekKalori.DAL.Context;
 
@@ -11,9 +12,10 @@ using YemekKalori.DAL.Context;
 namespace YemekKalori.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231129101806_initDb34")]
+    partial class initDb34
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,7 +73,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 1,
                             Calorie = 155m,
                             CarbRate = 1.1m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4678),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3343),
                             FatRate = 10.6m,
                             Name = "Haşlanmış Yumurta",
                             ProteinRate = 12.6m,
@@ -83,7 +85,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 2,
                             Calorie = 264m,
                             CarbRate = 1.4m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4684),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3347),
                             FatRate = 21m,
                             Name = "Peynir",
                             ProteinRate = 18m,
@@ -95,7 +97,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 3,
                             Calorie = 115m,
                             CarbRate = 6m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4686),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3349),
                             FatRate = 11m,
                             Name = "Siyah Zeytin",
                             ProteinRate = 0.8m,
@@ -107,7 +109,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 4,
                             Calorie = 145m,
                             CarbRate = 3.8m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4687),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3350),
                             FatRate = 15.3m,
                             Name = "Yeşil Zeytin",
                             ProteinRate = 1m,
@@ -119,7 +121,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 5,
                             Calorie = 196m,
                             CarbRate = 1.1m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4689),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3353),
                             FatRate = 15m,
                             Name = "Sahanda Yumurta",
                             ProteinRate = 14m,
@@ -131,7 +133,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 6,
                             Calorie = 106m,
                             CarbRate = 10m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4690),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3355),
                             FatRate = 4.9m,
                             Name = "Menemen",
                             ProteinRate = 6.4m,
@@ -143,7 +145,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 7,
                             Calorie = 266m,
                             CarbRate = 67m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4692),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3356),
                             FatRate = 0.2m,
                             Name = "Reçel",
                             ProteinRate = 0.3m,
@@ -155,7 +157,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 8,
                             Calorie = 304m,
                             CarbRate = 82m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4693),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3357),
                             FatRate = 0m,
                             Name = "Bal",
                             ProteinRate = 0.3m,
@@ -167,7 +169,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 9,
                             Calorie = 336m,
                             CarbRate = 1.4m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4695),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3359),
                             FatRate = 30m,
                             Name = "Salam",
                             ProteinRate = 13m,
@@ -179,7 +181,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 10,
                             Calorie = 1m,
                             CarbRate = 0.3m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4696),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3361),
                             FatRate = 0m,
                             Name = "Çay",
                             ProteinRate = 0m,
@@ -191,7 +193,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 11,
                             Calorie = 1m,
                             CarbRate = 0m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4697),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3362),
                             FatRate = 0m,
                             Name = "Yeşil Çay",
                             ProteinRate = 0m,
@@ -203,7 +205,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 12,
                             Calorie = 45m,
                             CarbRate = 10.4m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4698),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3363),
                             FatRate = 0.2m,
                             Name = "Portakal Suyu",
                             ProteinRate = 0.7m,
@@ -215,7 +217,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 13,
                             Calorie = 42m,
                             CarbRate = 5m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4700),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3364),
                             FatRate = 1m,
                             Name = "Süt",
                             ProteinRate = 3.4m,
@@ -227,7 +229,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 14,
                             Calorie = 66m,
                             CarbRate = 9.2m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4701),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3365),
                             FatRate = 2.2m,
                             Name = "Mercimek Çorbası",
                             ProteinRate = 4.1m,
@@ -239,7 +241,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 15,
                             Calorie = 39m,
                             CarbRate = 3.9m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4702),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3367),
                             FatRate = 1.5m,
                             Name = "Tavuk Çorbası",
                             ProteinRate = 2.9m,
@@ -251,7 +253,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 16,
                             Calorie = 32m,
                             CarbRate = 4.3m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4704),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3369),
                             FatRate = 1.6m,
                             Name = "Domates Çorbası",
                             ProteinRate = 1.2m,
@@ -263,7 +265,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 17,
                             Calorie = 40m,
                             CarbRate = 5.3m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4706),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3370),
                             FatRate = 1.5m,
                             Name = "Sebze Çorbası",
                             ProteinRate = 1.4m,
@@ -275,7 +277,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 18,
                             Calorie = 130m,
                             CarbRate = 28.2m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4707),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3371),
                             FatRate = 0.3m,
                             Name = "Pirinç Pilavı",
                             ProteinRate = 2.7m,
@@ -287,7 +289,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 19,
                             Calorie = 83m,
                             CarbRate = 18.6m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4708),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3373),
                             FatRate = 0.2m,
                             Name = "Bulgur Pilavı",
                             ProteinRate = 3.1m,
@@ -299,7 +301,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 20,
                             Calorie = 131m,
                             CarbRate = 25m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4710),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3374),
                             FatRate = 1.1m,
                             Name = "Makarna",
                             ProteinRate = 5m,
@@ -311,7 +313,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 21,
                             Calorie = 180m,
                             CarbRate = 2m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4711),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3375),
                             FatRate = 8m,
                             Name = "Kebap",
                             ProteinRate = 25m,
@@ -323,7 +325,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 22,
                             Calorie = 225m,
                             CarbRate = 2.2m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4712),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3377),
                             FatRate = 12m,
                             Name = "Döner",
                             ProteinRate = 26m,
@@ -335,7 +337,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 23,
                             Calorie = 333m,
                             CarbRate = 31.8m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4714),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3378),
                             FatRate = 17.8m,
                             Name = "Falafel",
                             ProteinRate = 13.3m,
@@ -347,7 +349,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 24,
                             Calorie = 254m,
                             CarbRate = 30m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4716),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3380),
                             FatRate = 10m,
                             Name = "Hamburger",
                             ProteinRate = 12m,
@@ -359,7 +361,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 25,
                             Calorie = 20m,
                             CarbRate = 4m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4717),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3382),
                             FatRate = 0.2m,
                             Name = "Mevsim Salata",
                             ProteinRate = 1m,
@@ -371,7 +373,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 26,
                             Calorie = 23m,
                             CarbRate = 4.3m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4718),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3383),
                             FatRate = 0.4m,
                             Name = "Çoban Salata",
                             ProteinRate = 1.1m,
@@ -383,7 +385,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 27,
                             Calorie = 265m,
                             CarbRate = 49m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4720),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3384),
                             FatRate = 3.2m,
                             Name = "Beyaz Ekmek",
                             ProteinRate = 9m,
@@ -395,7 +397,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 28,
                             Calorie = 247m,
                             CarbRate = 41m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4721),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3385),
                             FatRate = 4.2m,
                             Name = "Keepekli Ekmek",
                             ProteinRate = 13m,
@@ -407,7 +409,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 29,
                             Calorie = 259m,
                             CarbRate = 48.3m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4722),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3387),
                             FatRate = 3.3m,
                             Name = "Çavdar Ekmeği",
                             ProteinRate = 8.5m,
@@ -419,7 +421,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 30,
                             Calorie = 247m,
                             CarbRate = 43.4m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4724),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3388),
                             FatRate = 4.4m,
                             Name = "Tam Tahıllı Ekmek",
                             ProteinRate = 13m,
@@ -431,7 +433,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 31,
                             Calorie = 0.5m,
                             CarbRate = 0m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4725),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3389),
                             FatRate = 0m,
                             Name = "Light Cola",
                             ProteinRate = 0m,
@@ -443,7 +445,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 32,
                             Calorie = 48m,
                             CarbRate = 12m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4753),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3391),
                             FatRate = 0m,
                             Name = "Fanta",
                             ProteinRate = 0m,
@@ -455,7 +457,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 33,
                             Calorie = 30m,
                             CarbRate = 7.5m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4755),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3417),
                             FatRate = 0m,
                             Name = "Ice Tea",
                             ProteinRate = 0m,
@@ -467,7 +469,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 34,
                             Calorie = 37m,
                             CarbRate = 3.5m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4756),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3418),
                             FatRate = 2m,
                             Name = "Ayran",
                             ProteinRate = 1.7m,
@@ -479,7 +481,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 35,
                             Calorie = 299m,
                             CarbRate = 79.2m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4758),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3420),
                             FatRate = 0.5m,
                             Name = "Kuru Üzüm",
                             ProteinRate = 3.1m,
@@ -491,7 +493,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 36,
                             Calorie = 241m,
                             CarbRate = 62.6m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4759),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3421),
                             FatRate = 0.5m,
                             Name = "Kuru Kayısı",
                             ProteinRate = 3.4m,
@@ -503,7 +505,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 37,
                             Calorie = 654m,
                             CarbRate = 13.7m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4760),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3423),
                             FatRate = 65.2m,
                             Name = "Ceviz",
                             ProteinRate = 15.2m,
@@ -515,7 +517,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 38,
                             Calorie = 628m,
                             CarbRate = 16.7m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4762),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3424),
                             FatRate = 60.8m,
                             Name = "Fındık",
                             ProteinRate = 15m,
@@ -527,7 +529,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 39,
                             Calorie = 567m,
                             CarbRate = 16.1m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4763),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3425),
                             FatRate = 49.2m,
                             Name = "Fıstık",
                             ProteinRate = 25.8m,
@@ -539,7 +541,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 40,
                             Calorie = 52m,
                             CarbRate = 13.8m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4764),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3427),
                             FatRate = 0.2m,
                             Name = "Yeşil Elma",
                             ProteinRate = 0.3m,
@@ -551,7 +553,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 41,
                             Calorie = 546m,
                             CarbRate = 45m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4765),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3428),
                             FatRate = 31m,
                             Name = "Bitter Çikolata",
                             ProteinRate = 5m,
@@ -563,7 +565,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 42,
                             Calorie = 2m,
                             CarbRate = 0m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4767),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3429),
                             FatRate = 0m,
                             Name = "Türk Kahvesi",
                             ProteinRate = 0.1m,
@@ -575,7 +577,7 @@ namespace YemekKalori.DAL.Migrations
                             Id = 43,
                             Calorie = 1m,
                             CarbRate = 0m,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(4768),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(3430),
                             FatRate = 0m,
                             Name = "Filtre Kahve",
                             ProteinRate = 0.1m,
@@ -613,7 +615,7 @@ namespace YemekKalori.DAL.Migrations
                     b.Property<int?>("Type")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -742,7 +744,7 @@ namespace YemekKalori.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 29, 13, 42, 6, 297, DateTimeKind.Local).AddTicks(3973),
+                            CreatedDate = new DateTime(2023, 11, 29, 13, 18, 5, 743, DateTimeKind.Local).AddTicks(2655),
                             FirstName = "Admin",
                             Height = 0m,
                             LastName = "Admin",
@@ -757,7 +759,9 @@ namespace YemekKalori.DAL.Migrations
                 {
                     b.HasOne("YemekKalori.Domain.Entities.User", "User")
                         .WithMany("UserMeals")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

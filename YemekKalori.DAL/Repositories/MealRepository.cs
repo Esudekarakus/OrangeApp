@@ -21,6 +21,9 @@ namespace YemekKalori.DAL.Repositories
         public void AddMeal(Meal meal)
         {
             dbContext.Meals.Add(meal);
+
+            
+
             dbContext.SaveChanges();
 
         }
