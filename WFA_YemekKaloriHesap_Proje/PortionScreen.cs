@@ -25,6 +25,15 @@ namespace YemekKalori.UI
             this.foodId = foodId;
             this.frm = frm;
         }
+
+        public PortionScreen(MealFood mealFood, UserScreen frm)
+        {
+            InitializeComponent();
+            this.mealFood = mealFood;
+            this.frm = frm;
+        }
+
+        MealFood mealFood;
         UserScreen frm;
         int foodId;
         List<Decimal> portions;
@@ -42,19 +51,35 @@ namespace YemekKalori.UI
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            if (cbPortions.SelectedIndex != -1)
+            if (mealFood ==  null) 
             {
-                MealFood mealFood = new MealFood()
+                if (cbPortions.SelectedIndex != -1)
                 {
-                    FoodId = foodId,
-                    Food = foodService.GetFoodById(foodId),
-                    Portion = (decimal)cbPortions.SelectedItem
-                };
+                    MealFood mealFood = new MealFood()
+                    {
+                        FoodId = foodId,
+                        Food = foodService.GetFoodById(foodId),
+                        Portion = (decimal)cbPortions.SelectedItem
+                    };
 
-                frm.RetrieveMealFood(mealFood);
+                    frm.RetrieveMealFood(mealFood);
 
-                this.Close();
+                    this.Close();
+                }
             }
+            else
+            {
+                if (cbPortions.SelectedIndex != -1) 
+                {
+                    mealFood.Portion = (decimal)cbPortions.SelectedItem;
+                    frm.RetrieveMealFood(mealFood);
+
+                    this.Close();
+                }
+            }
+
+
+            
             
         }
     }
