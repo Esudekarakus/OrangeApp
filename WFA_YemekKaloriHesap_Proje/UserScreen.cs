@@ -102,8 +102,7 @@ namespace YemekKalori.UI
                 DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    MealFood mealFood = lstSecimler.SelectedItem as MealFood;
-                    mealfoodService.DeleteByStatus(mealFood);
+                    lstSecimler.Items.RemoveAt(lstSecimler.SelectedIndex);
 
 
                 }
@@ -115,7 +114,23 @@ namespace YemekKalori.UI
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (lstSecimler.SelectedIndex !=  -1) 
+            {
+                MealFood mealFood = lstSecimler.SelectedItem as MealFood;
 
+                lstSecimler.Items.RemoveAt (lstSecimler.SelectedIndex);
+
+                if (mealFood != null) 
+                {
+                    PortionScreen portionScreen = new PortionScreen(mealFood, this);
+                    this.Hide();
+                    portionScreen.ShowDialog();
+                    this.Show();
+                    
+
+                }
+
+            }
 
         }
 
