@@ -94,5 +94,24 @@ namespace YemekKalori.BLL.Services
 
             repository.Add(user);
         }
+
+        public void PasswordChange(User user, string password)
+        {
+            user.ChangePassword(password);
+
+            repository.Update(user);
+        }
+
+        public bool CheckPassword(string password, User user) 
+        {
+            if (!user.VerifyPassword(password))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
