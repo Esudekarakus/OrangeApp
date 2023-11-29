@@ -245,6 +245,10 @@ namespace YemekKalori.UI
             mealService.UpdateMeal(meal2);
 
             ClearListbox(lstSecimler);
+
+            lblToplamKalori.Text = mealService.GetTodaysCalories(user.Id).ToString();
+
+
         }
 
         public void ClearListbox(ListBox lst) 
