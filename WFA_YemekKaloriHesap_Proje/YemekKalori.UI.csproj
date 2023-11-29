@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="WinForms.DataVisualization" Version="1.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\YemekKalori.BLL\YemekKalori.BLL.csproj" />
     <ProjectReference Include="..\YemekKalori.Domain\YemekKalori.Domain.csproj" />
   </ItemGroup>
