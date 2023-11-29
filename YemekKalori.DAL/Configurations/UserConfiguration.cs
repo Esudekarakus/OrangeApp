@@ -25,6 +25,8 @@ namespace YemekKalori.DAL.Configurations
 
             builder.Property(u => u.BMI).HasComputedColumnSql("CAST([Weight] / POWER([Height], 2) AS DECIMAL(18,2))", stored: true);
 
+            builder.Property<string>("Salt").HasField("_salt");
+
             builder.HasData
                 (
                     new User

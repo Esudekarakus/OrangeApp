@@ -14,8 +14,11 @@ namespace YemekKalori.Domain.Entities
     {
         public User()
         {
-            
+            Salt = GenerateSalt();
         }
+
+        
+
         // Public properties to hold user information that can be accessed and modified externally.
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -93,14 +96,40 @@ namespace YemekKalori.Domain.Entities
         {
             using (var sha256 = SHA256.Create())
             {
+                var combinedPassword = string.Concat(password, _salt);
                 // Computes the SHA256 hash of the password bytes.
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(combinedPassword));
                 // Converts the byte array to a hexadecimal string.
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
 
+        public void ChangePassword(string password)
+        {
+            Password = password;
+        }
 
+        //private string _salt;
+
+        private string _salt;
+
+        public string? Salt
+        {
+            get { return _salt; }
+            set { _salt = value; }
+        }
+
+
+        private string GenerateSalt()
+        {
+            byte[] randomBytes = new byte[32];
+            using (var rng = RandomNumberGenerator.Create()) 
+            {
+                rng.GetBytes(randomBytes);
+            }
+            return Convert.ToBase64String(randomBytes);
+
+        }
 
     }
 }
