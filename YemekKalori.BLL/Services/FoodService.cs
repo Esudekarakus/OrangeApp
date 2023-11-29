@@ -137,5 +137,10 @@ namespace YemekKalori.BLL.Services
         {
             return repo.GetAllFood().Where(x => x.Type != Domain.Enums.FoodType.MeatProducts).ToList();
         }
+
+        public Food GetFoodById(int foodId)
+        {
+            return repo.GetFoodById(foodId);
+        }
     }
 }

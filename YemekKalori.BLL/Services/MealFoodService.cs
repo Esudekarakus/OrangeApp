@@ -58,5 +58,11 @@ namespace YemekKalori.BLL.Services
 
             
         }
+
+        public void DeleteByStatus(MealFood food)
+        {
+            food.Status = Domain.Enums.Status.Deleted;
+            _mealFoodRepository.Update(food);
+        }
     }
 }

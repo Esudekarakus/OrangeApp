@@ -71,6 +71,8 @@ namespace YemekKalori.BLL.Services
             return repo.GetMeals().Where(x=>x.MealCalorie==kalori).ToList();
         }
 
+        
+
         public void SetMealCalorie(Meal meal) 
         {
             List<MealFood> mealFoods = mealFoodRepository.GetMealFoodByMeal(meal.Id);

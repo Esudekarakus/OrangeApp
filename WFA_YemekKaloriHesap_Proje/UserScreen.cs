@@ -38,6 +38,10 @@ namespace YemekKalori.UI
             userService = new UserService();
             foodService = new FoodService();
             mealfoodService = new MealFoodService();
+
+            lstYemekler.AllowDrop = true;
+            lstSecimler.AllowDrop = true;
+
             if (user.Diet == Domain.Enums.DietType.Classic)
             {
                 lstYemekler.DisplayMember = null;
@@ -83,9 +87,8 @@ namespace YemekKalori.UI
                 DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    Food food = lstSecimler.SelectedItem as Food;
-
-                    foodService.DeleteFoodByStatus(food.Id);
+                    MealFood mealFood = lstSecimler.SelectedItem as MealFood;
+                    mealfoodService.DeleteByStatus(mealFood);
 
 
                 }
@@ -126,6 +129,11 @@ namespace YemekKalori.UI
             if (e.Data.GetDataPresent(typeof (Food)))
             {
                 Food food = (Food)e.Data.GetData(typeof(Food));
+
+                PortionScreen portionScreen = new PortionScreen(food.Id, this);
+                this.Hide();
+                portionScreen.ShowDialog();
+                this.Show();
             }
         }
 
@@ -133,7 +141,7 @@ namespace YemekKalori.UI
         {
             mealfoodService.SetNutrientsAndCalories(mealFood);
 
-
+            lstSecimler.Items.Add(mealFood);
         }
     }
 }

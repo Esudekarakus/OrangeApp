@@ -20,5 +20,12 @@ namespace YemekKalori.Domain.Entities
         public decimal ProteinRate { get; set; }
 
         public decimal Portion { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{Food.Name} {Portion} Porsiyon {Calorie} Kalori";
+            //return base.ToString();
+        }
     }
 }
