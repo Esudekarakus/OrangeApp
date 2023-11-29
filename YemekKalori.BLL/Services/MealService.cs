@@ -100,5 +100,28 @@ namespace YemekKalori.BLL.Services
         {
             repo.UpdateMeal(meal);
         }
+
+        public List<Meal> GetMealsByUserDaily(int userId)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date).ToList();
+        }
+
+        public decimal GetTodaysCalories(int userId)
+        {
+            decimal todaysCalories = 0;
+            List<Meal> todaysMeals = GetMealsByUserDaily(userId);
+
+            foreach (var meal in todaysMeals)
+            {
+                if (meal.MealCalorie is not null) 
+                {
+                    todaysCalories += (decimal)meal.MealCalorie;
+                }
+                
+            }
+
+            return todaysCalories;  
+
+        }
     }
 }
