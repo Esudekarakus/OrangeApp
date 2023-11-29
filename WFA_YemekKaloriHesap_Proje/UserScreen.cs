@@ -73,6 +73,8 @@ namespace YemekKalori.UI
                 //lstYemekler.ValueMember = "Id";
             }
             lstYemekler.Refresh();
+
+            ShowMyCalories();
         }
 
         private void lstSecimler_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -188,14 +190,14 @@ namespace YemekKalori.UI
         {
             ICollection<MealFood> mealFoods = new List<MealFood>();
 
-            
+
 
             Meal meal = new Meal()
             {
-                
+
                 MealTime = DateTime.Now
-                
-                
+
+
             };
 
             mealService.AddMeal(meal);
@@ -204,21 +206,21 @@ namespace YemekKalori.UI
 
             foreach (MealFood food in lstSecimler.Items)
             {
-                
+
                 mealFoods.Add(food);
 
 
             }
 
-            foreach (MealFood mealFood in mealFoods) 
+            foreach (MealFood mealFood in mealFoods)
             {
                 mealFood.MealId = meal2.Id;
                 mealFood.Meal = meal2;
 
-                
+
             }
 
-            
+
 
             meal2.MealFoods = mealFoods;
 
@@ -246,14 +248,25 @@ namespace YemekKalori.UI
 
             ClearListbox(lstSecimler);
 
-            lblToplamKalori.Text = mealService.GetTodaysCalories(user.Id).ToString();
+            ShowMyCalories();
 
 
         }
 
-        public void ClearListbox(ListBox lst) 
+        public void ClearListbox(ListBox lst)
         {
             lst.Items.Clear();
+        }
+
+        public void ShowMyCalories()
+        {
+            lblToplamKalori.Text = mealService.GetTodaysCalories(user.Id).ToString();
+
+            lblSabah.Text = mealService.GetMorningCalories(user.Id).ToString();
+
+            lblOglen.Text = mealService.GetLunchCalories(user.Id).ToString();
+
+            lblAksam.Text = mealService.GetDinnerCalories(user.Id).ToString();
         }
     }
 }

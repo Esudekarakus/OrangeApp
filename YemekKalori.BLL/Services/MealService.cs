@@ -106,6 +106,69 @@ namespace YemekKalori.BLL.Services
             return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date).ToList();
         }
 
+        public List<Meal> GetMealsByUserDailyBreakfast(int userId) 
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Breakfast).ToList();
+        }
+
+        public List<Meal> GetMealsByUserDailyLunch(int userId)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Lunch).ToList();
+        }
+
+        public List<Meal> GetMealsByUserDailyDinner(int userId)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Dinner).ToList();
+        }
+
+        public decimal GetMorningCalories(int userId)
+        {
+            decimal morningCalories = 0;
+            List<Meal> morningMeals = GetMealsByUserDailyBreakfast(userId);
+
+            foreach (var meal in morningMeals)
+            {
+                if (meal.MealCalorie is not null) 
+                {
+                    morningCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return morningCalories;
+        }
+
+        public decimal GetLunchCalories(int userId)
+        {
+            decimal lunchCalories = 0;
+            List<Meal> lunchMeals = GetMealsByUserDailyLunch(userId);
+
+            foreach (var meal in lunchMeals)
+            {
+                if (meal.MealCalorie is not null)
+                {
+                    lunchCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return lunchCalories;
+        }
+
+        public decimal GetDinnerCalories(int userId)
+        {
+            decimal dinnerCalories = 0;
+            List<Meal> dinnerMeals = GetMealsByUserDailyDinner(userId);
+
+            foreach (var meal in dinnerMeals)
+            {
+                if (meal.MealCalorie is not null)
+                {
+                    dinnerCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return dinnerCalories;
+        }
+
         public decimal GetTodaysCalories(int userId)
         {
             decimal todaysCalories = 0;
