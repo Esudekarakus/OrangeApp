@@ -17,7 +17,7 @@ namespace YemekKalori.UI
         public UserScreen()
         {
             InitializeComponent();
-            
+
 
         }
 
@@ -25,7 +25,7 @@ namespace YemekKalori.UI
         {
             InitializeComponent();
             this.user = user;
-            
+
         }
 
         User user;
@@ -73,11 +73,26 @@ namespace YemekKalori.UI
             lstYemekler.Refresh();
         }
 
+        private void lstSecimler_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //int index = lstYemekler.IndexFromPoint(e.Location);
+            //if (index != ListBox.NoMatches)
+            //{
+            //    Food secilenFood = lstYemekler.SelectedItem as Food;
+
+            //    if (secilenFood != null)
+            //    {
+            //        txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate}% Karbonhidrat Oranı {secilenFood.CarbRate}% Protein Oranı: {secilenFood.ProteinRate}%";
+            //    }
+            //}
+
+
+
+        }
+
         private void lstYemekler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Food secilenFood = lstYemekler.SelectedItem as Food;
 
-            txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate}% Karbonhidrat Oranı {secilenFood.CarbRate}% Protein Oranı: {secilenFood.ProteinRate}%";
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -108,6 +123,9 @@ namespace YemekKalori.UI
         {
             if (lstYemekler.SelectedItem != null)
             {
+                Food secilenFood = lstYemekler.SelectedItem as Food;
+                txtFoodDetay.Text = $"{secilenFood.Name} Yağ Oranı: {secilenFood.FatRate}% Karbonhidrat Oranı {secilenFood.CarbRate}% Protein Oranı: {secilenFood.ProteinRate}%";
+
                 DoDragDrop(lstYemekler.SelectedItem, DragDropEffects.Copy);
             }
         }
@@ -126,7 +144,7 @@ namespace YemekKalori.UI
 
         private void lstSecimler_DragDrop(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(typeof (Food)))
+            if (e.Data.GetDataPresent(typeof(Food)))
             {
                 Food food = (Food)e.Data.GetData(typeof(Food));
 
@@ -143,5 +161,12 @@ namespace YemekKalori.UI
 
             lstSecimler.Items.Add(mealFood);
         }
+
+        private void lstSecimler_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

@@ -230,6 +230,8 @@
             lstSecimler.TabIndex = 106;
             lstSecimler.DragDrop += lstSecimler_DragDrop;
             lstSecimler.DragEnter += lstSecimler_DragEnter;
+            lstSecimler.DoubleClick += lstSecimler_DoubleClick;
+            lstSecimler.MouseDoubleClick += lstSecimler_MouseDoubleClick;
             // 
             // sqlCommandBuilder1
             // 
