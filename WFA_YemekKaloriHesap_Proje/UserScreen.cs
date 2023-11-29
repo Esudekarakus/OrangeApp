@@ -215,7 +215,7 @@ namespace YemekKalori.UI
                 mealFood.MealId = meal2.Id;
                 mealFood.Meal = meal2;
 
-                mealfoodService.AddMealFood(mealFood);
+                
             }
 
             
@@ -224,6 +224,8 @@ namespace YemekKalori.UI
 
             meal2.UserId = user.Id;
             meal2.User = userService.GetById(user.Id);
+
+            mealService.UpdateMeal(meal2);
 
             mealService.SetMealCalorie(meal2);
 
