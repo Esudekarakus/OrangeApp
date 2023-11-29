@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnGuncelle = new Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            btnKapat = new Button();
             lnkLblSifreDegistir = new LinkLabel();
             label1 = new Label();
             lblAdSoyad = new Label();
-            lblYaş = new Label();
             txtBoxGoalType = new TextBox();
             txtBoxDietType = new TextBox();
             txtBoxBoy = new TextBox();
@@ -42,16 +50,22 @@
             label4 = new Label();
             lblHedefKcal = new Label();
             lblKalanKcal = new Label();
+            cKaloriTakipHaftalik = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)cKaloriTakipHaftalik).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
             SuspendLayout();
             // 
-            // btnGuncelle
+            // btnKapat
             // 
-            btnGuncelle.Location = new Point(176, 376);
-            btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(94, 29);
-            btnGuncelle.TabIndex = 0;
-            btnGuncelle.Text = "Güncelle";
-            btnGuncelle.UseVisualStyleBackColor = true;
+            btnKapat.Location = new Point(176, 376);
+            btnKapat.Name = "btnKapat";
+            btnKapat.Size = new Size(94, 29);
+            btnKapat.TabIndex = 0;
+            btnKapat.Text = "Çıkış";
+            btnKapat.UseVisualStyleBackColor = true;
             // 
             // lnkLblSifreDegistir
             // 
@@ -62,33 +76,25 @@
             lnkLblSifreDegistir.TabIndex = 1;
             lnkLblSifreDegistir.TabStop = true;
             lnkLblSifreDegistir.Text = "Şifre Değiştir";
+            lnkLblSifreDegistir.LinkClicked += lnkLblSifreDegistir_LinkClicked;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(128, 9);
+            label1.Location = new Point(192, 41);
             label1.Name = "label1";
-            label1.Size = new Size(37, 20);
+            label1.Size = new Size(61, 20);
             label1.TabIndex = 2;
-            label1.Text = "BEN";
+            label1.Text = "Profilim";
             // 
             // lblAdSoyad
             // 
             lblAdSoyad.AutoSize = true;
-            lblAdSoyad.Location = new Point(46, 41);
+            lblAdSoyad.Location = new Point(46, 91);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(50, 20);
             lblAdSoyad.TabIndex = 3;
             lblAdSoyad.Text = "label2";
-            // 
-            // lblYaş
-            // 
-            lblYaş.AutoSize = true;
-            lblYaş.Location = new Point(46, 91);
-            lblYaş.Name = "lblYaş";
-            lblYaş.Size = new Size(50, 20);
-            lblYaş.TabIndex = 4;
-            lblYaş.Text = "label3";
             // 
             // txtBoxGoalType
             // 
@@ -169,11 +175,63 @@
             lblKalanKcal.TabIndex = 13;
             lblKalanKcal.Text = "label6";
             // 
+            // cKaloriTakipHaftalik
+            // 
+            chartArea4.Name = "ChartArea1";
+            cKaloriTakipHaftalik.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            cKaloriTakipHaftalik.Legends.Add(legend4);
+            cKaloriTakipHaftalik.Location = new Point(777, 12);
+            cKaloriTakipHaftalik.Name = "cKaloriTakipHaftalik";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            cKaloriTakipHaftalik.Series.Add(series4);
+            cKaloriTakipHaftalik.Size = new Size(359, 228);
+            cKaloriTakipHaftalik.TabIndex = 14;
+            cKaloriTakipHaftalik.Text = "cKaloriTakipHaftalik";
+            // 
+            // chart1
+            // 
+            chartArea5.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            chart1.Legends.Add(legend5);
+            chart1.Location = new Point(777, 268);
+            chart1.Name = "chart1";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            chart1.Series.Add(series5);
+            chart1.Size = new Size(359, 214);
+            chart1.TabIndex = 15;
+            chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            chartArea6.Name = "ChartArea1";
+            chart2.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            chart2.Legends.Add(legend6);
+            chart2.Location = new Point(465, 125);
+            chart2.Name = "chart2";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            chart2.Series.Add(series6);
+            chart2.Size = new Size(261, 246);
+            chart2.TabIndex = 16;
+            chart2.Text = "chart2";
+            // 
             // FrmProfil
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(506, 450);
+            ClientSize = new Size(1157, 519);
+            Controls.Add(chart2);
+            Controls.Add(chart1);
+            Controls.Add(cKaloriTakipHaftalik);
             Controls.Add(lblKalanKcal);
             Controls.Add(lblHedefKcal);
             Controls.Add(label3);
@@ -183,25 +241,26 @@
             Controls.Add(txtBoxKilo);
             Controls.Add(txtBoxDietType);
             Controls.Add(txtBoxGoalType);
-            Controls.Add(lblYaş);
             Controls.Add(lblAdSoyad);
             Controls.Add(label1);
             Controls.Add(lnkLblSifreDegistir);
-            Controls.Add(btnGuncelle);
+            Controls.Add(btnKapat);
             Name = "FrmProfil";
             Text = "Profil";
             Load += FrmProfil_Load;
+            ((System.ComponentModel.ISupportInitialize)cKaloriTakipHaftalik).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnGuncelle;
+        private Button btnKapat;
         private LinkLabel lnkLblSifreDegistir;
         private Label label1;
         private Label lblAdSoyad;
-        private Label lblYaş;
         private TextBox txtBoxGoalType;
         private TextBox txtBoxDietType;
         private TextBox txtBoxBoy;
@@ -211,5 +270,8 @@
         private Label label4;
         private Label lblHedefKcal;
         private Label lblKalanKcal;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cKaloriTakipHaftalik;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }
