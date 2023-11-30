@@ -17,9 +17,13 @@ namespace YemekKalori.Domain.Entities
         public decimal? MealCalorie { get; set; }
         public int? UserId { get; set; }
         public User? User { get; set; }
-        
 
 
+        public override string ToString()
+        {
+            return $"{Type} {MealTime} {MealCalorie}";
+            //return base.ToString();
+        }
 
     }
 }

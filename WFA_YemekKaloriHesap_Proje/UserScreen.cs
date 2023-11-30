@@ -291,7 +291,15 @@ namespace YemekKalori.UI
             this.Close();
             FrmProfil frmProfil = new FrmProfil(user);
             frmProfil.Show();
-            
+
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MealDeleteScreen mds = new MealDeleteScreen(user);
+            this.Hide();
+            mds.ShowDialog();
+            this.Show();
         }
     }
 }

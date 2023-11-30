@@ -55,18 +55,18 @@ namespace YemekKalori.DAL.Repositories
         //meal id ye göre meal
         public Meal GetMealByMealID(int mealID)
         {
-           return dbContext.Meals.FirstOrDefault(x => x.Id == mealID);
+           return dbContext.Meals.FirstOrDefault(x => x.Id == mealID && x.Status != Domain.Enums.Status.Deleted);
         }
 
         //user ın meallerini getir
         public List<Meal> GetMealsByUser(int userId)
         {
-            return dbContext.Meals.Where(x => x.UserId == userId).ToList();
+            return dbContext.Meals.Where(x => x.UserId == userId && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
 
         public Meal GetMealByUser(int userId) 
         {
-            Meal meal = dbContext.Meals.FirstOrDefault(m => m.UserId == userId);
+            Meal meal = dbContext.Meals.FirstOrDefault(m => m.UserId == userId && m.Status != Domain.Enums.Status.Deleted);
             return meal;
         }
         //tüm meall leri getir

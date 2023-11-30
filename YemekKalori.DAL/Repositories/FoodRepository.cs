@@ -57,7 +57,7 @@ namespace YemekKalori.DAL.Repositories
 
         public Food GetFoodById(int foodId)
         {
-            return dbContext.Foods.FirstOrDefault(x => x.Id == foodId);
+            return dbContext.Foods.FirstOrDefault(x => x.Id == foodId && x.Status != Domain.Enums.Status.Deleted);
         }
 
         // food ları foodtype a göre listle
