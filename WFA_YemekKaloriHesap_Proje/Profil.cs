@@ -39,6 +39,7 @@ namespace YemekKalori.UI.Properties
         private void FrmProfil_Load(object sender, EventArgs e)
         {
 
+
             if (user != null)
             {
 
