@@ -60,11 +60,13 @@ namespace YemekKalori.UI
                     MealFood mealFood = new MealFood()
                     {
                         FoodId = foodId,
-                        //Food = foodService.GetFoodById(foodId),
+                        Name = foodService.GetFoodById(foodId).Name,
                         Portion = (decimal)cbPortions.SelectedItem
                     };
 
-                    mealFood.Food = foodService.GetFoodById(foodId);
+                    //mealFood.Food = foodService.GetFoodById(foodId);
+
+                    
                     frm.RetrieveMealFood(mealFood);
 
                     this.Close();

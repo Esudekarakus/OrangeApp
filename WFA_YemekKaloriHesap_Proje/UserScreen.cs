@@ -197,7 +197,7 @@ namespace YemekKalori.UI
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            ICollection<MealFood> mealFoods = new List<MealFood>();
+            List<MealFood> mealFoods = new List<MealFood>();
 
 
 
@@ -300,6 +300,7 @@ namespace YemekKalori.UI
             this.Hide();
             mds.ShowDialog();
             this.Show();
+            ShowMyCalories();
         }
     }
 }
