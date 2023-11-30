@@ -17,19 +17,19 @@ namespace YemekKalori.UI.Properties
 {
     public partial class FrmProfil : Form
     {
-        public FrmProfil(Domain.Entities.User user, MealFood food)
+        public FrmProfil(Domain.Entities.User user)
         {
             InitializeComponent();
             this.user = user;
             userService = new UserService();
             mealService = new MealService();
             mealFoodService = new MealFoodService();
-            this.food = food;
+            
             dbContext = new AppDbContext();
 
 
         }
-        MealFood food;
+        
         UserService userService;
         MealService mealService;
         MealFoodService mealFoodService;
@@ -48,10 +48,10 @@ namespace YemekKalori.UI.Properties
 
 
 
-                    List<MealFood> mealFoods = dbContext.MealFoods.Where(x => x.MealId == meals.Id).ToList();
-                    var enCokTuketilen = mealFoods.Max(x => x.Portion);
+                    //List<MealFood> mealFoods = dbContext.MealFoods.Where(x => x.MealId == meals.Id).ToList();
+                    //var enCokTuketilen = mealFoods.Max(x => x.Portion);
 
-                    lblEnCokTuketilenYiyecek.Text = $"{enCokTuketilen.ToString()}";
+                    lblEnCokTuketilenYiyecek.Text = $"rghthth";
                 }
 
 

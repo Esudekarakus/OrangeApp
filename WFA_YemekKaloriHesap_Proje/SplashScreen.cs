@@ -23,7 +23,7 @@ namespace YemekKalori.UI
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 1;
+            panel2.Width += 5;
 
             if (panel2.Width >= 495)
             {
