@@ -51,7 +51,7 @@ namespace YemekKalori.Domain.Entities
         public decimal? BMI { get; set; }
 
         public UserType Type { get; set; }
-
+        public decimal? HedefKalori { get; set; }
 
 
         // Private field to store the hashed password, which is not directly accessible outside the class.

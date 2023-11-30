@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             btnKapat = new Button();
             lnkLblSifreDegistir = new LinkLabel();
             label1 = new Label();
@@ -53,6 +53,7 @@
             cKaloriTakipHaftalik = new System.Windows.Forms.DataVisualization.Charting.Chart();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            lblEnCokTuketilenYiyecek = new Label();
             ((System.ComponentModel.ISupportInitialize)cKaloriTakipHaftalik).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
@@ -177,58 +178,68 @@
             // 
             // cKaloriTakipHaftalik
             // 
-            chartArea4.Name = "ChartArea1";
-            cKaloriTakipHaftalik.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            cKaloriTakipHaftalik.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            cKaloriTakipHaftalik.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            cKaloriTakipHaftalik.Legends.Add(legend1);
             cKaloriTakipHaftalik.Location = new Point(777, 12);
             cKaloriTakipHaftalik.Name = "cKaloriTakipHaftalik";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            cKaloriTakipHaftalik.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            cKaloriTakipHaftalik.Series.Add(series1);
             cKaloriTakipHaftalik.Size = new Size(359, 228);
             cKaloriTakipHaftalik.TabIndex = 14;
             cKaloriTakipHaftalik.Text = "cKaloriTakipHaftalik";
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            chart1.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart1.Legends.Add(legend2);
             chart1.Location = new Point(777, 268);
             chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            chart1.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart1.Series.Add(series2);
             chart1.Size = new Size(359, 214);
             chart1.TabIndex = 15;
             chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea6.Name = "ChartArea1";
-            chart2.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            chart2.Legends.Add(legend6);
+            chartArea3.Name = "ChartArea1";
+            chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            chart2.Legends.Add(legend3);
             chart2.Location = new Point(465, 125);
             chart2.Name = "chart2";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            chart2.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            chart2.Series.Add(series3);
             chart2.Size = new Size(261, 246);
             chart2.TabIndex = 16;
             chart2.Text = "chart2";
+            // 
+            // lblEnCokTuketilenYiyecek
+            // 
+            lblEnCokTuketilenYiyecek.AutoSize = true;
+            lblEnCokTuketilenYiyecek.Location = new Point(497, 60);
+            lblEnCokTuketilenYiyecek.Name = "lblEnCokTuketilenYiyecek";
+            lblEnCokTuketilenYiyecek.Size = new Size(50, 20);
+            lblEnCokTuketilenYiyecek.TabIndex = 17;
+            lblEnCokTuketilenYiyecek.Text = "label5";
             // 
             // FrmProfil
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1157, 519);
+            Controls.Add(lblEnCokTuketilenYiyecek);
             Controls.Add(chart2);
             Controls.Add(chart1);
             Controls.Add(cKaloriTakipHaftalik);
@@ -273,5 +284,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart cKaloriTakipHaftalik;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private Label lblEnCokTuketilenYiyecek;
     }
 }
