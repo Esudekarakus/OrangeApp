@@ -32,34 +32,34 @@ namespace YemekKalori.BLL.Services
         //kahvaltı getirme
         public List <Meal> GetBreakfast()
         {
-            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Breakfast).ToList();
+            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Breakfast && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         //öğle yemeği getirme
         public List <Meal> GetLunch()
         {
-            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Lunch).ToList();
+            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Lunch && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         //akşam yemeği getirme
 
         public List <Meal> GetDinner() 
         {
-            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Dinner).ToList();
+            return repo.GetMeals().Where(x=>x.Type==Domain.Enums.MealType.Dinner && x.Status != Domain.Enums.Status.Deleted).ToList();
  
         }
         //usrr id ye göre kahvaltı
         public List <Meal> GetBreakfastByUser(int userID) 
         {
-            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Breakfast).ToList();
+            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Breakfast && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         //user id ye göre öğle yemeği
         public List <Meal> GetLunchByUser(int userID)
         {
-            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Lunch).ToList();
+            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Lunch && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         //user id ye göre akşam yemeği
         public List <Meal>GetDinnerByUser(int userID)
         {
-            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Dinner).ToList();
+            return repo.GetMealsByUser(userID).Where(x => x.Type == Domain.Enums.MealType.Dinner && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
 
         MealFoodRepository mealFoodRepository;
@@ -103,29 +103,29 @@ namespace YemekKalori.BLL.Services
 
         public List<Meal> GetMealsByUserDaily(int userId)
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         public List<Meal> GetMealsByUserWeekly(int userId)
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddDays(-7) && x.MealTime <= DateTime.Now).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddDays(-7) && x.MealTime <= DateTime.Now && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         public List<Meal> GetMealsByUserMonthly(int userId)
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddMonths(-1) && x.MealTime <= DateTime.Now).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddMonths(-1) && x.MealTime <= DateTime.Now && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
         public List<Meal> GetMealsByUserDailyBreakfast(int userId) 
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Breakfast).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Breakfast && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
 
         public List<Meal> GetMealsByUserDailyLunch(int userId)
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Lunch).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Lunch && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
 
         public List<Meal> GetMealsByUserDailyDinner(int userId)
         {
-            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Dinner).ToList();
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Dinner && x.Status != Domain.Enums.Status.Deleted).ToList();
         }
 
         public decimal GetMorningCalories(int userId)
@@ -223,6 +223,16 @@ namespace YemekKalori.BLL.Services
             }
 
             return monthlyCalories;
+        }
+
+        public List<Meal> GetAllMealsByUser(int userId) 
+        {
+            return repo.GetMealsByUser(userId);
+        }
+
+        public void DeleteMealStatus(Meal meal) 
+        {
+            repo.DeleteMealByStatus(meal.Id);
         }
     }
 }

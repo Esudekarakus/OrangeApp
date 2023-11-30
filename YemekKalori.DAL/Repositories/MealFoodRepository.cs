@@ -42,13 +42,13 @@ namespace YemekKalori.DAL.Repositories
 
         public List<MealFood> GetMealFoodByMeal(int mealId)
         {
-            List<MealFood> mealFoods = dbContext.MealFoods.Where(a => a.MealId == mealId).ToList();
+            List<MealFood> mealFoods = dbContext.MealFoods.Where(a => a.MealId == mealId && a.Status != Domain.Enums.Status.Deleted).ToList();
             return mealFoods;
         }
 
         public MealFood GetMealFoodById(int  id)
         {
-            MealFood mealFood = dbContext.MealFoods.FirstOrDefault(x => x.Id == id);
+            MealFood mealFood = dbContext.MealFoods.FirstOrDefault(x => x.Id == id && x.Status != Domain.Enums.Status.Deleted);
             return mealFood;
         }
 
