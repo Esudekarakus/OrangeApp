@@ -48,14 +48,22 @@ namespace YemekKalori.UI.Properties
 
 
 
-                    //List<MealFood> mealFoods = dbContext.MealFoods.Where(x => x.MealId == meals.Id).ToList();
-                    //var enCokTuketilen = mealFoods.Max(x => x.Portion);
+                    var encokTuketilen = dbContext.MealFoods.Where(x => x.MealId == meals.Id).OrderByDescending(x => x.Portion).FirstOrDefault();
+                    
+                    Food food = new Food()
+                    {
+                        Id = encokTuketilen.FoodId,
+                    };
 
-                    lblEnCokTuketilenYiyecek.Text = $"rghthth";
+                    var food2 = dbContext.Foods.FirstOrDefault(x => x.Id == food.Id);
+                    lblEnCokTuketilenYiyecek.Text = $"{encokTuketilen.Food.Name}";
+                }
+                else
+                {
+                    lblEnCokTuketilenYiyecek.Text = "liste boş";
                 }
 
-
-                lblEnCokTuketilenYiyecek.Text = "liste boş";
+                
 
                 lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
                 txtBoxGoalType.Text = user.Goal?.ToString();
