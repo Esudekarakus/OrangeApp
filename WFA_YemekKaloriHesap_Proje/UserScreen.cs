@@ -37,6 +37,14 @@ namespace YemekKalori.UI
 
         private void UserScreen_Load(object sender, EventArgs e)
         {
+            if (user.Goal == Domain.Enums.GoalType.GainWeight)
+            {
+                user.HedefKalori = 2500;
+            }
+            else if (user.Goal == Domain.Enums.GoalType.LoseWeight)
+            {
+                user.HedefKalori = 1500;
+            }
             userService = new UserService();
             foodService = new FoodService();
             mealfoodService = new MealFoodService();
