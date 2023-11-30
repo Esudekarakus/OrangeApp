@@ -8,6 +8,7 @@ namespace YemekKalori.Domain.Entities
 {
     public class MealFood : BaseClass
     {
+        public string Name { get; set; }
         public Meal? Meal { get; set; }
         public int? MealId { get; set; }
 
@@ -24,7 +25,7 @@ namespace YemekKalori.Domain.Entities
 
         public override string ToString()
         {
-            return $"{Food.Name} {Portion} Porsiyon {Calorie} Kalori";
+            return $"{Name} {Portion} Porsiyon {Calorie} Kalori";
             //return base.ToString();
         }
     }
