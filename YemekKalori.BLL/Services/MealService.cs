@@ -105,7 +105,14 @@ namespace YemekKalori.BLL.Services
         {
             return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date).ToList();
         }
-
+        public List<Meal> GetMealsByUserWeekly(int userId)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddDays(-7) && x.MealTime <= DateTime.Now).ToList();
+        }
+        public List<Meal> GetMealsByUserMonthly(int userId)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime >= DateTime.Now.AddMonths(-1) && x.MealTime <= DateTime.Now).ToList();
+        }
         public List<Meal> GetMealsByUserDailyBreakfast(int userId) 
         {
             return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Type == Domain.Enums.MealType.Breakfast).ToList();
@@ -185,6 +192,37 @@ namespace YemekKalori.BLL.Services
 
             return todaysCalories;  
 
+        }
+        public decimal GetWeeklyCalories(int userId)
+        {
+            decimal weeklyCalories = 0;
+            List<Meal> weeklyMeals = GetMealsByUserWeekly(userId);
+
+            foreach (var meal in weeklyMeals)
+            {
+                if (meal.MealCalorie is not null)
+                {
+                    weeklyCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return weeklyCalories;
+        }
+
+        public decimal GetMonthlyCalories(int userId)
+        {
+            decimal monthlyCalories = 0;
+            List<Meal> monthlyMeals = GetMealsByUserMonthly(userId);
+
+            foreach (var meal in monthlyMeals)
+            {
+                if (meal.MealCalorie is not null)
+                {
+                    monthlyCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return monthlyCalories;
         }
     }
 }
