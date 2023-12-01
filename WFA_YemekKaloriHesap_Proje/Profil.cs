@@ -122,9 +122,10 @@ namespace YemekKalori.UI.Properties
 
         private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             PasswordChangeScreen passwordChangeScreen = new PasswordChangeScreen(user);
-            passwordChangeScreen.Show();
+            passwordChangeScreen.ShowDialog();
+            this.Show();
         }
 
     }

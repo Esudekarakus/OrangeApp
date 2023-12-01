@@ -288,10 +288,10 @@ namespace YemekKalori.UI
 
         private void lLabelProfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             FrmProfil frmProfil = new FrmProfil(user);
-            frmProfil.Show();
-
+            frmProfil.ShowDialog();
+            this.Show();
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
