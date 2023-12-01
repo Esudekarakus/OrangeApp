@@ -20,24 +20,24 @@ namespace YemekKalori.UI.Properties
         public FrmProfil(Domain.Entities.User user)
         {
             InitializeComponent();
-            
+
             this.user = user;
             userService = new UserService();
             mealService = new MealService();
             mealFoodService = new MealFoodService();
-            
+
             dbContext = new AppDbContext();
             VeriEkleOlustur();
-            
+
 
         }
-        
+
         UserService userService;
         MealService mealService;
         MealFoodService mealFoodService;
         Domain.Entities.User user;
         AppDbContext dbContext;
-        
+
         private void FrmProfil_Load(object sender, EventArgs e)
         {
 
@@ -51,16 +51,16 @@ namespace YemekKalori.UI.Properties
 
 
 
-                     var encokTuketilen = dbContext.MealFoods.Where(x => x.MealId == meals.Id).OrderByDescending(x => x.Portion).FirstOrDefault();
+                    var encokTuketilen = dbContext.MealFoods.Where(x => x.MealId == meals.Id).OrderByDescending(x => x.Portion).FirstOrDefault();
 
                     Food food = new Food()
                     {
                         Id = encokTuketilen.FoodId
                     };
-                   
 
-                    
-                    
+
+
+
 
                     var food2 = dbContext.Foods.FirstOrDefault(x => x.Id == food.Id);
                     lblEnCokTuketilenYiyecek.Text = $"{encokTuketilen.Food.Name}";
@@ -70,7 +70,7 @@ namespace YemekKalori.UI.Properties
                     lblEnCokTuketilenYiyecek.Text = "liste boş";
                 }
 
-                
+
 
                 lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
                 txtBoxGoalType.Text = user.Goal?.ToString();
@@ -79,7 +79,7 @@ namespace YemekKalori.UI.Properties
                 txtBoxKilo.Text = user.Weight?.ToString();
                 lblHedefKcal.Text = user.HedefKalori.ToString();
                 decimal? kalanKalori = user.HedefKalori - mealService.GetTodaysCalories(user.Id);
-                if(kalanKalori<0)
+                if (kalanKalori < 0)
                 {
                     lblKalanKcal.Text = "0";
                 }
@@ -88,16 +88,16 @@ namespace YemekKalori.UI.Properties
                     lblKalanKcal.Text = kalanKalori.ToString();
                 }
 
-                
-                
+
+
             }
         }
 
         private void VeriEkleOlustur()
         {
-            
 
-            
+
+
             chartFavoriBesin.Size = new System.Drawing.Size(300, 300);
             this.Controls.Add(chartFavoriBesin);
             chartFavoriBesin.Titles.Add("Favori Besin İçeriği");
@@ -117,7 +117,7 @@ namespace YemekKalori.UI.Properties
             // Series1 serisine verileri ekleyerek göster
             chartFavoriBesin.Series["Series1"].Points.AddXY("Carb", encokTuketilen.Food.CarbRate);
             chartFavoriBesin.Series["Series1"].Points.AddXY("Fat", encokTuketilen.Food.FatRate);
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Protein",encokTuketilen.Food.ProteinRate);
+            chartFavoriBesin.Series["Series1"].Points.AddXY("Protein", encokTuketilen.Food.ProteinRate);
         }
 
         private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -128,7 +128,11 @@ namespace YemekKalori.UI.Properties
             this.Show();
         }
 
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
-   
+
 }

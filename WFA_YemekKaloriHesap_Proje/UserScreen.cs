@@ -205,7 +205,7 @@ namespace YemekKalori.UI
             {
 
                 MealTime = DateTime.Now,
-                
+
 
             };
 
@@ -301,6 +301,11 @@ namespace YemekKalori.UI
             mds.ShowDialog();
             this.Show();
             ShowMyCalories();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

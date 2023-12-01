@@ -37,7 +37,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            btnKapat = new Button();
             lnkLblSifreDegistir = new LinkLabel();
             label1 = new Label();
             lblAdSoyad = new Label();
@@ -59,21 +58,12 @@
             ((System.ComponentModel.ISupportInitialize)chartFavoriBesin).BeginInit();
             SuspendLayout();
             // 
-            // btnKapat
-            // 
-            btnKapat.Location = new Point(176, 376);
-            btnKapat.Name = "btnKapat";
-            btnKapat.Size = new Size(94, 29);
-            btnKapat.TabIndex = 0;
-            btnKapat.Text = "Çıkış";
-            btnKapat.UseVisualStyleBackColor = true;
-            // 
             // lnkLblSifreDegistir
             // 
             lnkLblSifreDegistir.AutoSize = true;
-            lnkLblSifreDegistir.Location = new Point(312, 407);
+            lnkLblSifreDegistir.Location = new Point(273, 305);
             lnkLblSifreDegistir.Name = "lnkLblSifreDegistir";
-            lnkLblSifreDegistir.Size = new Size(95, 20);
+            lnkLblSifreDegistir.Size = new Size(73, 15);
             lnkLblSifreDegistir.TabIndex = 1;
             lnkLblSifreDegistir.TabStop = true;
             lnkLblSifreDegistir.Text = "Şifre Değiştir";
@@ -82,47 +72,51 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(192, 41);
+            label1.Location = new Point(168, 31);
             label1.Name = "label1";
-            label1.Size = new Size(61, 20);
+            label1.Size = new Size(49, 15);
             label1.TabIndex = 2;
             label1.Text = "Profilim";
             // 
             // lblAdSoyad
             // 
             lblAdSoyad.AutoSize = true;
-            lblAdSoyad.Location = new Point(46, 91);
+            lblAdSoyad.Location = new Point(40, 68);
             lblAdSoyad.Name = "lblAdSoyad";
-            lblAdSoyad.Size = new Size(50, 20);
+            lblAdSoyad.Size = new Size(38, 15);
             lblAdSoyad.TabIndex = 3;
             lblAdSoyad.Text = "label2";
             // 
             // txtBoxGoalType
             // 
-            txtBoxGoalType.Location = new Point(46, 138);
+            txtBoxGoalType.Location = new Point(40, 104);
+            txtBoxGoalType.Margin = new Padding(3, 2, 3, 2);
             txtBoxGoalType.Name = "txtBoxGoalType";
-            txtBoxGoalType.Size = new Size(155, 27);
+            txtBoxGoalType.Size = new Size(136, 23);
             txtBoxGoalType.TabIndex = 5;
             // 
             // txtBoxDietType
             // 
-            txtBoxDietType.Location = new Point(46, 193);
+            txtBoxDietType.Location = new Point(40, 145);
+            txtBoxDietType.Margin = new Padding(3, 2, 3, 2);
             txtBoxDietType.Name = "txtBoxDietType";
-            txtBoxDietType.Size = new Size(155, 27);
+            txtBoxDietType.Size = new Size(136, 23);
             txtBoxDietType.TabIndex = 6;
             // 
             // txtBoxBoy
             // 
-            txtBoxBoy.Location = new Point(252, 196);
+            txtBoxBoy.Location = new Point(220, 147);
+            txtBoxBoy.Margin = new Padding(3, 2, 3, 2);
             txtBoxBoy.Name = "txtBoxBoy";
-            txtBoxBoy.Size = new Size(155, 27);
+            txtBoxBoy.Size = new Size(136, 23);
             txtBoxBoy.TabIndex = 8;
             // 
             // txtBoxKilo
             // 
-            txtBoxKilo.Location = new Point(252, 138);
+            txtBoxKilo.Location = new Point(220, 104);
+            txtBoxKilo.Margin = new Padding(3, 2, 3, 2);
             txtBoxKilo.Name = "txtBoxKilo";
-            txtBoxKilo.Size = new Size(155, 27);
+            txtBoxKilo.Size = new Size(136, 23);
             txtBoxKilo.TabIndex = 7;
             // 
             // label3
@@ -130,9 +124,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Consolas", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Navy;
-            label3.Location = new Point(258, 282);
+            label3.Location = new Point(226, 212);
             label3.Name = "label3";
-            label3.Size = new Size(120, 22);
+            label3.Size = new Size(96, 18);
             label3.TabIndex = 11;
             label3.Text = "Kalan kcal.";
             // 
@@ -141,9 +135,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Consolas", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(50, 282);
+            label2.Location = new Point(44, 212);
             label2.Name = "label2";
-            label2.Size = new Size(120, 22);
+            label2.Size = new Size(96, 18);
             label2.TabIndex = 10;
             label2.Text = "Hedef kcal.";
             // 
@@ -152,27 +146,27 @@
             label4.AutoSize = true;
             label4.Font = new Font("Consolas", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(0, 0, 64);
-            label4.Location = new Point(176, 249);
+            label4.Location = new Point(154, 187);
             label4.Name = "label4";
-            label4.Size = new Size(77, 27);
+            label4.Size = new Size(60, 22);
             label4.TabIndex = 9;
             label4.Text = "HEDEF";
             // 
             // lblHedefKcal
             // 
             lblHedefKcal.AutoSize = true;
-            lblHedefKcal.Location = new Point(50, 325);
+            lblHedefKcal.Location = new Point(44, 244);
             lblHedefKcal.Name = "lblHedefKcal";
-            lblHedefKcal.Size = new Size(50, 20);
+            lblHedefKcal.Size = new Size(38, 15);
             lblHedefKcal.TabIndex = 12;
             lblHedefKcal.Text = "label5";
             // 
             // lblKalanKcal
             // 
             lblKalanKcal.AutoSize = true;
-            lblKalanKcal.Location = new Point(258, 325);
+            lblKalanKcal.Location = new Point(226, 244);
             lblKalanKcal.Name = "lblKalanKcal";
-            lblKalanKcal.Size = new Size(50, 20);
+            lblKalanKcal.Size = new Size(38, 15);
             lblKalanKcal.TabIndex = 13;
             lblKalanKcal.Text = "label6";
             // 
@@ -182,13 +176,14 @@
             cKaloriTakipHaftalik.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             cKaloriTakipHaftalik.Legends.Add(legend4);
-            cKaloriTakipHaftalik.Location = new Point(777, 12);
+            cKaloriTakipHaftalik.Location = new Point(680, 9);
+            cKaloriTakipHaftalik.Margin = new Padding(3, 2, 3, 2);
             cKaloriTakipHaftalik.Name = "cKaloriTakipHaftalik";
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             cKaloriTakipHaftalik.Series.Add(series4);
-            cKaloriTakipHaftalik.Size = new Size(359, 228);
+            cKaloriTakipHaftalik.Size = new Size(314, 171);
             cKaloriTakipHaftalik.TabIndex = 14;
             cKaloriTakipHaftalik.Text = "cKaloriTakipHaftalik";
             // 
@@ -198,13 +193,14 @@
             chart1.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             chart1.Legends.Add(legend5);
-            chart1.Location = new Point(777, 268);
+            chart1.Location = new Point(680, 201);
+            chart1.Margin = new Padding(3, 2, 3, 2);
             chart1.Name = "chart1";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
             series5.Name = "Series1";
             chart1.Series.Add(series5);
-            chart1.Size = new Size(359, 214);
+            chart1.Size = new Size(314, 160);
             chart1.TabIndex = 15;
             chart1.Text = "chart1";
             // 
@@ -214,31 +210,32 @@
             chartFavoriBesin.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             chartFavoriBesin.Legends.Add(legend6);
-            chartFavoriBesin.Location = new Point(465, 125);
+            chartFavoriBesin.Location = new Point(407, 94);
+            chartFavoriBesin.Margin = new Padding(3, 2, 3, 2);
             chartFavoriBesin.Name = "chartFavoriBesin";
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series6.Legend = "Legend1";
             series6.Name = "Series1";
             chartFavoriBesin.Series.Add(series6);
-            chartFavoriBesin.Size = new Size(261, 246);
+            chartFavoriBesin.Size = new Size(228, 184);
             chartFavoriBesin.TabIndex = 16;
             chartFavoriBesin.Text = "chart2";
             // 
             // lblEnCokTuketilenYiyecek
             // 
             lblEnCokTuketilenYiyecek.AutoSize = true;
-            lblEnCokTuketilenYiyecek.Location = new Point(497, 60);
+            lblEnCokTuketilenYiyecek.Location = new Point(435, 45);
             lblEnCokTuketilenYiyecek.Name = "lblEnCokTuketilenYiyecek";
-            lblEnCokTuketilenYiyecek.Size = new Size(50, 20);
+            lblEnCokTuketilenYiyecek.Size = new Size(38, 15);
             lblEnCokTuketilenYiyecek.TabIndex = 17;
             lblEnCokTuketilenYiyecek.Text = "label5";
             // 
             // FrmProfil
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1157, 519);
+            ClientSize = new Size(1012, 389);
             Controls.Add(lblEnCokTuketilenYiyecek);
             Controls.Add(chartFavoriBesin);
             Controls.Add(chart1);
@@ -255,7 +252,7 @@
             Controls.Add(lblAdSoyad);
             Controls.Add(label1);
             Controls.Add(lnkLblSifreDegistir);
-            Controls.Add(btnKapat);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmProfil";
             Text = "Profil";
             Load += FrmProfil_Load;
@@ -267,8 +264,6 @@
         }
 
         #endregion
-
-        private Button btnKapat;
         private LinkLabel lnkLblSifreDegistir;
         private Label label1;
         private Label lblAdSoyad;
