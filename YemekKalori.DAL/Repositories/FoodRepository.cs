@@ -19,6 +19,7 @@ namespace YemekKalori.DAL.Repositories
         //food eklemek için
         public void AddFood(Food food)
         {
+            
             dbContext.Foods.Add(food);
             dbContext.SaveChanges();
 
@@ -26,14 +27,18 @@ namespace YemekKalori.DAL.Repositories
         //food update
         public void UpdateFood(Food food) 
         {
-            dbContext.Foods.Update(food);
+            
             food.Status = Domain.Enums.Status.Modified;
+            food.ModifiedDate = DateTime.Now;
+            dbContext.Foods.Update(food);
             dbContext.SaveChanges();
         }
         //food sil
         public void DeleteFood(int foodID)
         {
-            Food food= dbContext.Foods.Find(foodID);
+            Food food = dbContext.Foods.FirstOrDefault(x => x.Id == foodID);
+
+            
             dbContext.Foods.Remove(food);
             dbContext.SaveChanges();
         }
@@ -44,6 +49,8 @@ namespace YemekKalori.DAL.Repositories
         {
             Food food = dbContext.Foods.Find(foodID);
             food.Status = Domain.Enums.Status.Deleted;
+            food.DeletedDate = DateTime.Now;
+            dbContext.Foods.Update(food);
             dbContext.SaveChanges();
 
         }

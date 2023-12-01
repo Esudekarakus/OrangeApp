@@ -12,6 +12,7 @@ namespace YemekKalori.Domain.Entities
         public BaseClass()
         {
             CreatedDate = DateTime.Now;
+            Status = Status.Added;
         }
         public int Id { get; set; }
         public Status Status { get; set; } // Enum to represent the data entrys status.
