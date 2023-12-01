@@ -52,6 +52,7 @@ namespace YemekKalori.UI
 
             //haftalık kalori takibi
 
+
             //aylık kalori takibi 
 
         }
