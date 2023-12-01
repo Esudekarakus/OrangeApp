@@ -50,6 +50,7 @@
             btnOnayla = new Button();
             lLabelProfil = new LinkLabel();
             linkLabel1 = new LinkLabel();
+            btnExit = new Button();
             gBoxSabah.SuspendLayout();
             grBoxAksam.SuspendLayout();
             gBoxOgle.SuspendLayout();
@@ -304,12 +305,23 @@
             linkLabel1.Text = "Öğünlerim";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked_1;
             // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(666, 401);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(75, 23);
+            btnExit.TabIndex = 114;
+            btnExit.Text = "Çıkış";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // UserScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumAquamarine;
             ClientSize = new Size(849, 430);
+            Controls.Add(btnExit);
             Controls.Add(linkLabel1);
             Controls.Add(lLabelProfil);
             Controls.Add(btnOnayla);
@@ -362,5 +374,6 @@
         private Button btnOnayla;
         private LinkLabel lLabelProfil;
         private LinkLabel linkLabel1;
+        private Button btnExit;
     }
 }
