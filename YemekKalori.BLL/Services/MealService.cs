@@ -100,7 +100,10 @@ namespace YemekKalori.BLL.Services
         {
             repo.UpdateMeal(meal);
         }
-
+        public List<Meal> GetMealsByUserDaily(int userId,DateTime date)
+        {
+            return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == date && x.Status != Domain.Enums.Status.Deleted).ToList();
+        }
         public List<Meal> GetMealsByUserDaily(int userId)
         {
             return repo.GetMealsByUser(userId).Where(x => x.MealTime.Date == DateTime.Now.Date && x.Status != Domain.Enums.Status.Deleted).ToList();
@@ -193,6 +196,58 @@ namespace YemekKalori.BLL.Services
             return todaysCalories;  
 
         }
+        //herhangi bir günün kalorisi,tarihe bağlı
+        public decimal GetDailyCalories(int userId, DateTime date)
+        {
+            decimal dailyCalories = 0;
+            List<Meal> dailyMeals = GetMealsByUserDaily(userId, date);
+
+            foreach (var meal in dailyMeals)
+            {
+                if (meal.MealCalorie is not null)
+                {
+                    dailyCalories += (decimal)meal.MealCalorie;
+                }
+            }
+
+            return dailyCalories;
+        }
+
+        public List<decimal> GetWeeklyCaloriesPerDay(int userId)
+        {
+            List<decimal> weeklyCaloriesList = new List<decimal>();
+
+            // Şu andan itibaren bir hafta geriye git
+            DateTime startDate = DateTime.Now.Date.AddDays(-7);
+
+            for (int i = 0; i < 7; i++)
+            {
+                DateTime currentDate = startDate.AddDays(i);
+                decimal dailyCalories = GetTodaysCalories(userId);
+                weeklyCaloriesList.Add(dailyCalories);
+            }
+
+            return weeklyCaloriesList;
+        }
+        public List<decimal> GetMonthlyCaloriesPerWeek(int userId)
+        {
+            List<decimal> monthlyCaloriesList = new List<decimal>();
+
+            // Şu andan itibaren bir ay geriye git
+            DateTime startDate = DateTime.Now.Date.AddMonths(-1);
+
+            for (int i = 0; i < 4; i++)
+            {
+                decimal weeklyCalories = GetWeeklyCalories(userId);
+                monthlyCaloriesList.Add(weeklyCalories);
+
+                // Bir hafta ileri git
+                startDate = startDate.AddDays(7);
+            }
+
+            return monthlyCaloriesList;
+        }
+
         public decimal GetWeeklyCalories(int userId)
         {
             decimal weeklyCalories = 0;
