@@ -30,7 +30,7 @@ namespace YemekKalori.UI
         {
             service = new MealService();
 
-            List<Meal> meals = service.GetAllMealsByUser(user.Id);
+            List<Meal> meals = service.GetAllMealsByUser(user.Id).OrderBy(x=>x.MealTime).ToList();
 
             foreach (Meal meal in meals) 
             {
