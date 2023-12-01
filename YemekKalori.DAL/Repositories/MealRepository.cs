@@ -30,8 +30,10 @@ namespace YemekKalori.DAL.Repositories
         //update meal
         public void UpdateMeal(Meal meal)
         {
-            dbContext.Meals.Update(meal);
             meal.Status = Domain.Enums.Status.Modified;
+            meal.ModifiedDate = DateTime.Now;
+            dbContext.Meals.Update(meal);
+            
             dbContext.SaveChanges();
         
 
@@ -48,6 +50,8 @@ namespace YemekKalori.DAL.Repositories
         {
             Meal meal= dbContext.Meals.FirstOrDefault(x => x.Id == mealID);
             meal.Status = Domain.Enums.Status.Deleted;
+            meal.DeletedDate = DateTime.Now;
+            dbContext.Meals.Update(meal);
             dbContext.SaveChanges();
         }
 

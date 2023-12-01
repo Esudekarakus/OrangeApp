@@ -34,17 +34,21 @@ namespace YemekKalori.DAL.Repositories
         }
         public void Update(User user)
         {
+            user.Status = Domain.Enums.Status.Modified;
+            user.ModifiedDate = DateTime.Now;
             dbContext.Users.Update(user);
             dbContext.SaveChanges();
 
 
         }
-        //public void DeleteUserByStatus(int id) 
-        //{
-        //    User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
-        //    user.Status = Domain.Enums.Status.Deleted;
-        //    dbContext.SaveChanges();
-        //}
+        public void DeleteUserByStatus(int id)
+        {
+            User user = dbContext.Users.FirstOrDefault(x => x.Id == id);
+            user.Status = Domain.Enums.Status.Deleted;
+            user.DeletedDate = DateTime.Now;
+            dbContext.Update(user);
+            dbContext.SaveChanges();
+        }
         //kullanıcı kaydını silmek isterse
         public void Delete(int id) 
         {

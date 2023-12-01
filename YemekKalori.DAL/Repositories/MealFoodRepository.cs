@@ -24,6 +24,8 @@ namespace YemekKalori.DAL.Repositories
 
         public void Update(MealFood entity) 
         {
+            entity.Status = Domain.Enums.Status.Modified;
+            entity.ModifiedDate = DateTime.Now;
             dbContext.Update(entity);
             dbContext.SaveChanges();
         }
@@ -31,6 +33,8 @@ namespace YemekKalori.DAL.Repositories
         public void Delete(MealFood entity) 
         {
             entity.Status = Domain.Enums.Status.Deleted;
+            entity.DeletedDate = DateTime.Now;
+            dbContext.Update(entity);
             dbContext.SaveChanges();
         }
 
