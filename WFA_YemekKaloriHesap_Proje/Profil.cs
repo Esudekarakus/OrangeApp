@@ -115,9 +115,11 @@ namespace YemekKalori.UI.Properties
 
             // Verileri seriyi ekleyerek göster
             // Series1 serisine verileri ekleyerek göster
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Carb", encokTuketilen.Food.CarbRate);
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Fat", encokTuketilen.Food.FatRate);
+            chartFavoriBesin.Series["Series1"].IsValueShownAsLabel = false;
+            chartFavoriBesin.Series["Series1"].Points.AddXY("Karbonhidrat", encokTuketilen.Food.CarbRate);
+            chartFavoriBesin.Series["Series1"].Points.AddXY("Yağ", encokTuketilen.Food.FatRate);
             chartFavoriBesin.Series["Series1"].Points.AddXY("Protein", encokTuketilen.Food.ProteinRate);
+
         }
 
         private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -131,6 +133,13 @@ namespace YemekKalori.UI.Properties
         private void btnKapat_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lLabelGrafikler_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Graph graph = new Graph(user);
+            graph.ShowDialog();
         }
     }
 
