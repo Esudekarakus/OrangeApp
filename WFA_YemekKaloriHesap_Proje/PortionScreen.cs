@@ -47,7 +47,11 @@ namespace YemekKalori.UI
 
             Food food = foodService.GetFoodById(foodId);
 
+            lblYemekAd.Text = food.Name;
+
             pbFoodPic.ImageLocation = food.FoodPic;
+
+            lblPorsiyonTanim.Text = food.PortionDesc;
 
             cbPortions.SelectedIndex = -1;
 

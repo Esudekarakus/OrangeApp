@@ -27,7 +27,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 10.6m,
                         ProteinRate = 12.6m,
                         Type = Domain.Enums.FoodType.Eggs,
-                        FoodPic = "Images/HaşlanmışYumurta.jpg"
+                        FoodPic = "Images/HaşlanmışYumurta.jpg",
+                        PortionDesc = "Adet"
                     },
                     new Food
                     {
@@ -39,7 +40,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 21,
                         ProteinRate = 18,
                         Type = Domain.Enums.FoodType.DairyProducts,
-                        FoodPic = "Images/BeyazPeynir.jpg"
+                        FoodPic = "Images/BeyazPeynir.jpg",
+                        PortionDesc = "100 gram"
 
                     },
                     new Food
@@ -52,7 +54,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 11,
                         ProteinRate = 0.8m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/siya-zeytin.jpeg"
+                        FoodPic = "Images/siya-zeytin.jpeg",
+                        PortionDesc = "100 gram"
                     },
                     new Food
                     {
@@ -64,7 +67,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 15.3m,
                         ProteinRate = 1,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/YesilZeytin.png"
+                        FoodPic = "Images/YesilZeytin.png",
+                        PortionDesc = "100 gram"
                     },
                     new Food
                     {
@@ -76,7 +80,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 15,
                         ProteinRate = 14,
                         Type = Domain.Enums.FoodType.Eggs,
-                        FoodPic = "Images/SahandaYumurta.png"
+                        FoodPic = "Images/SahandaYumurta.png",
+                        PortionDesc = "Adet"
                     },
 
                     new Food
@@ -89,7 +94,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 4.9m,
                         ProteinRate = 6.4m,
                         Type = Domain.Enums.FoodType.Eggs,
-                        FoodPic = "Images/Menemen.jpg"
+                        FoodPic = "Images/Menemen.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -102,7 +108,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.2m,
                         ProteinRate = 0.3m,
                         Type = Domain.Enums.FoodType.Fruits,
-                        FoodPic = "Images/Reçel.jpg"
+                        FoodPic = "Images/Reçel.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -115,7 +122,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0.3m,
                         Type = Domain.Enums.FoodType.Honey,
-                        FoodPic = "Images/bal.png"
+                        FoodPic = "Images/bal.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -128,7 +136,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 30,
                         ProteinRate = 13m,
                         Type = Domain.Enums.FoodType.MeatProducts,
-                        FoodPic = "Images/salam.png"
+                        FoodPic = "Images/salam.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -141,7 +150,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0,
                         Type = Domain.Enums.FoodType.Tea,
-                        FoodPic = "Images/Çay.png"
+                        FoodPic = "Images/Çay.png",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -154,7 +164,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0,
                         Type = Domain.Enums.FoodType.Tea,
-                        FoodPic = "Images/YesilCay.png"
+                        FoodPic = "Images/YesilCay.png",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -167,7 +178,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.2m,
                         ProteinRate = 0.7m,
                         Type = Domain.Enums.FoodType.Juice,
-                        FoodPic = "Images/Portakal-suyu.jpg"
+                        FoodPic = "Images/Portakal-suyu.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -180,7 +192,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 1,
                         ProteinRate = 3.4m,
                         Type = Domain.Enums.FoodType.DairyProducts,
-                        FoodPic = "Images/Süt.jpg"
+                        FoodPic = "Images/Süt.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -193,7 +206,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 2.2m,
                         ProteinRate = 4.1m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/MercimekCorbası.png"
+                        FoodPic = "Images/MercimekCorbası.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -206,7 +220,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 1.5m,
                         ProteinRate = 2.9m,
                         Type = Domain.Enums.FoodType.MeatProducts,
-                        FoodPic = "Images/Tavuk Çorbası.png"
+                        FoodPic = "Images/Tavuk Çorbası.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -219,7 +234,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 1.6m,
                         ProteinRate = 1.2m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/domatesÇorbası.png"
+                        FoodPic = "Images/domatesÇorbası.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -232,7 +248,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 1.5m,
                         ProteinRate = 1.4m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/SebzeÇorbası.jpg"
+                        FoodPic = "Images/SebzeÇorbası.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -245,7 +262,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.3m,
                         ProteinRate = 2.7m,
                         Type = Domain.Enums.FoodType.Legumes,
-                        FoodPic = "Images/PirinçPilavı.jpg"
+                        FoodPic = "Images/PirinçPilavı.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -258,7 +276,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.2m,
                         ProteinRate = 3.1m,
                         Type = Domain.Enums.FoodType.Legumes,
-                        FoodPic = "Images/BulgurPilavı.jpg"
+                        FoodPic = "Images/BulgurPilavı.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -271,7 +290,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 1.1m,
                         ProteinRate = 5,
                         Type = Domain.Enums.FoodType.GrainProducts,
-                        FoodPic = "Images/Makarna.jpg"
+                        FoodPic = "Images/Makarna.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -284,7 +304,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 8,
                         ProteinRate = 25,
                         Type = Domain.Enums.FoodType.MeatProducts,
-                        FoodPic = "Images/Kebap.jpg"
+                        FoodPic = "Images/Kebap.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -297,7 +318,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 12,
                         ProteinRate = 26,
                         Type = Domain.Enums.FoodType.MeatProducts,
-                        FoodPic = "Images/Döner.jpg"
+                        FoodPic = "Images/Döner.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -310,7 +332,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 17.8m,
                         ProteinRate = 13.3m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/Falafel.jpg"
+                        FoodPic = "Images/Falafel.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -323,7 +346,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 10,
                         ProteinRate = 12,
                         Type = Domain.Enums.FoodType.MeatProducts,
-                        FoodPic = "Images/Hamburger.png"
+                        FoodPic = "Images/Hamburger.png",
+                        PortionDesc = "Adet"
                     },
 
                     new Food
@@ -336,7 +360,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.2m,
                         ProteinRate = 1,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/MevsimSalata.png"
+                        FoodPic = "Images/MevsimSalata.png",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -349,7 +374,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.4m,
                         ProteinRate = 1.1m,
                         Type = Domain.Enums.FoodType.Vegetables,
-                        FoodPic = "Images/coban_salatasi.jpg"
+                        FoodPic = "Images/coban_salatasi.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -362,7 +388,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 3.2m,
                         ProteinRate = 9,
                         Type = Domain.Enums.FoodType.GrainProducts,
-                        FoodPic = "Images/beyaz_ekmek.jpg"
+                        FoodPic = "Images/beyaz_ekmek.jpg",
+                        PortionDesc = "2 dilim"
                     },
 
                     new Food
@@ -375,7 +402,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 4.2m,
                         ProteinRate = 13,
                         Type = Domain.Enums.FoodType.GrainProducts,
-                        FoodPic = "Images/kepek_ekmegi.jpg"
+                        FoodPic = "Images/kepek_ekmegi.jpg",
+                        PortionDesc = "2 dilim"
                     },
 
                     new Food
@@ -388,7 +416,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 3.3m,
                         ProteinRate = 8.5m,
                         Type = Domain.Enums.FoodType.GrainProducts,
-                        FoodPic = "Images/cavdar_ekmegi.jpg"
+                        FoodPic = "Images/cavdar_ekmegi.jpg",
+                        PortionDesc = "2 dilim"
                     },
 
                     new Food
@@ -401,7 +430,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 4.4m,
                         ProteinRate = 13,
                         Type = Domain.Enums.FoodType.GrainProducts,
-                        FoodPic = "Images/tam_tahilli_ekmek.jpg"
+                        FoodPic = "Images/tam_tahilli_ekmek.jpg",
+                        PortionDesc = "2 dilim"
                     },
 
                     new Food
@@ -414,7 +444,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0,
                         Type = Domain.Enums.FoodType.SugaryDrinks,
-                        FoodPic = "Images/light_kola.jpg"
+                        FoodPic = "Images/light_kola.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -427,7 +458,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0,
                         Type = Domain.Enums.FoodType.SugaryDrinks,
-                        FoodPic = "Images/fanta.jpg"
+                        FoodPic = "Images/fanta.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -440,7 +472,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0,
                         Type = Domain.Enums.FoodType.SugaryDrinks,
-                        FoodPic = "Images/icetea.jpg"
+                        FoodPic = "Images/icetea.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -453,7 +486,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 2,
                         ProteinRate = 1.7m,
                         Type = Domain.Enums.FoodType.DairyProducts,
-                        FoodPic = "Images/ayran.jpg"
+                        FoodPic = "Images/ayran.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -466,7 +500,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.5m,
                         ProteinRate = 3.1m,
                         Type = Domain.Enums.FoodType.Fruits,
-                        FoodPic = "kuru_uzum.jpg"
+                        FoodPic = "kuru_uzum.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -479,7 +514,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.5m,
                         ProteinRate = 3.4m,
                         Type = Domain.Enums.FoodType.Fruits,
-                        FoodPic = "Images/kuru_kayisi.jpg"
+                        FoodPic = "Images/kuru_kayisi.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -492,7 +528,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 65.2m,
                         ProteinRate = 15.2m,
                         Type = Domain.Enums.FoodType.Nuts,
-                        FoodPic = "Images/ceviz.jpg"
+                        FoodPic = "Images/ceviz.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -505,7 +542,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 60.8m,
                         ProteinRate = 15,
                         Type = Domain.Enums.FoodType.Nuts,
-                        FoodPic = "Images/findik.jpg"
+                        FoodPic = "Images/findik.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -518,7 +556,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 49.2m,
                         ProteinRate = 25.8m,
                         Type = Domain.Enums.FoodType.Nuts,
-                        FoodPic = "Images/fistik.jpg"
+                        FoodPic = "Images/fistik.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -531,7 +570,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0.2m,
                         ProteinRate = 0.3m,
                         Type = Domain.Enums.FoodType.Fruits,
-                        FoodPic = "yesil_elma.jpg"
+                        FoodPic = "yesil_elma.jpg",
+                        PortionDesc = "Adet"
                     },
 
                     new Food
@@ -544,7 +584,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 31,
                         ProteinRate = 5,
                         Type = Domain.Enums.FoodType.ProcessedFood,
-                        FoodPic = "bitter_cikolata.jpg"
+                        FoodPic = "bitter_cikolata.jpg",
+                        PortionDesc = "100 gram"
                     },
 
                     new Food
@@ -557,7 +598,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0.1m,
                         Type = Domain.Enums.FoodType.Coffee,
-                        FoodPic = "Images/turk_kahve.jpg"
+                        FoodPic = "Images/turk_kahve.jpg",
+                        PortionDesc = "Bardak"
                     },
 
                     new Food
@@ -570,7 +612,8 @@ namespace YemekKalori.DAL.Configurations
                         FatRate = 0,
                         ProteinRate = 0.1m,
                         Type = Domain.Enums.FoodType.Coffee,
-                        FoodPic = "Images/filtre_kahve.jpg"
+                        FoodPic = "Images/filtre_kahve.jpg",
+                        PortionDesc = "Bardak"
                     }
 
                     
