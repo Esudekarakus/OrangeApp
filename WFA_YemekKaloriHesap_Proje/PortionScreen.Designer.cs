@@ -32,6 +32,9 @@
             cbPortions = new ComboBox();
             btnOnayla = new Button();
             pbFoodPic = new PictureBox();
+            lblPorsiyonTanim = new Label();
+            label2 = new Label();
+            lblYemekAd = new Label();
             ((System.ComponentModel.ISupportInitialize)pbFoodPic).BeginInit();
             SuspendLayout();
             // 
@@ -39,7 +42,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(22, 181);
+            label1.Location = new Point(22, 232);
             label1.Name = "label1";
             label1.Size = new Size(222, 25);
             label1.TabIndex = 0;
@@ -49,7 +52,7 @@
             // cbPortions
             // 
             cbPortions.FormattingEnabled = true;
-            cbPortions.Location = new Point(22, 234);
+            cbPortions.Location = new Point(22, 338);
             cbPortions.Name = "cbPortions";
             cbPortions.Size = new Size(222, 23);
             cbPortions.TabIndex = 1;
@@ -57,7 +60,7 @@
             // btnOnayla
             // 
             btnOnayla.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnOnayla.Location = new Point(52, 291);
+            btnOnayla.Location = new Point(56, 394);
             btnOnayla.Name = "btnOnayla";
             btnOnayla.Size = new Size(138, 43);
             btnOnayla.TabIndex = 2;
@@ -74,11 +77,45 @@
             pbFoodPic.TabIndex = 3;
             pbFoodPic.TabStop = false;
             // 
+            // lblPorsiyonTanim
+            // 
+            lblPorsiyonTanim.AutoSize = true;
+            lblPorsiyonTanim.BackColor = SystemColors.ActiveCaption;
+            lblPorsiyonTanim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPorsiyonTanim.Location = new Point(163, 292);
+            lblPorsiyonTanim.Name = "lblPorsiyonTanim";
+            lblPorsiyonTanim.Size = new Size(52, 21);
+            lblPorsiyonTanim.TabIndex = 4;
+            lblPorsiyonTanim.Text = "label2";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(22, 292);
+            label2.Name = "label2";
+            label2.Size = new Size(126, 21);
+            label2.TabIndex = 5;
+            label2.Text = "Porsiyon Tanımı :";
+            // 
+            // lblYemekAd
+            // 
+            lblYemekAd.AutoSize = true;
+            lblYemekAd.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblYemekAd.Location = new Point(66, 181);
+            lblYemekAd.Name = "lblYemekAd";
+            lblYemekAd.Size = new Size(52, 21);
+            lblYemekAd.TabIndex = 6;
+            lblYemekAd.Text = "label3";
+            // 
             // PortionScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(266, 366);
+            ClientSize = new Size(266, 466);
+            Controls.Add(lblYemekAd);
+            Controls.Add(label2);
+            Controls.Add(lblPorsiyonTanim);
             Controls.Add(pbFoodPic);
             Controls.Add(btnOnayla);
             Controls.Add(cbPortions);
@@ -97,5 +134,8 @@
         private ComboBox cbPortions;
         private Button btnOnayla;
         private PictureBox pbFoodPic;
+        private Label lblPorsiyonTanim;
+        private Label label2;
+        private Label lblYemekAd;
     }
 }

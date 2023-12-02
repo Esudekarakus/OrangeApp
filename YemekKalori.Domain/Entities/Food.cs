@@ -25,6 +25,8 @@ namespace YemekKalori.Domain.Entities
 
         public string? FoodPic {  get; set; }
 
+        public string? PortionDesc { get; set; }
+
         public override string ToString()
         {
             return $"{Name} {Calorie} Kalori";
