@@ -49,6 +49,7 @@
             // 
             chartArea1.Name = "ChartArea1";
             cGunluk.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
             legend1.Name = "Legend1";
             cGunluk.Legends.Add(legend1);
             cGunluk.Location = new Point(33, 43);
@@ -65,6 +66,7 @@
             // 
             chartArea2.Name = "ChartArea1";
             cHaftalik.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
             legend2.Name = "Legend1";
             cHaftalik.Legends.Add(legend2);
             cHaftalik.Location = new Point(723, 43);
@@ -81,11 +83,13 @@
             // 
             chartArea3.Name = "ChartArea1";
             cMonthly.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
             legend3.Name = "Legend1";
             cMonthly.Legends.Add(legend3);
             cMonthly.Location = new Point(364, 357);
             cMonthly.Name = "cMonthly";
             series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series3.Legend = "Legend1";
             series3.Name = "Monthly";
             cMonthly.Series.Add(series3);
