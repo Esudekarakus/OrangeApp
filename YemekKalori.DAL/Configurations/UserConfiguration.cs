@@ -40,6 +40,20 @@ namespace YemekKalori.DAL.Configurations
                         Status = Domain.Enums.Status.Added,
                         Type = Domain.Enums.UserType.Admin
                     }
+                    //new User
+                    //{
+                    //    Id=2,
+                    //    CreatedDate = DateTime.Now,
+                    //    FirstName="Akif",
+                    //    LastName="Gül",
+                    //    Username="akifG",
+                    //    Password="123Asd",
+                    //    Status = Domain.Enums.Status.Added,
+                    //    Type=Domain.Enums.UserType.Standart,
+                    //    Diet=Domain.Enums.DietType.Carnivor
+                        
+                    //}
+
                 );
 
             
