@@ -96,9 +96,6 @@ namespace YemekKalori.UI.Properties
         private void VeriEkleOlustur()
         {
 
-
-
-            chartFavoriBesin.Size = new System.Drawing.Size(300, 300);
             this.Controls.Add(chartFavoriBesin);
             chartFavoriBesin.Titles.Add("Favori Besin İçeriği");
             var meals = mealService.GetMealByUser(user.Id);
@@ -115,10 +112,12 @@ namespace YemekKalori.UI.Properties
 
             // Verileri seriyi ekleyerek göster
             // Series1 serisine verileri ekleyerek göster
-            chartFavoriBesin.Series["Series1"].IsValueShownAsLabel = false;
+
             chartFavoriBesin.Series["Series1"].Points.AddXY("Karbonhidrat", encokTuketilen.Food.CarbRate);
             chartFavoriBesin.Series["Series1"].Points.AddXY("Yağ", encokTuketilen.Food.FatRate);
             chartFavoriBesin.Series["Series1"].Points.AddXY("Protein", encokTuketilen.Food.ProteinRate);
+
+            chartFavoriBesin.Series["Series1"]["PieLabelStyle"] = "Disabled";
 
         }
 

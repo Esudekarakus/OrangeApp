@@ -155,18 +155,16 @@
             // 
             chartArea1.Name = "ChartArea1";
             chartFavoriBesin.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
             legend1.Name = "Legend1";
             chartFavoriBesin.Legends.Add(legend1);
-            chartFavoriBesin.Location = new Point(713, 91);
+            chartFavoriBesin.Location = new Point(580, 91);
             chartFavoriBesin.Name = "chartFavoriBesin";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartFavoriBesin.Series.Add(series1);
-            chartFavoriBesin.Size = new Size(350, 328);
+            chartFavoriBesin.Size = new Size(483, 382);
             chartFavoriBesin.TabIndex = 16;
             chartFavoriBesin.Text = "chart2";
             // 
