@@ -39,7 +39,7 @@ namespace YemekKalori.UI
             var dailyMeals=mealService.GetMealsByUserDaily(user.Id);
             
             this.Controls.Add(cGunluk);
-            cGunluk.Titles.Add($"{user.Username} Haftalık Kalori Takibi");
+            cGunluk.Titles.Add($"{user.Username} Günlük Kalori Takibi");
             Series Daily = new Series();
 
             foreach (var meal in dailyMeals)
@@ -52,9 +52,46 @@ namespace YemekKalori.UI
 
             //haftalık kalori takibi
 
+            var weeklyMealsPerday=mealService.GetWeeklyCaloriesPerDay(user.Id);
+            this.Controls.Add(cHaftalik);
+            cHaftalik.Titles.Add($"{user.Username} Haftalık Kalori Takibi");
+            DateTime startDate=DateTime.Now.AddDays(-7);
+            Series series =new Series();
+            int i = 0;
+           foreach (var calorie in  weeklyMealsPerday)
+            {
 
-            //aylık kalori takibi 
+                DateTime date=startDate.AddDays(i);
+                series.Points.AddXY(date, calorie);
+                i++;
+            }
+           cHaftalik.Series.Add(series);
+           cHaftalik.Invalidate();
 
+            //aylık
+
+            
+
+        }
+        public void Aylik()
+        {
+            //aylık kalori takibi
+
+            var monthlyMealsPerWeek = mealService.GetMonthlyCaloriesPerWeek(user.Id);
+            this.Controls.Add(cMonthly);
+            cMonthly.Titles.Add($"{user.Username} Aylık Kalori Takibi");
+            DateTime startdate2 = DateTime.Now.AddMonths(-1);
+            Series series1 = new Series();
+            int j = 0;
+
+            foreach (var calories in monthlyMealsPerWeek)
+            {
+                DateTime dateTime = startdate2.AddDays(j);
+                series1.Points.AddXY(dateTime, calories);
+                j++;
+            }
+            cMonthly.Series.Add(series1);
+            cMonthly.Invalidate();
         }
     }
 }
