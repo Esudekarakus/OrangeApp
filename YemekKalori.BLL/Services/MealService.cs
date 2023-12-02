@@ -223,11 +223,24 @@ namespace YemekKalori.BLL.Services
             for (int i = 0; i < 7; i++)
             {
                 DateTime currentDate = startDate.AddDays(i);
-                decimal dailyCalories = GetTodaysCalories(userId);
+                decimal dailyCalories = GetDailyCalories(userId,currentDate);
                 weeklyCaloriesList.Add(dailyCalories);
             }
 
             return weeklyCaloriesList;
+        }
+        public decimal GetWeeklyCalories(int userId, DateTime startDate)
+        {
+            decimal totalWeeklyCalories = 0;
+
+            for (int i = 0; i < 7; i++)
+            {
+                DateTime currentDate = startDate.AddDays(i);
+                decimal dailyCalories = GetDailyCalories(userId, currentDate);
+                totalWeeklyCalories += dailyCalories;
+            }
+
+            return totalWeeklyCalories;
         }
         public List<decimal> GetMonthlyCaloriesPerWeek(int userId)
         {
@@ -238,7 +251,7 @@ namespace YemekKalori.BLL.Services
 
             for (int i = 0; i < 4; i++)
             {
-                decimal weeklyCalories = GetWeeklyCalories(userId);
+                decimal weeklyCalories = GetWeeklyCalories(userId, startDate);
                 monthlyCaloriesList.Add(weeklyCalories);
 
                 // Bir hafta ileri git
@@ -247,6 +260,7 @@ namespace YemekKalori.BLL.Services
 
             return monthlyCaloriesList;
         }
+
 
         public decimal GetWeeklyCalories(int userId)
         {
