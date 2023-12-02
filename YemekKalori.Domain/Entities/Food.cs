@@ -23,6 +23,8 @@ namespace YemekKalori.Domain.Entities
 
         public ICollection<MealFood> MealFoods { get; set; }
 
+        public string? FoodPic {  get; set; }
+
         public override string ToString()
         {
             return $"{Name} {Calorie} Kalori";

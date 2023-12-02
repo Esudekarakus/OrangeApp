@@ -45,6 +45,10 @@ namespace YemekKalori.UI
 
             foodService = new FoodService();
 
+            Food food = foodService.GetFoodById(foodId);
+
+            pbFoodPic.ImageLocation = food.FoodPic;
+
             cbPortions.SelectedIndex = -1;
 
         }
@@ -66,7 +70,7 @@ namespace YemekKalori.UI
 
                     //mealFood.Food = foodService.GetFoodById(foodId);
 
-                    
+
                     frm.RetrieveMealFood(mealFood);
 
                     this.Close();
