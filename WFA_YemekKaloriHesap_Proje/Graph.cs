@@ -35,6 +35,7 @@ namespace YemekKalori.UI
 
         private void Graph_Load(object sender, EventArgs e)
         {
+            Aylik();
             //gunluk kalori takibi
             var dailyMeals=mealService.GetMealsByUserDaily(user.Id);
             
@@ -68,7 +69,7 @@ namespace YemekKalori.UI
            cHaftalik.Series.Add(series);
            cHaftalik.Invalidate();
 
-            //aylık
+            
 
             
 
@@ -88,7 +89,7 @@ namespace YemekKalori.UI
             {
                 DateTime dateTime = startdate2.AddDays(j);
                 series1.Points.AddXY(dateTime, calories);
-                j++;
+                j=j+7;
             }
             cMonthly.Series.Add(series1);
             cMonthly.Invalidate();
