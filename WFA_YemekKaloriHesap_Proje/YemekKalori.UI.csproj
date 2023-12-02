@@ -9,6 +9,188 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\ayran.jpg" />
+    <None Remove="Images\bal.png" />
+    <None Remove="Images\BeyazPeynir.jpg" />
+    <None Remove="Images\beyaz_ekmek.jpg" />
+    <None Remove="Images\bitter_cikolata.jpg" />
+    <None Remove="Images\BulgurPilavı.jpg" />
+    <None Remove="Images\cavdar_ekmegi.jpg" />
+    <None Remove="Images\ceviz.jpg" />
+    <None Remove="Images\coban_salatasi.jpg" />
+    <None Remove="Images\domatesÇorbası.png" />
+    <None Remove="Images\Döner.jpg" />
+    <None Remove="Images\Falafel.jpg" />
+    <None Remove="Images\fanta.jpg" />
+    <None Remove="Images\filtre_kahve.jpg" />
+    <None Remove="Images\findik.jpg" />
+    <None Remove="Images\fistik.jpg" />
+    <None Remove="Images\Hamburger.png" />
+    <None Remove="Images\HaşlanmışYumurta.jpg" />
+    <None Remove="Images\icetea.jpg" />
+    <None Remove="Images\Kebap.jpg" />
+    <None Remove="Images\kepek_ekmegi.jpg" />
+    <None Remove="Images\kuru_kayisi.jpg" />
+    <None Remove="Images\kuru_uzum.jpg" />
+    <None Remove="Images\light_kola.jpg" />
+    <None Remove="Images\Makarna.jpg" />
+    <None Remove="Images\Menemen.jpg" />
+    <None Remove="Images\MercimekCorbası.png" />
+    <None Remove="Images\MevsimSalata.png" />
+    <None Remove="Images\PirinçPilavı.jpg" />
+    <None Remove="Images\Portakal-suyu.jpg" />
+    <None Remove="Images\Reçel.jpg" />
+    <None Remove="Images\SahandaYumurta.png" />
+    <None Remove="Images\salam.png" />
+    <None Remove="Images\SebzeÇorbası.jpg" />
+    <None Remove="Images\siyah-zeytin.jpeg" />
+    <None Remove="Images\Süt.jpg" />
+    <None Remove="Images\tam_tahilli_ekmek.jpg" />
+    <None Remove="Images\Tavuk Çorbası.png" />
+    <None Remove="Images\turk_kahve.jpg" />
+    <None Remove="Images\YesilCay.png" />
+    <None Remove="Images\YesilZeytin.png" />
+    <None Remove="Images\yesil_cay.jpg" />
+    <None Remove="Images\yesil_elma.jpg" />
+    <None Remove="Images\Çay.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\ayran.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BeyazPeynir.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\beyaz_ekmek.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bitter_cikolata.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BulgurPilavı.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cavdar_ekmegi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ceviz.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\coban_salatasi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\domatesÇorbası.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Döner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Falafel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\fanta.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\filtre_kahve.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\findik.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\fistik.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hamburger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HaşlanmışYumurta.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icetea.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Kebap.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\kepek_ekmegi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\kuru_kayisi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\kuru_uzum.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\light_kola.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Makarna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Menemen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MercimekCorbası.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MevsimSalata.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PirinçPilavı.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Portakal-suyu.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Reçel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SahandaYumurta.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\salam.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SebzeÇorbası.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\siyah-zeytin.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Süt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tam_tahilli_ekmek.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Tavuk Çorbası.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\turk_kahve.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\YesilCay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\YesilZeytin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\yesil_cay.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\yesil_elma.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Çay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="WinForms.DataVisualization" Version="1.9.1" />
   </ItemGroup>
 
