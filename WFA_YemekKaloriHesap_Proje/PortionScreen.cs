@@ -31,8 +31,9 @@ namespace YemekKalori.UI
             InitializeComponent();
             this.mealFood = mealFood;
             this.frm = frm;
+            foodId = mealFood.FoodId;
         }
-
+        
         MealFood mealFood;
         UserScreen frm;
         int foodId;
