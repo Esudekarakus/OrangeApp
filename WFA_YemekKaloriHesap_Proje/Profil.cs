@@ -73,7 +73,15 @@ namespace YemekKalori.UI.Properties
 
                 lblBmi.Text=user.BMI.ToString();
                 lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
-                txtBoxGoalType.Text = user.Goal?.ToString();
+                if (user.Goal==Domain.Enums.GoalType.GainWeight)
+                {
+                    txtBoxGoalType.Text = "Kilo almak";
+
+                }
+                else if(user.Goal == Domain.Enums.GoalType.LoseWeight)
+                {
+                    txtBoxGoalType.Text = "Kilo vermek";
+                }
                 txtBoxDietType.Text = user.Diet?.ToString();
                 txtBoxBoy.Text = user.Height?.ToString();
                 txtBoxKilo.Text = user.Weight?.ToString();
