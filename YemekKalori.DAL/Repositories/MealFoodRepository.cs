@@ -55,7 +55,11 @@ namespace YemekKalori.DAL.Repositories
             MealFood mealFood = dbContext.MealFoods.FirstOrDefault(x => x.Id == id && x.Status != Domain.Enums.Status.Deleted);
             return mealFood;
         }
-
+        public List<MealFood> GetMealFoodByID(int id)
+        {
+            List<MealFood> mealFood = dbContext.MealFoods.Where(x => x.Id == id && x.Status != Domain.Enums.Status.Deleted).ToList();
+            return mealFood;
+        }
 
     }
 }

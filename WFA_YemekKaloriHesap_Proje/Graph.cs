@@ -50,6 +50,7 @@ namespace YemekKalori.UI
             }
 
             
+
             cGunluk.Invalidate();
 
             //haftalık kalori takibi

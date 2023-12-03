@@ -25,8 +25,8 @@ namespace YemekKalori.UI.Properties
             userService = new UserService();
             mealService = new MealService();
             mealFoodService = new MealFoodService();
+            foodService = new FoodService();
 
-            dbContext = new AppDbContext();
             VeriEkleOlustur();
 
 
@@ -34,9 +34,10 @@ namespace YemekKalori.UI.Properties
 
         UserService userService;
         MealService mealService;
+        FoodService foodService;
         MealFoodService mealFoodService;
         Domain.Entities.User user;
-        AppDbContext dbContext;
+       
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
@@ -48,22 +49,21 @@ namespace YemekKalori.UI.Properties
                 var meals = mealService.GetMealByUser(user.Id);
                 if (meals != null)
                 {
-
-
-
-                    var encokTuketilen = dbContext.MealFoods.Where(x => x.MealId == meals.Id).OrderByDescending(x => x.Portion).FirstOrDefault();
-
-                    Food food = new Food()
+                    var encoktuketilenMealFood = mealFoodService.GetTheMostConsumedMealFoodByMealId(meals.Id);
+                    if (encoktuketilenMealFood!=null)
                     {
-                        Id = encokTuketilen.FoodId
-                    };
+                        var food = foodService.GetFoodById(encoktuketilenMealFood.FoodId);
+                        lblEnCokTuketilenYiyecek.Text = $"{food.Name}";
+                    }
+                    else
+                    {
+                        lblEnCokTuketilenYiyecek.Text = " ";
+                    }
+                    
 
+        
 
-
-
-
-                    var food2 = dbContext.Foods.FirstOrDefault(x => x.Id == food.Id);
-                    lblEnCokTuketilenYiyecek.Text = $"{encokTuketilen.Food.Name}";
+                    
                 }
                 else
                 {
@@ -91,6 +91,10 @@ namespace YemekKalori.UI.Properties
 
 
             }
+            else
+            {
+                MessageBox.Show("Kullanıcı bilgilerine ulaşılamadı", "hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void VeriEkleOlustur()
@@ -98,28 +102,31 @@ namespace YemekKalori.UI.Properties
 
             this.Controls.Add(chartFavoriBesin);
             chartFavoriBesin.Titles.Add("Favori Besin İçeriği");
-            var meals = mealService.GetMealByUser(user.Id);
-            var encokTuketilen = dbContext.MealFoods.Where(x => x.MealId == meals.Id).OrderByDescending(x => x.Portion).FirstOrDefault();
-            Food food = new Food()
+           
+            if (user != null)
             {
-                Id = encokTuketilen.FoodId
-            };
+
+                var meals = mealService.GetMealByUser(user.Id);
+                if (meals != null)
+                {
+                    var encoktuketilenMealFood = mealFoodService.GetTheMostConsumedMealFoodByMealId(meals.Id);
+                    if (encoktuketilenMealFood != null)
+                    {
+                        var food = foodService.GetFoodById(encoktuketilenMealFood.FoodId);
+                        chartFavoriBesin.Series["Series1"].Points.AddXY("Karbonhidrat", food.CarbRate);
+                        chartFavoriBesin.Series["Series1"].Points.AddXY("Yağ", food.FatRate);
+                        chartFavoriBesin.Series["Series1"].Points.AddXY("Protein", food.ProteinRate);
+
+                        chartFavoriBesin.Series["Series1"]["PieLabelStyle"] = "Disabled";
+
+                    }
 
 
-            // Chart kontrolüne seriyi ekle
 
-            var food2 = dbContext.Foods.FirstOrDefault(x => x.Id == food.Id);
-
-            // Verileri seriyi ekleyerek göster
-            // Series1 serisine verileri ekleyerek göster
-
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Karbonhidrat", encokTuketilen.Food.CarbRate);
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Yağ", encokTuketilen.Food.FatRate);
-            chartFavoriBesin.Series["Series1"].Points.AddXY("Protein", encokTuketilen.Food.ProteinRate);
-
-            chartFavoriBesin.Series["Series1"]["PieLabelStyle"] = "Disabled";
-
+                }
+            }
         }
+
 
         private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

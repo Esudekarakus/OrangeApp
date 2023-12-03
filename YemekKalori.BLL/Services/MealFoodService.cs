@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,5 +65,18 @@ namespace YemekKalori.BLL.Services
             food.Status = Domain.Enums.Status.Deleted;
             _mealFoodRepository.Update(food);
         }
+
+        public MealFood  GetTheMostConsumedMealFoodByMealId(int mealid)
+        {
+            List<MealFood> encoktuketilen = _mealFoodRepository.GetMealFoodByID(mealid);
+
+            MealFood mostConsumed = encoktuketilen.OrderByDescending(food => food.Portion).FirstOrDefault();
+
+
+            return mostConsumed;
+
+        }
+
+
     }
 }

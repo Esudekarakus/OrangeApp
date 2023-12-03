@@ -50,6 +50,9 @@
             // 
             // cGunluk
             // 
+            chartArea1.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea1.AxisX.Title = "Öğünler";
+            chartArea1.AxisY.Title = "Kalori";
             chartArea1.Name = "ChartArea1";
             cGunluk.ChartAreas.Add(chartArea1);
             legend1.Enabled = false;
@@ -67,6 +70,7 @@
             // 
             // cHaftalik
             // 
+            chartArea2.AxisY.Title = "Kalori";
             chartArea2.Name = "ChartArea1";
             cHaftalik.ChartAreas.Add(chartArea2);
             legend2.Enabled = false;
@@ -84,6 +88,7 @@
             // 
             // cMonthly
             // 
+            chartArea3.AxisY.Title = "Kalori";
             chartArea3.Name = "ChartArea1";
             cMonthly.ChartAreas.Add(chartArea3);
             legend3.Enabled = false;
