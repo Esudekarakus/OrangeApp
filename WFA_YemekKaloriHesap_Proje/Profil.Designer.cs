@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             lnkLblSifreDegistir = new LinkLabel();
             label1 = new Label();
             lblAdSoyad = new Label();
@@ -50,6 +50,8 @@
             lLabelGrafikler = new LinkLabel();
             label4 = new Label();
             lblEnCokTuketilenYiyecek = new Label();
+            label9 = new Label();
+            lblBmi = new Label();
             ((System.ComponentModel.ISupportInitialize)chartFavoriBesin).BeginInit();
             SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             // lblAdSoyad
             // 
             lblAdSoyad.AutoSize = true;
-            lblAdSoyad.Location = new Point(46, 91);
+            lblAdSoyad.Location = new Point(74, 36);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(50, 20);
             lblAdSoyad.TabIndex = 3;
@@ -153,17 +155,17 @@
             // 
             // chartFavoriBesin
             // 
-            chartArea1.Name = "ChartArea1";
-            chartFavoriBesin.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartFavoriBesin.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            chartFavoriBesin.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chartFavoriBesin.Legends.Add(legend2);
             chartFavoriBesin.Location = new Point(580, 91);
             chartFavoriBesin.Name = "chartFavoriBesin";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartFavoriBesin.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chartFavoriBesin.Series.Add(series2);
             chartFavoriBesin.Size = new Size(483, 382);
             chartFavoriBesin.TabIndex = 16;
             chartFavoriBesin.Text = "chart2";
@@ -235,11 +237,31 @@
             lblEnCokTuketilenYiyecek.TabIndex = 24;
             lblEnCokTuketilenYiyecek.Text = "label9";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(74, 82);
+            label9.Name = "label9";
+            label9.Size = new Size(141, 20);
+            label9.TabIndex = 25;
+            label9.Text = "Vücut Kitle İndeksi : ";
+            // 
+            // lblBmi
+            // 
+            lblBmi.AutoSize = true;
+            lblBmi.Location = new Point(221, 82);
+            lblBmi.Name = "lblBmi";
+            lblBmi.Size = new Size(15, 20);
+            lblBmi.TabIndex = 26;
+            lblBmi.Text = "-";
+            // 
             // FrmProfil
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1157, 519);
+            Controls.Add(lblBmi);
+            Controls.Add(label9);
             Controls.Add(lblEnCokTuketilenYiyecek);
             Controls.Add(label4);
             Controls.Add(lLabelGrafikler);
@@ -287,5 +309,7 @@
         private LinkLabel lLabelGrafikler;
         private Label label4;
         private Label lblEnCokTuketilenYiyecek;
+        private Label label9;
+        private Label lblBmi;
     }
 }
