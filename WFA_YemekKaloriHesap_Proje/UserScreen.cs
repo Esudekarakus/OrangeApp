@@ -207,7 +207,7 @@ namespace YemekKalori.UI
                 Meal meal = new Meal()
                 {
 
-                    MealTime = DateTime.Now,
+                    MealTime = new DateTime (2023,12,3,18,0,0),
 
 
                 };
@@ -311,9 +311,15 @@ namespace YemekKalori.UI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                Application.Exit();
+            }
+            
         }
+
 
         private void label2_Click(object sender, EventArgs e)
         {

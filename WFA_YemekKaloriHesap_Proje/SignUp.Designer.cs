@@ -58,55 +58,55 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(255, 128, 0);
-            label1.Location = new Point(41, 81);
+            label1.Location = new Point(12, 82);
             label1.Name = "label1";
-            label1.Size = new Size(50, 17);
+            label1.Size = new Size(38, 17);
             label1.TabIndex = 0;
-            label1.Text = "Name";
+            label1.Text = "Isim";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(41, 143);
+            label2.Location = new Point(12, 141);
             label2.Name = "label2";
-            label2.Size = new Size(74, 17);
+            label2.Size = new Size(53, 17);
             label2.TabIndex = 0;
-            label2.Text = "Surname";
+            label2.Text = "Soyad";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(41, 197);
+            label3.Location = new Point(12, 197);
             label3.Name = "label3";
-            label3.Size = new Size(83, 17);
+            label3.Size = new Size(99, 17);
             label3.TabIndex = 1;
-            label3.Text = "Username";
+            label3.Text = "Kullanıcı Adı";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(255, 128, 0);
-            label4.Location = new Point(41, 251);
+            label4.Location = new Point(12, 250);
             label4.Name = "label4";
-            label4.Size = new Size(40, 17);
+            label4.Size = new Size(56, 17);
             label4.TabIndex = 2;
-            label4.Text = "Şifre";
+            label4.Text = "Parola";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(255, 128, 0);
-            label5.Location = new Point(41, 304);
+            label5.Location = new Point(12, 303);
             label5.Name = "label5";
-            label5.Size = new Size(94, 17);
+            label5.Size = new Size(110, 17);
             label5.TabIndex = 3;
-            label5.Text = "Şifre Tekrar";
+            label5.Text = "Parola Tekrar";
             // 
             // label6
             // 
