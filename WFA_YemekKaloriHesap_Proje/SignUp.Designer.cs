@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -43,76 +44,95 @@
             nUpDownKilo = new NumericUpDown();
             nUpDownBoy = new NumericUpDown();
             btnKayitOl = new Button();
+            panel1 = new Panel();
+            label8 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)nUpDownKilo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUpDownBoy).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(255, 128, 0);
             label1.Location = new Point(41, 81);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(50, 17);
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(255, 128, 0);
             label2.Location = new Point(41, 143);
             label2.Name = "label2";
-            label2.Size = new Size(67, 20);
+            label2.Size = new Size(74, 17);
             label2.TabIndex = 0;
             label2.Text = "Surname";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
             label3.Location = new Point(41, 197);
             label3.Name = "label3";
-            label3.Size = new Size(75, 20);
+            label3.Size = new Size(83, 17);
             label3.TabIndex = 1;
             label3.Text = "Username";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(255, 128, 0);
             label4.Location = new Point(41, 251);
             label4.Name = "label4";
-            label4.Size = new Size(39, 20);
+            label4.Size = new Size(40, 17);
             label4.TabIndex = 2;
             label4.Text = "Şifre";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(255, 128, 0);
             label5.Location = new Point(41, 304);
             label5.Name = "label5";
-            label5.Size = new Size(83, 20);
+            label5.Size = new Size(94, 17);
             label5.TabIndex = 3;
             label5.Text = "Şifre Tekrar";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(255, 128, 0);
             label6.Location = new Point(41, 357);
             label6.Name = "label6";
-            label6.Size = new Size(35, 20);
+            label6.Size = new Size(36, 17);
             label6.TabIndex = 4;
             label6.Text = "Kilo";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.FromArgb(255, 128, 0);
             label7.Location = new Point(41, 405);
             label7.Name = "label7";
-            label7.Size = new Size(34, 20);
+            label7.Size = new Size(36, 17);
             label7.TabIndex = 5;
             label7.Text = "Boy";
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(133, 132);
+            txtSurname.Location = new Point(133, 136);
             txtSurname.Name = "txtSurname";
             txtSurname.Size = new Size(239, 27);
             txtSurname.TabIndex = 6;
@@ -165,23 +185,55 @@
             // 
             // btnKayitOl
             // 
-            btnKayitOl.ForeColor = SystemColors.Highlight;
+            btnKayitOl.BackColor = Color.FromArgb(255, 128, 0);
+            btnKayitOl.ForeColor = Color.White;
             btnKayitOl.Location = new Point(133, 464);
             btnKayitOl.Name = "btnKayitOl";
             btnKayitOl.Size = new Size(240, 29);
             btnKayitOl.TabIndex = 12;
             btnKayitOl.Text = "Kayıt Ol";
-            btnKayitOl.UseVisualStyleBackColor = true;
+            btnKayitOl.UseVisualStyleBackColor = false;
             btnKayitOl.Click += btnKayitOl_Click;
             btnKayitOl.MouseEnter += btnKayitOl_MouseEnter;
             btnKayitOl.MouseLeave += btnKayitOl_MouseLeave;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.Controls.Add(label8);
+            panel1.Location = new Point(-3, 8);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(475, 52);
+            panel1.TabIndex = 13;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(136, 1);
+            label8.Name = "label8";
+            label8.Size = new Size(190, 38);
+            label8.TabIndex = 0;
+            label8.Text = "Orange'a Katıl";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-70, 499);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(609, 139);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
             // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MediumAquamarine;
-            ClientSize = new Size(465, 556);
+            BackColor = Color.White;
+            ClientSize = new Size(465, 577);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel1);
             Controls.Add(btnKayitOl);
             Controls.Add(nUpDownBoy);
             Controls.Add(nUpDownKilo);
@@ -203,6 +255,9 @@
             Load += SignUp_Load;
             ((System.ComponentModel.ISupportInitialize)nUpDownKilo).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpDownBoy).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +279,8 @@
         private NumericUpDown nUpDownKilo;
         private NumericUpDown nUpDownBoy;
         private Button btnKayitOl;
+        private Panel panel1;
+        private Label label8;
+        private PictureBox pictureBox1;
     }
 }
