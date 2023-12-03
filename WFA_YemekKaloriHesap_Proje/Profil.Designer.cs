@@ -62,9 +62,9 @@
             // 
             lnkLblSifreDegistir.AutoSize = true;
             lnkLblSifreDegistir.BackColor = Color.Transparent;
-            lnkLblSifreDegistir.Location = new Point(74, 440);
+            lnkLblSifreDegistir.Location = new Point(65, 330);
             lnkLblSifreDegistir.Name = "lnkLblSifreDegistir";
-            lnkLblSifreDegistir.Size = new Size(95, 20);
+            lnkLblSifreDegistir.Size = new Size(73, 15);
             lnkLblSifreDegistir.TabIndex = 1;
             lnkLblSifreDegistir.TabStop = true;
             lnkLblSifreDegistir.Text = "Şifre Değiştir";
@@ -76,9 +76,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(511, 0);
+            label1.Location = new Point(447, 0);
             label1.Name = "label1";
-            label1.Size = new Size(102, 31);
+            label1.Size = new Size(83, 25);
             label1.TabIndex = 2;
             label1.Text = "Profilim";
             // 
@@ -87,38 +87,42 @@
             lblAdSoyad.AutoSize = true;
             lblAdSoyad.BackColor = Color.Transparent;
             lblAdSoyad.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAdSoyad.Location = new Point(74, 36);
+            lblAdSoyad.Location = new Point(65, 27);
             lblAdSoyad.Name = "lblAdSoyad";
-            lblAdSoyad.Size = new Size(52, 17);
+            lblAdSoyad.Size = new Size(42, 14);
             lblAdSoyad.TabIndex = 3;
             lblAdSoyad.Text = "label2";
             // 
             // txtBoxGoalType
             // 
-            txtBoxGoalType.Location = new Point(139, 143);
+            txtBoxGoalType.Location = new Point(122, 107);
+            txtBoxGoalType.Margin = new Padding(3, 2, 3, 2);
             txtBoxGoalType.Name = "txtBoxGoalType";
-            txtBoxGoalType.Size = new Size(155, 27);
+            txtBoxGoalType.Size = new Size(136, 23);
             txtBoxGoalType.TabIndex = 5;
             // 
             // txtBoxDietType
             // 
-            txtBoxDietType.Location = new Point(139, 204);
+            txtBoxDietType.Location = new Point(122, 153);
+            txtBoxDietType.Margin = new Padding(3, 2, 3, 2);
             txtBoxDietType.Name = "txtBoxDietType";
-            txtBoxDietType.Size = new Size(155, 27);
+            txtBoxDietType.Size = new Size(136, 23);
             txtBoxDietType.TabIndex = 6;
             // 
             // txtBoxBoy
             // 
-            txtBoxBoy.Location = new Point(385, 204);
+            txtBoxBoy.Location = new Point(337, 153);
+            txtBoxBoy.Margin = new Padding(3, 2, 3, 2);
             txtBoxBoy.Name = "txtBoxBoy";
-            txtBoxBoy.Size = new Size(155, 27);
+            txtBoxBoy.Size = new Size(136, 23);
             txtBoxBoy.TabIndex = 8;
             // 
             // txtBoxKilo
             // 
-            txtBoxKilo.Location = new Point(385, 139);
+            txtBoxKilo.Location = new Point(337, 104);
+            txtBoxKilo.Margin = new Padding(3, 2, 3, 2);
             txtBoxKilo.Name = "txtBoxKilo";
-            txtBoxKilo.Size = new Size(155, 27);
+            txtBoxKilo.Size = new Size(136, 23);
             txtBoxKilo.TabIndex = 7;
             // 
             // label3
@@ -127,9 +131,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Navy;
-            label3.Location = new Point(418, 283);
+            label3.Location = new Point(366, 212);
             label3.Name = "label3";
-            label3.Size = new Size(109, 21);
+            label3.Size = new Size(90, 17);
             label3.TabIndex = 11;
             label3.Text = "Kalan kcal.";
             // 
@@ -139,9 +143,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(50, 283);
+            label2.Location = new Point(44, 212);
             label2.Name = "label2";
-            label2.Size = new Size(111, 21);
+            label2.Size = new Size(91, 17);
             label2.TabIndex = 10;
             label2.Text = "Hedef kcal.";
             // 
@@ -149,9 +153,9 @@
             // 
             lblHedefKcal.AutoSize = true;
             lblHedefKcal.BackColor = Color.Transparent;
-            lblHedefKcal.Location = new Point(74, 353);
+            lblHedefKcal.Location = new Point(65, 265);
             lblHedefKcal.Name = "lblHedefKcal";
-            lblHedefKcal.Size = new Size(50, 20);
+            lblHedefKcal.Size = new Size(38, 15);
             lblHedefKcal.TabIndex = 12;
             lblHedefKcal.Text = "label5";
             // 
@@ -159,9 +163,9 @@
             // 
             lblKalanKcal.AutoSize = true;
             lblKalanKcal.BackColor = Color.Transparent;
-            lblKalanKcal.Location = new Point(460, 353);
+            lblKalanKcal.Location = new Point(402, 265);
             lblKalanKcal.Name = "lblKalanKcal";
-            lblKalanKcal.Size = new Size(50, 20);
+            lblKalanKcal.Size = new Size(38, 15);
             lblKalanKcal.TabIndex = 13;
             lblKalanKcal.Text = "label6";
             // 
@@ -171,14 +175,15 @@
             chartFavoriBesin.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartFavoriBesin.Legends.Add(legend1);
-            chartFavoriBesin.Location = new Point(576, 57);
+            chartFavoriBesin.Location = new Point(504, 43);
+            chartFavoriBesin.Margin = new Padding(3, 2, 3, 2);
             chartFavoriBesin.Name = "chartFavoriBesin";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartFavoriBesin.Series.Add(series1);
-            chartFavoriBesin.Size = new Size(483, 382);
+            chartFavoriBesin.Size = new Size(423, 286);
             chartFavoriBesin.TabIndex = 16;
             chartFavoriBesin.Text = "chart2";
             // 
@@ -187,9 +192,9 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(328, 146);
+            label5.Location = new Point(287, 110);
             label5.Name = "label5";
-            label5.Size = new Size(45, 17);
+            label5.Size = new Size(36, 14);
             label5.TabIndex = 18;
             label5.Text = "Kilo :";
             // 
@@ -198,9 +203,9 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(76, 146);
+            label6.Location = new Point(66, 110);
             label6.Name = "label6";
-            label6.Size = new Size(60, 17);
+            label6.Size = new Size(49, 14);
             label6.TabIndex = 19;
             label6.Text = "Hedef :";
             // 
@@ -209,9 +214,9 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(333, 210);
+            label7.Location = new Point(291, 158);
             label7.Name = "label7";
-            label7.Size = new Size(45, 17);
+            label7.Size = new Size(37, 14);
             label7.TabIndex = 20;
             label7.Text = "Boy :";
             // 
@@ -220,9 +225,9 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(20, 211);
+            label8.Location = new Point(18, 158);
             label8.Name = "label8";
-            label8.Size = new Size(127, 17);
+            label8.Size = new Size(102, 14);
             label8.TabIndex = 21;
             label8.Text = "Beslenme Türü :";
             // 
@@ -230,9 +235,9 @@
             // 
             lLabelGrafikler.AutoSize = true;
             lLabelGrafikler.BackColor = Color.Transparent;
-            lLabelGrafikler.Location = new Point(449, 440);
+            lLabelGrafikler.Location = new Point(393, 330);
             lLabelGrafikler.Name = "lLabelGrafikler";
-            lLabelGrafikler.Size = new Size(103, 20);
+            lLabelGrafikler.Size = new Size(81, 15);
             lLabelGrafikler.TabIndex = 22;
             lLabelGrafikler.TabStop = true;
             lLabelGrafikler.Text = "Kalori Takibim";
@@ -244,9 +249,9 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(182, 283);
+            label4.Location = new Point(159, 212);
             label4.Name = "label4";
-            label4.Size = new Size(213, 21);
+            label4.Size = new Size(176, 17);
             label4.TabIndex = 23;
             label4.Text = "En Çok Tüketilen Besin";
             // 
@@ -254,9 +259,9 @@
             // 
             lblEnCokTuketilenYiyecek.AutoSize = true;
             lblEnCokTuketilenYiyecek.BackColor = Color.Transparent;
-            lblEnCokTuketilenYiyecek.Location = new Point(255, 353);
+            lblEnCokTuketilenYiyecek.Location = new Point(223, 265);
             lblEnCokTuketilenYiyecek.Name = "lblEnCokTuketilenYiyecek";
-            lblEnCokTuketilenYiyecek.Size = new Size(50, 20);
+            lblEnCokTuketilenYiyecek.Size = new Size(38, 15);
             lblEnCokTuketilenYiyecek.TabIndex = 24;
             lblEnCokTuketilenYiyecek.Text = "label9";
             // 
@@ -265,9 +270,9 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(74, 82);
+            label9.Location = new Point(65, 62);
             label9.Name = "label9";
-            label9.Size = new Size(155, 17);
+            label9.Size = new Size(124, 14);
             label9.TabIndex = 25;
             label9.Text = "Vücut Kitle İndeksi : ";
             // 
@@ -275,9 +280,9 @@
             // 
             lblBmi.AutoSize = true;
             lblBmi.BackColor = Color.Transparent;
-            lblBmi.Location = new Point(221, 82);
+            lblBmi.Location = new Point(193, 62);
             lblBmi.Name = "lblBmi";
-            lblBmi.Size = new Size(15, 20);
+            lblBmi.Size = new Size(12, 15);
             lblBmi.TabIndex = 26;
             lblBmi.Text = "-";
             // 
@@ -285,17 +290,18 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-8, -1);
+            panel1.Location = new Point(-7, -1);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1168, 34);
+            panel1.Size = new Size(1022, 26);
             panel1.TabIndex = 27;
             // 
             // FrmProfil
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1157, 472);
+            ClientSize = new Size(1012, 354);
             Controls.Add(panel1);
             Controls.Add(lblBmi);
             Controls.Add(label9);
@@ -317,7 +323,9 @@
             Controls.Add(txtBoxGoalType);
             Controls.Add(lblAdSoyad);
             Controls.Add(lnkLblSifreDegistir);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmProfil";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Profil";
             Load += FrmProfil_Load;
             ((System.ComponentModel.ISupportInitialize)chartFavoriBesin).EndInit();

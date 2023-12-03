@@ -37,7 +37,7 @@ namespace YemekKalori.UI.Properties
         FoodService foodService;
         MealFoodService mealFoodService;
         Domain.Entities.User user;
-       
+
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace YemekKalori.UI.Properties
                 if (meals != null)
                 {
                     var encoktuketilenMealFood = mealFoodService.GetTheMostConsumedMealFoodByMealId(meals.Id);
-                    if (encoktuketilenMealFood!=null)
+                    if (encoktuketilenMealFood != null)
                     {
                         var food = foodService.GetFoodById(encoktuketilenMealFood.FoodId);
                         lblEnCokTuketilenYiyecek.Text = $"{food.Name}";
@@ -59,11 +59,11 @@ namespace YemekKalori.UI.Properties
                     {
                         lblEnCokTuketilenYiyecek.Text = " ";
                     }
-                    
 
-        
 
-                    
+
+
+
                 }
                 else
                 {
@@ -71,7 +71,7 @@ namespace YemekKalori.UI.Properties
                 }
 
 
-                lblBmi.Text=user.BMI.ToString();
+                lblBmi.Text = user.BMI.ToString();
                 lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
                 if (user.Goal==Domain.Enums.GoalType.GainWeight)
                 {
@@ -110,7 +110,7 @@ namespace YemekKalori.UI.Properties
 
             this.Controls.Add(chartFavoriBesin);
             chartFavoriBesin.Titles.Add("Favori Besin İçeriği");
-           
+
             if (user != null)
             {
 
@@ -138,10 +138,10 @@ namespace YemekKalori.UI.Properties
 
         private void lnkLblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             PasswordChangeScreen passwordChangeScreen = new PasswordChangeScreen(user);
             passwordChangeScreen.ShowDialog();
-            this.Show();
+            //this.Show();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace YemekKalori.UI.Properties
 
         private void lLabelGrafikler_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Graph graph = new Graph(user);
             graph.ShowDialog();
         }

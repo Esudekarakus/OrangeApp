@@ -137,9 +137,9 @@ namespace YemekKalori.UI
                 if (mealFood != null)
                 {
                     PortionScreen portionScreen = new PortionScreen(mealFood, this);
-                    this.Hide();
+                    //this.Hide();
                     portionScreen.ShowDialog();
-                    this.Show();
+                    //this.Show();
 
 
                 }
@@ -178,9 +178,9 @@ namespace YemekKalori.UI
                 Food food = (Food)e.Data.GetData(typeof(Food));
 
                 PortionScreen portionScreen = new PortionScreen(food.Id, this);
-                this.Hide();
+                //this.Hide();
                 portionScreen.ShowDialog();
-                this.Show();
+                //this.Show();
             }
         }
 
@@ -198,9 +198,9 @@ namespace YemekKalori.UI
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            
 
-            if (lstSecimler.Items.Count > 0) 
+
+            if (lstSecimler.Items.Count > 0)
             {
                 List<MealFood> mealFoods = new List<MealFood>();
 
@@ -263,7 +263,7 @@ namespace YemekKalori.UI
                 ShowMyCalories();
             }
 
-            
+
 
 
         }
@@ -303,9 +303,9 @@ namespace YemekKalori.UI
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealDeleteScreen mds = new MealDeleteScreen(user);
-            this.Hide();
+            //this.Hide();
             mds.ShowDialog();
-            this.Show();
+            //this.Show();
             ShowMyCalories();
         }
 
@@ -317,7 +317,7 @@ namespace YemekKalori.UI
                 this.Close();
                 Application.Exit();
             }
-            
+
         }
 
 

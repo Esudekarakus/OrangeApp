@@ -30,9 +30,9 @@ namespace YemekKalori.UI
         {
             service = new MealService();
 
-            List<Meal> meals = service.GetAllMealsByUser(user.Id).OrderBy(x=>x.MealTime).ToList();
+            List<Meal> meals = service.GetAllMealsByUser(user.Id).OrderBy(x => x.MealTime).ToList();
 
-            foreach (Meal meal in meals) 
+            foreach (Meal meal in meals)
             {
                 lstMeals.Items.Add(meal);
             }
@@ -41,8 +41,8 @@ namespace YemekKalori.UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
-            if (lstMeals.SelectedIndex != -1) 
+
+            if (lstMeals.SelectedIndex != -1)
             {
                 DialogResult dialogResult = MessageBox.Show("Öğünü silmek istediğinizden emin misiniz?", "Delete confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -52,7 +52,7 @@ namespace YemekKalori.UI
 
                     lstMeals.Items.RemoveAt(lstMeals.SelectedIndex);
                 }
-                
+
             }
         }
     }

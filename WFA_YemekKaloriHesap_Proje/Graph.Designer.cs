@@ -58,13 +58,14 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             cGunluk.Legends.Add(legend1);
-            cGunluk.Location = new Point(33, 43);
+            cGunluk.Location = new Point(29, 32);
+            cGunluk.Margin = new Padding(3, 2, 3, 2);
             cGunluk.Name = "cGunluk";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Daily";
             cGunluk.Series.Add(series1);
-            cGunluk.Size = new Size(492, 279);
+            cGunluk.Size = new Size(430, 209);
             cGunluk.TabIndex = 0;
             cGunluk.Text = "chart1";
             // 
@@ -76,13 +77,14 @@
             legend2.Enabled = false;
             legend2.Name = "Legend1";
             cHaftalik.Legends.Add(legend2);
-            cHaftalik.Location = new Point(723, 43);
+            cHaftalik.Location = new Point(633, 32);
+            cHaftalik.Margin = new Padding(3, 2, 3, 2);
             cHaftalik.Name = "cHaftalik";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Weekly";
             cHaftalik.Series.Add(series2);
-            cHaftalik.Size = new Size(552, 279);
+            cHaftalik.Size = new Size(483, 209);
             cHaftalik.TabIndex = 1;
             cHaftalik.Text = "chart1";
             // 
@@ -94,38 +96,42 @@
             legend3.Enabled = false;
             legend3.Name = "Legend1";
             cMonthly.Legends.Add(legend3);
-            cMonthly.Location = new Point(364, 357);
+            cMonthly.Location = new Point(318, 268);
+            cMonthly.Margin = new Padding(3, 2, 3, 2);
             cMonthly.Name = "cMonthly";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series3.Legend = "Legend1";
             series3.Name = "Monthly";
             cMonthly.Series.Add(series3);
-            cMonthly.Size = new Size(743, 375);
+            cMonthly.Size = new Size(650, 281);
             cMonthly.TabIndex = 2;
             cMonthly.Text = "chart1";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-98, 506);
+            pictureBox1.Location = new Point(-86, 380);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(456, 295);
+            pictureBox1.Size = new Size(399, 221);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
             // Graph
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1436, 769);
+            ClientSize = new Size(1256, 577);
             Controls.Add(pictureBox1);
             Controls.Add(cMonthly);
             Controls.Add(cHaftalik);
             Controls.Add(cGunluk);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Graph";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Graph";
             Load += Graph_Load;
             ((System.ComponentModel.ISupportInitialize)cGunluk).EndInit();

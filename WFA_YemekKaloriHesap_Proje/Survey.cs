@@ -19,7 +19,7 @@ namespace YemekKalori.UI
         {
             InitializeComponent();
             cBoxBeslenmeTuru.DataSource = Enum.GetValues(typeof(Domain.Enums.DietType));
-            cbGoals.DataSource = Enum.GetValues(typeof (Domain.Enums.GoalType));
+            cbGoals.DataSource = Enum.GetValues(typeof(Domain.Enums.GoalType));
 
         }
 
@@ -45,13 +45,13 @@ namespace YemekKalori.UI
                 service.UpdateUser(user);
                 MessageBox.Show("Anketi doldurduğunuz için teşekkür ederiz.");
                 this.Close();
-                
+
             }
-            catch (Exception ex)  
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void Survey_Load(object sender, EventArgs e)

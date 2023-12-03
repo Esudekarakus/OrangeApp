@@ -71,7 +71,7 @@ namespace YemekKalori.UI
 
         private void btnKayitOl_MouseLeave(object sender, EventArgs e)
         {
-            Cursor= Cursors.Default;
+            Cursor = Cursors.Default;
         }
     }
 }

@@ -44,20 +44,19 @@
             label1.BackColor = Color.FromArgb(255, 128, 0);
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(59, 8);
+            label1.Location = new Point(52, 6);
             label1.Name = "label1";
-            label1.Size = new Size(343, 32);
+            label1.Size = new Size(270, 25);
             label1.TabIndex = 0;
             label1.Text = "Silmek istediğiniz öğünü seçin.";
             // 
             // lstMeals
             // 
             lstMeals.FormattingEnabled = true;
-            lstMeals.ItemHeight = 20;
-            lstMeals.Location = new Point(14, 65);
-            lstMeals.Margin = new Padding(3, 4, 3, 4);
+            lstMeals.ItemHeight = 15;
+            lstMeals.Location = new Point(12, 49);
             lstMeals.Name = "lstMeals";
-            lstMeals.Size = new Size(402, 424);
+            lstMeals.Size = new Size(352, 319);
             lstMeals.TabIndex = 1;
             // 
             // btnDelete
@@ -65,10 +64,9 @@
             btnDelete.BackColor = Color.FromArgb(255, 128, 0);
             btnDelete.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(278, 513);
-            btnDelete.Margin = new Padding(3, 4, 3, 4);
+            btnDelete.Location = new Point(243, 385);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(138, 52);
+            btnDelete.Size = new Size(121, 39);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Sil";
             btnDelete.UseVisualStyleBackColor = false;
@@ -77,9 +75,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-102, 496);
+            pictureBox1.Location = new Point(-89, 372);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(355, 147);
+            pictureBox1.Size = new Size(311, 110);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -88,23 +87,24 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-21, 1);
+            panel1.Location = new Point(-18, 1);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(477, 57);
+            panel1.Size = new Size(417, 43);
             panel1.TabIndex = 4;
             // 
             // MealDeleteScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(430, 581);
+            ClientSize = new Size(376, 436);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(btnDelete);
             Controls.Add(lstMeals);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "MealDeleteScreen";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "MealDeleteScreen";
             Load += MealDeleteScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

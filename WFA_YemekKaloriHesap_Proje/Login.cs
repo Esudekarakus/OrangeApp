@@ -70,7 +70,7 @@ namespace WFA_YemekKaloriHesap_Proje
 
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            Cursor= Cursors.Default;
+            Cursor = Cursors.Default;
         }
     }
 }

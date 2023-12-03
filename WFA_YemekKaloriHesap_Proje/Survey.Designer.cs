@@ -47,9 +47,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft PhagsPa", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Info;
-            label1.Location = new Point(94, 15);
+            label1.Location = new Point(82, 11);
             label1.Name = "label1";
-            label1.Size = new Size(386, 29);
+            label1.Size = new Size(319, 24);
             label1.TabIndex = 0;
             label1.Text = "Bize kendinden biraz bahseder misin";
             // 
@@ -58,18 +58,19 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(66, 116);
+            label2.Location = new Point(58, 87);
             label2.Name = "label2";
-            label2.Size = new Size(429, 23);
+            label2.Size = new Size(350, 18);
             label2.TabIndex = 1;
             label2.Text = "1.Hangi beslenme türünü tercih ediyorsun?";
             // 
             // cBoxBeslenmeTuru
             // 
             cBoxBeslenmeTuru.FormattingEnabled = true;
-            cBoxBeslenmeTuru.Location = new Point(108, 173);
+            cBoxBeslenmeTuru.Location = new Point(94, 130);
+            cBoxBeslenmeTuru.Margin = new Padding(3, 2, 3, 2);
             cBoxBeslenmeTuru.Name = "cBoxBeslenmeTuru";
-            cBoxBeslenmeTuru.Size = new Size(356, 28);
+            cBoxBeslenmeTuru.Size = new Size(312, 23);
             cBoxBeslenmeTuru.TabIndex = 2;
             // 
             // label3
@@ -77,9 +78,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(44, 225);
+            label3.Location = new Point(38, 169);
             label3.Name = "label3";
-            label3.Size = new Size(482, 23);
+            label3.Size = new Size(389, 18);
             label3.TabIndex = 3;
             label3.Text = "2. Neden programımızı kullanmaya karar verdin?";
             // 
@@ -88,9 +89,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(255, 128, 0);
-            label4.Location = new Point(160, 346);
+            label4.Location = new Point(140, 260);
             label4.Name = "label4";
-            label4.Size = new Size(277, 27);
+            label4.Size = new Size(228, 22);
             label4.TabIndex = 7;
             label4.Text = "O zaman başlayalım mı?";
             // 
@@ -99,9 +100,10 @@
             button1.BackColor = Color.FromArgb(255, 128, 0);
             button1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(238, 391);
+            button1.Location = new Point(208, 293);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(82, 22);
             button1.TabIndex = 8;
             button1.Text = "EVET";
             button1.UseVisualStyleBackColor = false;
@@ -110,36 +112,39 @@
             // cbGoals
             // 
             cbGoals.FormattingEnabled = true;
-            cbGoals.Location = new Point(108, 275);
+            cbGoals.Location = new Point(94, 206);
+            cbGoals.Margin = new Padding(3, 2, 3, 2);
             cbGoals.Name = "cbGoals";
-            cbGoals.Size = new Size(356, 28);
+            cbGoals.Size = new Size(312, 23);
             cbGoals.TabIndex = 9;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-2, 14);
+            panel1.Location = new Point(-2, 10);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(567, 55);
+            panel1.Size = new Size(496, 41);
             panel1.TabIndex = 10;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-18, 426);
+            pictureBox1.Location = new Point(-16, 320);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(597, 219);
+            pictureBox1.Size = new Size(522, 164);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
             // Survey
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(561, 546);
+            ClientSize = new Size(491, 410);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(cbGoals);
@@ -148,7 +153,9 @@
             Controls.Add(label3);
             Controls.Add(cBoxBeslenmeTuru);
             Controls.Add(label2);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Survey";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Survey";
             Load += Survey_Load;
             panel1.ResumeLayout(false);
