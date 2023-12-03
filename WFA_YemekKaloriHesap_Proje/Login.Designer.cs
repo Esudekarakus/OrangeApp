@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -35,15 +36,17 @@
             txtPassword = new TextBox();
             btnLogin = new Button();
             lblKayitOl = new LinkLabel();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.Font = new Font("Sans Serif Collection", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(183, 12);
+            label1.Location = new Point(200, 3);
             label1.Name = "label1";
-            label1.Size = new Size(197, 111);
+            label1.Size = new Size(199, 82);
             label1.TabIndex = 0;
             label1.Text = "Giriş Yap";
             label1.Click += label1_Click;
@@ -51,8 +54,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.ForeColor = Color.FromArgb(255, 128, 0);
             label2.Location = new Point(42, 155);
             label2.Name = "label2";
             label2.Size = new Size(157, 32);
@@ -62,8 +66,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
             label3.Location = new Point(119, 232);
             label3.Name = "label3";
             label3.Size = new Size(74, 32);
@@ -108,7 +113,7 @@
             // 
             lblKayitOl.AutoSize = true;
             lblKayitOl.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblKayitOl.LinkColor = Color.Cyan;
+            lblKayitOl.LinkColor = Color.FromArgb(255, 128, 0);
             lblKayitOl.Location = new Point(443, 480);
             lblKayitOl.Name = "lblKayitOl";
             lblKayitOl.Size = new Size(97, 32);
@@ -117,23 +122,35 @@
             lblKayitOl.Text = "Kayıt Ol";
             lblKayitOl.LinkClicked += lblKayitOl_LinkClicked;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(-27, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(601, 85);
+            panel1.TabIndex = 7;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Crimson;
+            BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(545, 525);
+            Controls.Add(panel1);
             Controls.Add(lblKayitOl);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             Text = "Form1";
             Load += Login_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +164,6 @@
         private TextBox txtPassword;
         private Button btnLogin;
         private LinkLabel lblKayitOl;
+        private Panel panel1;
     }
 }

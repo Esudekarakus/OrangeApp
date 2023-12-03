@@ -37,12 +37,15 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Graph));
             cGunluk = new System.Windows.Forms.DataVisualization.Charting.Chart();
             cHaftalik = new System.Windows.Forms.DataVisualization.Charting.Chart();
             cMonthly = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)cGunluk).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cHaftalik).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cMonthly).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // cGunluk
@@ -97,11 +100,23 @@
             cMonthly.TabIndex = 2;
             cMonthly.Text = "chart1";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-98, 506);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(456, 295);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // Graph
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1436, 769);
+            Controls.Add(pictureBox1);
             Controls.Add(cMonthly);
             Controls.Add(cHaftalik);
             Controls.Add(cGunluk);
@@ -111,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)cGunluk).EndInit();
             ((System.ComponentModel.ISupportInitialize)cHaftalik).EndInit();
             ((System.ComponentModel.ISupportInitialize)cMonthly).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -119,5 +135,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart cGunluk;
         private System.Windows.Forms.DataVisualization.Charting.Chart cHaftalik;
         private System.Windows.Forms.DataVisualization.Charting.Chart cMonthly;
+        private PictureBox pictureBox1;
     }
 }
