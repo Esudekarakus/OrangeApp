@@ -20,7 +20,7 @@ namespace YemekKalori.DAL.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data source=LAPTOP-6B0RV21O;initial catalog=DietAppProjectDb;integrated security=true");
+            optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-EVCENE1; Initial Catalog = DietDb; User Id = sa; Password = Anyela123");
             //base.OnConfiguring(optionsBuilder);
 
             
