@@ -198,67 +198,72 @@ namespace YemekKalori.UI
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            List<MealFood> mealFoods = new List<MealFood>();
+            
 
-
-
-            Meal meal = new Meal()
+            if (lstSecimler.Items.Count > 0) 
             {
+                List<MealFood> mealFoods = new List<MealFood>();
 
-                MealTime = DateTime.Now,
+                Meal meal = new Meal()
+                {
 
-
-            };
-
-            mealService.AddMeal(meal);
-
-            Meal meal2 = mealService.GetMealByID(meal.Id);
-
-            foreach (MealFood food in lstSecimler.Items)
-            {
-
-                mealFoods.Add(food);
+                    MealTime = DateTime.Now,
 
 
+                };
+
+                mealService.AddMeal(meal);
+
+                Meal meal2 = mealService.GetMealByID(meal.Id);
+
+                foreach (MealFood food in lstSecimler.Items)
+                {
+
+                    mealFoods.Add(food);
+
+
+                }
+
+                foreach (MealFood mealFood in mealFoods)
+                {
+                    mealFood.MealId = meal2.Id;
+                    mealFood.Meal = meal2;
+
+
+                }
+
+
+
+                meal2.MealFoods = mealFoods;
+
+                meal2.UserId = user.Id;
+                meal2.User = userService.GetById(user.Id);
+
+                mealService.UpdateMeal(meal2);
+
+                mealService.SetMealCalorie(meal2);
+
+                if (meal2.MealTime.Hour >= 6 && meal2.MealTime.Hour <= 12)
+                {
+                    meal2.Type = Domain.Enums.MealType.Breakfast;
+                }
+                else if (meal2.MealTime.Hour > 12 && meal2.MealTime.Hour <= 15)
+                {
+                    meal2.Type = Domain.Enums.MealType.Lunch;
+                }
+                else if (meal2.MealTime.Hour > 15 && meal2.MealTime.Hour <= 23)
+                {
+                    meal2.Type = Domain.Enums.MealType.Dinner;
+                }
+
+                mealService.UpdateMeal(meal2);
+
+                ClearListbox(lstSecimler);
+
+                ShowMyCalories();
             }
 
-            foreach (MealFood mealFood in mealFoods)
-            {
-                mealFood.MealId = meal2.Id;
-                mealFood.Meal = meal2;
-
-
-            }
-
-
-
-            meal2.MealFoods = mealFoods;
-
-            meal2.UserId = user.Id;
-            meal2.User = userService.GetById(user.Id);
-
-            mealService.UpdateMeal(meal2);
-
-            mealService.SetMealCalorie(meal2);
-
-            if (meal2.MealTime.Hour >= 6 && meal2.MealTime.Hour <= 12)
-            {
-                meal2.Type = Domain.Enums.MealType.Breakfast;
-            }
-            else if (meal2.MealTime.Hour > 12 && meal2.MealTime.Hour <= 15)
-            {
-                meal2.Type = Domain.Enums.MealType.Lunch;
-            }
-            else if (meal2.MealTime.Hour > 15 && meal2.MealTime.Hour <= 23)
-            {
-                meal2.Type = Domain.Enums.MealType.Dinner;
-            }
-
-            mealService.UpdateMeal(meal2);
-
-            ClearListbox(lstSecimler);
-
-            ShowMyCalories();
+            
 
 
         }
@@ -272,11 +277,11 @@ namespace YemekKalori.UI
         {
             lblToplamKalori.Text = mealService.GetTodaysCalories(user.Id).ToString();
 
-            lblSabah.Text = mealService.GetMorningCalories(user.Id).ToString();
+            lblSabah2.Text = mealService.GetMorningCalories(user.Id).ToString();
 
-            lblOglen.Text = mealService.GetLunchCalories(user.Id).ToString();
+            lblOglen2.Text = mealService.GetLunchCalories(user.Id).ToString();
 
-            lblAksam.Text = mealService.GetDinnerCalories(user.Id).ToString();
+            lblAksam2.Text = mealService.GetDinnerCalories(user.Id).ToString();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -308,6 +313,11 @@ namespace YemekKalori.UI
         {
             this.Close();
             Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
