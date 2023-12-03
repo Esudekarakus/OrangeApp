@@ -148,6 +148,7 @@
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Login_Load;
             panel1.ResumeLayout(false);
