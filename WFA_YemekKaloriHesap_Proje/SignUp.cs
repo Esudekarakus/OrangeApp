@@ -63,5 +63,15 @@ namespace YemekKalori.UI
                 throw new Exception("Şifreler eşleşmiyor.");
             }
         }
+
+        private void btnKayitOl_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void btnKayitOl_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor= Cursors.Default;
+        }
     }
 }

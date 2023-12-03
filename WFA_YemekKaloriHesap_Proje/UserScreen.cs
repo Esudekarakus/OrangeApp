@@ -37,6 +37,7 @@ namespace YemekKalori.UI
 
         private void UserScreen_Load(object sender, EventArgs e)
         {
+            MessageBox.Show($"Hoşgeldiniz {user.FirstName},seçmek istediğiniz yiyecekleri sürükleyip bırakarak listeye ekleyebilirsiniz.");
             if (user.Goal == Domain.Enums.GoalType.GainWeight)
             {
                 user.HedefKalori = 2500;
@@ -306,6 +307,7 @@ namespace YemekKalori.UI
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }

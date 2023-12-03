@@ -71,7 +71,7 @@ namespace YemekKalori.UI.Properties
                 }
 
 
-
+                lblBmi.Text=user.BMI.ToString();
                 lblAdSoyad.Text = $"{user.FirstName} {user.LastName}";
                 txtBoxGoalType.Text = user.Goal?.ToString();
                 txtBoxDietType.Text = user.Diet?.ToString();
