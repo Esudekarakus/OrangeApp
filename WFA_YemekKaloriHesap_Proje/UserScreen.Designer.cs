@@ -414,6 +414,7 @@
             Controls.Add(grBoxAksam);
             Margin = new Padding(3, 2, 3, 2);
             Name = "UserScreen";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UserScreen";
             Load += UserScreen_Load;
             gBoxSabah.ResumeLayout(false);

@@ -37,7 +37,7 @@ namespace YemekKalori.UI
                 }
                 else
                 {
-                    if (!(txtYeniSifre.Text == txtYeniSifreTekrar.Text)) 
+                    if (!(txtYeniSifre.Text == txtYeniSifreTekrar.Text))
                     {
                         MessageBox.Show("Şifreler uyuşmuyor.");
                     }
@@ -48,7 +48,7 @@ namespace YemekKalori.UI
                     }
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

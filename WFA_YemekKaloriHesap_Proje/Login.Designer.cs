@@ -44,9 +44,9 @@
             // 
             label1.Font = new Font("Sans Serif Collection", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(200, 3);
+            label1.Location = new Point(175, 2);
             label1.Name = "label1";
-            label1.Size = new Size(199, 82);
+            label1.Size = new Size(174, 62);
             label1.TabIndex = 0;
             label1.Text = "Giriş Yap";
             label1.Click += label1_Click;
@@ -57,9 +57,9 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(42, 155);
+            label2.Location = new Point(37, 116);
             label2.Name = "label2";
-            label2.Size = new Size(157, 32);
+            label2.Size = new Size(126, 25);
             label2.TabIndex = 1;
             label2.Text = "Kullanıcı Adı :";
             // 
@@ -69,28 +69,26 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(119, 232);
+            label3.Location = new Point(104, 174);
             label3.Name = "label3";
-            label3.Size = new Size(74, 32);
+            label3.Size = new Size(59, 25);
             label3.TabIndex = 2;
             label3.Text = "Şifre :";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(205, 161);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(179, 121);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(251, 27);
+            txtUsername.Size = new Size(220, 23);
             txtUsername.TabIndex = 3;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(205, 239);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(179, 179);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(251, 27);
+            txtPassword.Size = new Size(220, 23);
             txtPassword.TabIndex = 4;
             // 
             // btnLogin
@@ -98,10 +96,9 @@
             btnLogin.BackColor = Color.DarkOrange;
             btnLogin.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogin.ForeColor = SystemColors.ButtonHighlight;
-            btnLogin.Location = new Point(183, 337);
-            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Location = new Point(160, 253);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(251, 75);
+            btnLogin.Size = new Size(220, 56);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Giriş";
             btnLogin.UseVisualStyleBackColor = false;
@@ -114,9 +111,9 @@
             lblKayitOl.AutoSize = true;
             lblKayitOl.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblKayitOl.LinkColor = Color.FromArgb(255, 128, 0);
-            lblKayitOl.Location = new Point(443, 480);
+            lblKayitOl.Location = new Point(388, 360);
             lblKayitOl.Name = "lblKayitOl";
-            lblKayitOl.Size = new Size(97, 32);
+            lblKayitOl.Size = new Size(77, 25);
             lblKayitOl.TabIndex = 6;
             lblKayitOl.TabStop = true;
             lblKayitOl.Text = "Kayıt Ol";
@@ -126,19 +123,20 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(-27, 12);
+            panel1.Location = new Point(-24, 9);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(601, 85);
+            panel1.Size = new Size(526, 64);
             panel1.TabIndex = 7;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(545, 525);
+            ClientSize = new Size(477, 394);
             Controls.Add(panel1);
             Controls.Add(lblKayitOl);
             Controls.Add(btnLogin);
@@ -146,8 +144,8 @@
             Controls.Add(txtUsername);
             Controls.Add(label3);
             Controls.Add(label2);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Login_Load;
             panel1.ResumeLayout(false);

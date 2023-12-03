@@ -33,7 +33,7 @@ namespace YemekKalori.UI
             this.frm = frm;
             foodId = mealFood.FoodId;
         }
-        
+
         MealFood mealFood;
         UserScreen frm;
         int foodId;
