@@ -207,7 +207,7 @@ namespace YemekKalori.UI
                 Meal meal = new Meal()
                 {
 
-                    MealTime = new DateTime (2023,12,3,18,0,0),
+                    MealTime = DateTime.Now,
 
 
                 };
